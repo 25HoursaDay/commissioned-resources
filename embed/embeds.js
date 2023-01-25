@@ -15,7 +15,16 @@ if (window.self != window.top) {
 
 function ogSrc() {}
 function repo() {}
-function rick() {}
+function rick() {document.querySelector("html").innerHTML = `<video width="100%" height="100%" autoplay>
+
+    <source src="/media/cc0-videos/flower.webm"
+            type="video/webm">
+
+    <source src="/media/cc0-videos/flower.mp4"
+            type="video/mp4">
+
+</video>
+`}
 
 // 0 is disabled, 1 is enabled
 
