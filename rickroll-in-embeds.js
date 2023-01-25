@@ -1,6 +1,6 @@
-const credit_to_25HoursaDay_on_github = `
+const _25HoursaDay_on_github = `
   <style></style>
-  <h1>Embed protected.</h1> <br>
+  <h1>This embed prevented.</h1><br>
   <button onclick="ogSrc()"></button>
   <button onclick="repo()"></button>
 `
@@ -8,7 +8,7 @@ const credit_to_25HoursaDay_on_github = `
 if (window.self != window.top) {
   if (!document.referrer.includes(self.location)) {
     
-    document.querySelector("html").innerHTML = credit_to_25HoursaDay_on_github;
+    document.querySelector("html").innerHTML = _25HoursaDay_on_github;
     
   }
 }
