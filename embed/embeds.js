@@ -17,11 +17,12 @@ function ogSrc() {}
 function repo() {}
 function rick() {document.querySelector("html").innerHTML = `<video width="100%" height="100%" autoplay>
 
-    <source src="/media/cc0-videos/flower.webm"
-            type="video/webm">
+<source src="https://25hoursaday.github.io/commissioned-resources/embed/rickroll-720p.mp4" type="video/mp4">
+<source src="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/embed/rickroll-720p.mp4" type="video/mp4">
+<source src="https://25hoursaday.github.io/commissioned-resources/embed/rickroll-360p.mp4" type="video/mp4">
+<source src="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/embed/rickroll-360p.mp4" type="video/mp4">
 
-    <source src="/media/cc0-videos/flower.mp4"
-            type="video/mp4">
+    
 
 </video>
 `}
