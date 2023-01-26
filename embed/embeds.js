@@ -13,10 +13,9 @@ const _25HoursaDay_on_github = `
 
 if (window.self != window.top) {
   if (!document.referrer.includes(self.location)) {
-      if (_25embedOptions.rickRoll == 1) {rick()} else {
-    var ogContent = window.self;
-    document.querySelector("html").innerHTML = _25HoursaDay_on_github;
-    }
+    if (window.location.hostname != document.location.hostname) {
+      if (_25embedOptions.rickRoll == 1) {rick()} else {var ogContent = window.self; document.querySelector("html").innerHTML = _25HoursaDay_on_github;}
+    } else {}
   }
 }
 
