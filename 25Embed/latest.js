@@ -4,14 +4,11 @@ const _25HoursaDay_on_github = `
   <button id="ogSrc" class="mBtn" onclick="ogSrc()">Original Content</button>
   <button id="repo" class="mBtn" onclick="repo()">More Information</button>
 `;
-var contentOwner;
-var override = false;
-var skipScript = false;
 
-if (window.top.location.startsWith("file:") && override == false) {if (_25embedOptions.allowFileHost == 0){}}
-if (window.self.location.startsWith("file:") && override == false) {
-  if (_25embedOptions.allowFileUrls == 0) {var contentOwner = false;} else {var override = true;}
-}
+var override = false;
+// file protection
+if (window.top.location.startsWith("file:") && override == false) {if (_25embedOptions.allowFileHost == 0){var contentOwner = false; var override = true;} else {var override = true;}}
+if (window.self.location.startsWith("file:") && override == false) {if (_25embedOptions.allowFileUrls == 0) {var contentOwner = false; var override = true;} else {var override = true;}}
   
 // check if the source content is NOT the top element
 if (window.self != window.top && override == false) {
@@ -23,17 +20,17 @@ if (window.self != window.top && override == false) {
     
 // check if the source content owner is embedding the source content and if so, check if the "allowSameHost" setting is enabled. 
     if (window.self.location.hostname == window.top.location.hostname && override == false) {
-      if (_25embedOptions.allowSameHost == 1) {var override = true;
+      if (_25embedOptions.allowSameHost == 1) {var override = true; var contentOwner = true;
         } else {var contentOwner = false;}            
       } else {var contentOwner = true;}
     } else {var contentOwner = true;}
   } else {var contentOwner = true;}
 
 
-if (contentOwner != true && override != true) {
-  console.log("contentOwner != true && override != true");
-  if (contentOwner == false && override == false) {
-    console.log("contentOwner == false && override == false");
+if (contentOwner != true) {
+  console.log("contentOwner != true");
+  if (contentOwner == false) {
+    console.log("contentOwner == false");
     if (_25embedOptions.rickRoll == 1) {rick();} else {var ogContent = window.self; document.querySelector("html").innerHTML = _25HoursaDay_on_github;}
   }
 }
