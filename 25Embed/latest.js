@@ -9,9 +9,9 @@ const _25HoursaDay_on_github = `
 
 var override = false;
 var reason = "Prevented";
-// if there isnt a config.js file, set options to default
-if(typeof _25embedOptions == "undefined"){
 
+// if there isnt a config.js file, set options to default
+if (typeof _25embedOptions == "undefined") {
 const _25embedOptions = {
 rickRoll:0,
 allowSameHost:1,
@@ -23,8 +23,8 @@ const _25embedAllowedUrls = {};
 } else {}
 
 // file protection
-if (window.top.location.startsWith("file:") && override == false) {if (_25embedOptions.allowFileHost == 0){var contentOwner = false; var override = true;} else {var override = true;}}
-if (window.self.location.startsWith("file:") && override == false) {if (_25embedOptions.allowFileUrls == 0) {var contentOwner = false; var override = true;} else {var override = true;}}
+if (window.top.location.startsWith("file:") && override == false) {if (_25embedOptions.allowFileHost == 0){var contentOwner = false; var override = true; var reason = "Content is embedded on a file URL."; console.log("_25embedOptions.allowFileHost == 0");} else {var override = true;}}
+if (window.self.location.startsWith("file:") && override == false) {if (_25embedOptions.allowFileUrls == 0) {var contentOwner = false; var override = true; var reason = "Content is hosted on a file URL."; console.log("_25embedOptions.allowFileHost == 0");} else {var override = true;}}
   
 // check if the source content is NOT the top element
 if (window.self != window.top && override == false) {
@@ -36,11 +36,10 @@ if (window.self != window.top && override == false) {
     
 // check if the source content owner is embedding the source content and if so, check if the "allowSameHost" setting is enabled. 
     if (window.self.location.hostname == window.top.location.hostname && override == false) {
-      if (_25embedOptions.allowSameHost == 1) {var override = true; var contentOwner = true;
-        } else {var contentOwner = false;}            
-      } else {var contentOwner = true;}
-    } else {var contentOwner = true;}
-  } else {var contentOwner = true;}
+      if (_25embedOptions.allowSameHost == 0) {var contentOwner = false; var reason = "Same host, different URL."; console.log("_25embedOptions.allowSameHost == 0");} else {var contentOwner = true; var override = true;}
+      } else {var reason = "The embedded content does not belong to this website."; console.log("window.self != window.top && !document.referrer.includes(self.location)");}
+    } else {var contentOwner = true; var override = true;}
+  } else {var contentOwner = true; var override = true;}
 
 
 if (contentOwner != true) {
