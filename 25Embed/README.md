@@ -1,7 +1,16 @@
 
 ## About 25Embed
 25Embed is a tool to prevent your content from being embedded on sites that are not yours.
+If you were directed to this page from an embed, please contact the original content owner to let them know their hard work is being stolen!
 
+## Installation
+How to install 25Embed:
+### HTML file
+To install 25Embed in an HTML file, you must add the following code into the head of your file:
+`
+
+`
+### Javascript file
 ## History
 I first thought of the concept of 25Embed back when I was not so technologically inclined, when I would just embed things into google sites.
 I figured there had to be a way to prevent someone from so easily stealing your content, but I didn't know how to create something like that.
