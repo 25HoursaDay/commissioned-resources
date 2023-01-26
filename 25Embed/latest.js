@@ -12,20 +12,21 @@ const _25HoursaDay_on_github = `
   <button id="ogSrc" class="mBtn" onclick="ogSrc()">Original Content</button>
   <button id="repo" class="mBtn" onclick="repo()">More Information</button>
 `;
-if (document.location.href.startsWith("file:")) {
-if (_25embedOptions.allowFileUrls == 0) {}
+var override = false;
+if (window.self.location.startsWith("file:") && override == false) {
+if (_25embedOptions.allowFileUrls == 0) {var contentOwner = false;}else{var contentOwner = true; var override = true;}
 }
   
 // check if the source content is NOT the top element
-if (window.self != window.top) {
+if (window.self != window.top && override == false) {
     console.log("window.self != window.top");
   
 // check if the referrer of the page is the owner of the source content or not
-  if (!document.referrer.includes(self.location)) {
+  if (!document.referrer.includes(self.location) && override == false) {
       console.log("!document.referrer.includes(self.location)");
     
 // check if the source content owner is embedding the source content and if so, check if the "allowSameHost" setting is enabled. 
-    if (window.self.location.hostname == window.top.location.hostname) {if (_25embedOptions.allowSameHost == 1) {var contentOwner = true;} else {var contentOwner = false;}            
+    if (window.self.location.hostname == window.top.location.hostname && override == false) {if (_25embedOptions.allowSameHost == 1) {var contentOwner = true;} else {var contentOwner = false;}            
       } else {var contentOwner = false;}
     } else {var contentOwner = true;}
   } else {var contentOwner = true;}
