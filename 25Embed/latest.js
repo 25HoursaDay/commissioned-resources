@@ -4,9 +4,11 @@ const _25HoursaDay_on_github = `
   <button id="ogSrc" class="mBtn" onclick="ogSrc()">Original Content</button>
   <button id="repo" class="mBtn" onclick="repo()">More Information</button>
 `;
-
+var contentOwner;
 var override = false;
-if (window.top.location.startsWith("file:") && override == false) {_25embedOptions.allowFileHost == 0}
+var skipScript = false;
+
+if (window.top.location.startsWith("file:") && override == false) {if (_25embedOptions.allowFileHost == 0){}}
 if (window.self.location.startsWith("file:") && override == false) {
   if (_25embedOptions.allowFileUrls == 0) {var contentOwner = false;} else {var override = true;}
 }
