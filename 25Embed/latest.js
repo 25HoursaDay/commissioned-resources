@@ -13,6 +13,10 @@ const _25HoursaDay_on_github = `
   <button id="repo" class="mBtn" onclick="repo()">More Information</button>
 `;
 
+if (_25embedOptions.allowFileUrls == 0) {
+  if (document.location.href.startsWith("file:")) {var contentOwner = false;}
+}
+  
 // check if the source content is NOT the top element
 if (window.self != window.top) {
     console.log("window.self != window.top");
@@ -26,6 +30,7 @@ if (window.self != window.top) {
       } else {var contentOwner = false;}
     } else {var contentOwner = true;}
   } else {var contentOwner = true;}
+
 
 if (contentOwner != true) {
   console.log("contentOwner != true");
