@@ -52,7 +52,7 @@ if (contentOwner != true) {
 }
 
 function ogSrc() {window.open(ogContent);}
-function repo() {window.open("https://github.com/25HoursaDay/commissioned-resources/tree/main/25Embed");}
+function repo() {window.open("https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/README.md#about-25embed");}
 function rick() {document.querySelector("html").innerHTML = `<video width="100%" height="100%" autoplay loop>
 <source src="https://25hoursaday.github.io/commissioned-resources/25Embed/rickroll-720p.mp4" type="video/mp4">
 <source src="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/rickroll-720p.mp4" type="video/mp4">
