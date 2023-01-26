@@ -9,13 +9,14 @@ const _25HoursaDay_on_github = `
 
 var override = false;
 var reason = "Prevented";
+// if there isnt a config.js file, set options to default
 if(typeof _25embedOptions == "undefined"){
 
 const _25embedOptions = {
-rickRoll:0, // default set to 0
-allowSameHost:1, // default set to 1
-allowFileUrls:0, // default set to 0
-allowFileHost:0 // default set to 0
+rickRoll:0,
+allowSameHost:1,
+allowFileUrls:0,
+allowFileHost:0
 };
 
 const _25embedAllowedUrls = {};
