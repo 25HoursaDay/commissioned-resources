@@ -6,8 +6,8 @@ const _25HoursaDay_on_github = `
 `;
 
 var override = false;
-
-if (window.self.location.startsWith("file:") && override == false || window.top.location.startsWith("file:") && override == false) {
+if (window.top.location.startsWith("file:") && override == false) {_25embedOptions.allowFileHost == 0}
+if (window.self.location.startsWith("file:") && override == false) {
   if (_25embedOptions.allowFileUrls == 0) {var contentOwner = false;} else {var override = true;}
 }
   
