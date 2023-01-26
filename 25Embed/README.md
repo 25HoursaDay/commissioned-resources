@@ -1,4 +1,4 @@
-# 25Embed
+
 ## About 25Embed
 25Embed is a tool to prevent your content from being embedded on sites that are not yours.
 
