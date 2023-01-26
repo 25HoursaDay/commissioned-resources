@@ -12,9 +12,8 @@ const _25HoursaDay_on_github = `
   <button id="ogSrc" class="mBtn" onclick="ogSrc()">Original Content</button>
   <button id="repo" class="mBtn" onclick="repo()">More Information</button>
 `;
-
-if (_25embedOptions.allowFileUrls == 0) {
-  if (document.location.href.startsWith("file:")) {var contentOwner = false;}
+if (document.location.href.startsWith("file:")) {
+if (_25embedOptions.allowFileUrls == 0) {}
 }
   
 // check if the source content is NOT the top element
