@@ -23,12 +23,12 @@ Example:
 Put your [config.js](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js) file url where it says "path to config file", and put the [25Embed](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/latest.js) file url where it says "path to 25Embed file".
 ### Javascript file
 If you would like to install 25Embed in your index.js file, you must add the following code:
-`
+```
 document.head.append(`
   <script src="path to config file"></script>
   <script src="path to 25Embed file"></script>
 `);
-`
+```
 ## History
 I first thought of the concept of 25Embed back when I was not so technologically inclined, when I would just embed things into google sites.
 I figured there had to be a way to prevent someone from so easily stealing your content, but I didn't know how to create something like that.
