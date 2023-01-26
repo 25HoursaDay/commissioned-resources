@@ -4,7 +4,7 @@
 If you were directed to this page from an embed, please contact the original content owner to let them know their hard work is being stolen!
 
 ## Installation
-To install 25Embed, first you must create your own [config.js](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js) file with settings to your liking (see [here](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js) for more information on config.js) or leave the settings default.
+To install 25Embed, first you must create your own [config.js](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js) file with settings to your liking (see [here]() for more information on config.js) or leave the settings default.
 ### HTML file (recommended)
 To install 25Embed in an HTML file, you must add the [latest.js](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/latest.js) file and your custom [config.js](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js) to a script tag in the head of your file (two script tags in total).
 Example:
@@ -29,6 +29,7 @@ document.head.append(`
   <script src="path to 25Embed file"></script>
 `);
 ```
+Put your [config.js](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js) file url where it says "path to config file", and put the [25Embed](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/latest.js) file url where it says "path to 25Embed file".
 ## History
 I first thought of the concept of 25Embed back when I was not so technologically inclined, when I would just embed things into google sites.
 I figured there had to be a way to prevent someone from so easily stealing your content, but I didn't know how to create something like that.
