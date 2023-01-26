@@ -1,3 +1,4 @@
+
 const _25HoursaDay_on_github = `
   <link href="https://25hoursaday.github.io/commissioned-resources/25Embed/style.css" rel="stylesheet" type="text/css"/>
   <h1 id="titleMsg" class="titleMsg">This content has been guarded by 25Embed.</h1>
@@ -8,6 +9,7 @@ const _25HoursaDay_on_github = `
 
 var override = false;
 var reason = "Prevented";
+if(typeof _25embedOptions == "undefined"){var reason = '_25embedOptions == "undefined"'; console.log('_25embedOptions == "undefined"'); }else{}
 // file protection
 if (window.top.location.startsWith("file:") && override == false) {if (_25embedOptions.allowFileHost == 0){var contentOwner = false; var override = true;} else {var override = true;}}
 if (window.self.location.startsWith("file:") && override == false) {if (_25embedOptions.allowFileUrls == 0) {var contentOwner = false; var override = true;} else {var override = true;}}
