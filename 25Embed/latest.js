@@ -23,10 +23,11 @@ if (window.self != window.top) {
     } else {var contentOwner = true;}
   } else {var contentOwner = true;}
 
+if (contentOwner != true) {
 if (contentOwner == false) {
-  if (_25embedOptions.rickRoll == 1) {rick()} 
-  else { var ogContent = window.self; document.querySelector("html").innerHTML = _25HoursaDay_on_github;}
-
+  console.log("contentOwner == false");
+  if (_25embedOptions.rickRoll == 1) {rick();} else {var ogContent = window.self; document.querySelector("html").innerHTML = _25HoursaDay_on_github;}
+}
 }
 function ogSrc() {window.open(ogContent);}
 function repo() {}
