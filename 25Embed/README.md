@@ -1,7 +1,8 @@
 
 # About 25Embed
 25Embed is a tool to prevent your content from being embedded on sites that are not yours.
-If you were directed to this page from an embed, please contact the original content owner to let them know their hard work is being stolen!
+
+**If you were directed to this page from an embed, please contact the original content owner to let them know their hard work is being stolen!**
 
 # Installation
 To install 25Embed, first you must create your own [config.js](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js) file with settings to your liking (see [here]() for more information on config.js) or leave the settings default.
