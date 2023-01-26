@@ -13,8 +13,8 @@ const _25HoursaDay_on_github = `
   <button id="repo" class="mBtn" onclick="repo()">More Information</button>
 `;
 var override = false;
-if (window.self.location.startsWith("file:") && override == false) {
-if (_25embedOptions.allowFileUrls == 0) {var contentOwner = false;}else{var contentOwner = true; var override = true;}
+if (window.self.location.startsWith("file:") && override == false || window.top.location.startsWith("file:") && override == false) {
+if (_25embedOptions.allowFileUrls == 0) {var contentOwner = false;} else {var contentOwner = true; var override = true;}
 }
   
 // check if the source content is NOT the top element
