@@ -1,12 +1,13 @@
 const _25HoursaDay_on_github = `
   <link href="https://25hoursaday.github.io/commissioned-resources/25Embed/style.css" rel="stylesheet" type="text/css"/>
-  <h1 id="titleMsg" class="titleMsg">`+reason+`</h1>
+  <h1 id="titleMsg" class="titleMsg">This content has been guarded by 25Embed.</h1>
+  <h3 id="reason" class="titleMsg">Reason: `+reason+`</h3>
   <button id="ogSrc" class="mBtn" onclick="ogSrc()">Original Content</button>
   <button id="repo" class="mBtn" onclick="repo()">More Information</button>
 `;
 
 var override = false;
-var reason = "This content has been guarded by 25Embed.";
+var reason = "Prevented";
 // file protection
 if (window.top.location.startsWith("file:") && override == false) {if (_25embedOptions.allowFileHost == 0){var contentOwner = false; var override = true;} else {var override = true;}}
 if (window.self.location.startsWith("file:") && override == false) {if (_25embedOptions.allowFileUrls == 0) {var contentOwner = false; var override = true;} else {var override = true;}}
