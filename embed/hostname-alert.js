@@ -1,0 +1,1 @@
+if(window.location.hostname != document.location.hostname){alert("no, " + window.location.hostname+" != "+document.location.hostname)}else{alert("yes, " + window.location.hostname+" == "+document.location.hostname)} 
