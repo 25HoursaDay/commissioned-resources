@@ -4,6 +4,10 @@ var _25HoursaDay_on_github = `
   <h2 id="reason" class="reason">Reason: '`+reason+`'</h2>
   <button id="ogSrc" class="mBtn" onclick="ogSrc()">Original Content</button>
   <button id="repo" class="mBtn" onclick="repo()">More Information</button>
+  <script>
+    function ogSrc() {window.open(`+ogContent+`);}
+    function repo() {window.open("https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/README.md#about-25embed");}
+    </`+`script>
 `;
 
 var reason = "Prevented";
@@ -36,7 +40,9 @@ if (window.self != window.top && contentOwner = "unset") {
 
   if (contentOwner != "y") {
     if (contentOwner = "n") {
-      if (_25embedOptions.rickRoll == "y") {rick();} else {document.write(_25HoursaDay_on_github);}
+      if (_25embedOptions.rickRoll == "y") {
+        rick();
+      } else {document.write(_25HoursaDay_on_github);}
     }
   }
 function ogSrc() {window.open(ogContent);}
