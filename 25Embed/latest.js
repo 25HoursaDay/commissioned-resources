@@ -14,30 +14,32 @@ var reason = "Prevented";
 var ogContent = self.location;
 var contentOwner = "unset";
 
-// file protection
+
 if (_25embedOptions.allowFileHost == "n" && contentOwner == "unset") {
   if (window.location.href.startsWith("file:") && contentOwner == "unset") {
-    var contentOwner = "n"; var reason = "Content is hosted on a file URL.";
+    var contentOwner = "n"; var reason = "Content is hosted on a file URL."; _25embedLaunch();
   }
 }
-
 if (window.self != window.top && contentOwner == "unset") {
   if (_25embedOptions.allowSameHost == "y") {
     if (window.self.location.hostname == window.top.location.hostname && contentOwner == "n") {
         var contentOwner = "y"; 
-    } else {var contentOwner = "n"; var reason = "Same host, different URL.";}
+    } else {var contentOwner = "n"; var reason = "Same host, different URL."; _25embedLaunch();}
   }
   var contentOwner = "n";
   var reason = "The embedded content does not belong to this website.";
+  _25embedLaunch();
 } else {var contentOwner = "y";}
-      
-  if (contentOwner != "y") {
-    if (contentOwner == "n") {
-      if (_25embedOptions.rickRoll == "n") {
-        document.write(_25HoursaDay_on_github);
-      } else {rick();}
+
+function _25embedLaunch() {
+    if (contentOwner != "y") {
+      if (contentOwner == "n") {
+        if (_25embedOptions.rickRoll == "n") {
+          document.write(_25HoursaDay_on_github);
+        } else {rick();}
+      }
     }
-  }
+}
 function ogSrc() {window.open(ogContent);}
 function repo() {window.open("https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/README.md#about-25embed");}
 function rick() {document.write(`<video width="100%" height="100%" autoplay loop>
@@ -48,4 +50,3 @@ function rick() {document.write(`<video width="100%" height="100%" autoplay loop
 </video>
 `
 );}
-
