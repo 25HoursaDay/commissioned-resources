@@ -1,11 +1,3 @@
-var _25HoursaDay_on_github = `
-  <link href="https://25hoursaday.github.io/commissioned-resources/25Embed/style.css" rel="stylesheet" type="text/css"/>
-  <h1 id="titleMsg" class="titleMsg">This content has been guarded by 25Embed.</h1>
-  <h2 id="reason" class="reason">Reason: '`+ reason +`'</h2>
-  <button id="ogSrc" class="mBtn" onclick="ogSrc()">Original Content</button>
-  <button id="repo" class="mBtn" onclick="repo()">More Information</button>
-`;
-
 var reason = "Prevented";
 var ogContent = self.location;
 var contentOwner = "unset";
@@ -26,6 +18,15 @@ if (window.self != window.top && contentOwner == "unset") {
   var reason = "The embedded content does not belong to this website.";
   _25embedLaunch();
 } else {var contentOwner = "y";}
+
+var _25HoursaDay_on_github = `
+  <link href="https://25hoursaday.github.io/commissioned-resources/25Embed/style.css" rel="stylesheet" type="text/css"/>
+  <h1 id="titleMsg" class="titleMsg">This content has been guarded by 25Embed.</h1>
+  <h2 id="reason" class="reason">Reason: '`+ reason +`'</h2>
+  <button id="ogSrc" class="mBtn" onclick="ogSrc()">Original Content</button>
+  <button id="repo" class="mBtn" onclick="repo()">More Information</button>
+`;
+
 
 function _25embedLaunch() {
     if (contentOwner != "y") {
