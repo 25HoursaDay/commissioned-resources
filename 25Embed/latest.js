@@ -1,8 +1,6 @@
 var reason = "Prevented";
 var ogContent = self.location;
 var contentOwner = "unset";
-
-
 if (_25embedOptions.allowFileHost == "n" && contentOwner == "unset") {
   if (window.location.href.startsWith("file:") && contentOwner == "unset") {
     var contentOwner = "n"; var reason = "Content is hosted on a file URL."; _25embedLaunch();
@@ -18,7 +16,6 @@ if (window.self != window.top && contentOwner == "unset") {
   var reason = "The embedded content does not belong to this website.";
   _25embedLaunch();
 } else {var contentOwner = "y";}
-
 var _25HoursaDay_on_github = `
   <link href="https://25hoursaday.github.io/commissioned-resources/25Embed/style.css" rel="stylesheet" type="text/css"/>
   <h1 id="titleMsg" class="titleMsg">This content has been guarded by 25Embed.</h1>
@@ -26,8 +23,6 @@ var _25HoursaDay_on_github = `
   <button id="ogSrc" class="mBtn" onclick="ogSrc()">Original Content</button>
   <button id="repo" class="mBtn" onclick="repo()">More Information</button>
 `;
-
-
 function _25embedLaunch() {
     if (contentOwner != "y") {
       if (contentOwner == "n") {
@@ -45,5 +40,4 @@ function rick() {document.innerHTML = `<video width="100%" height="100%" autopla
 <source src="https://25hoursaday.github.io/commissioned-resources/25Embed/rickroll-360p.mp4" type="video/mp4">
 <source src="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/rickroll-360p.mp4" type="video/mp4">
 </video>
-`
-);}
+`;}
