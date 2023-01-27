@@ -1,9 +1,9 @@
-// 0 is disabled, 1 is enabled
+// d is disabled, e is enabled
 const _25embedOptions = {
-rickRoll:0, // default set to 0
-allowSameHost:0, // default set to 1
-allowFileUrls:0, // default set to 0
-allowFileHost:0 // default set to 0
+rickRoll:"d", // default set to d
+allowSameHost:"d", // default set to e
+allowFileUrls:"d", // default set to d
+allowFileHost:"d" // default set to d
 };
 
 const _25embedAllowedUrls = {};
