@@ -18,10 +18,12 @@ if (window.self != window.top && contentOwner == "unset") {
 } else {var contentOwner = "y";}
 var _25HoursaDay_on_github = `
   <link href="https://25hoursaday.github.io/commissioned-resources/25Embed/style.css" rel="stylesheet" type="text/css"/>
+  <div id="_25embedScreen" class="_25embedScreen">
   <h1 id="titleMsg" class="titleMsg">This content has been guarded by 25Embed.</h1>
   <h2 id="reason" class="reason">Reason: '`+ reason +`'</h2>
   <button id="ogSrc" class="mBtn" onclick="ogSrc()">Original Content</button>
   <button id="repo" class="mBtn" onclick="repo()">More Information</button>
+  </div>
 `;
 function _25embedLaunch() {
     if (contentOwner != "y") {
