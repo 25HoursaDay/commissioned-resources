@@ -15,20 +15,20 @@ var ogContent = window.self.location;
 var contentOwner = "unset";
 
 // file protection
-if (_25embedOptions.allowFileHost == "n" && contentOwner = "unset") {
-  if (window.location.startsWith("file:") && contentOwner = "unset") {
+if (_25embedOptions.allowFileHost == "n" && contentOwner == "unset") {
+  if (window.location.startsWith("file:") && contentOwner == "unset") {
     var contentOwner = "n"; var reason = "Content is hosted on a file URL.";
   }
 }
 
 // check if the source content is NOT the top element
-if (window.self != window.top && contentOwner = "unset") {
+if (window.self != window.top && contentOwner == "unset") {
   
 // check if the referrer of the page is NOT the owner of the source content
-  if (!document.referrer.includes(self.location) && contentOwner = "unset") {
+  if (!document.referrer.includes(self.location) && contentOwner == "unset") {
     
 // check if the source content owner is embedding the source content and if so, check if the "allowSameHost" setting is enabled. 
-    if (window.self.location.hostname == window.top.location.hostname && contentOwner = "n") {
+    if (window.self.location.hostname == window.top.location.hostname && contentOwner == "n") {
       if (_25embedOptions.allowSameHost == "y") {
         var contentOwner = "unset"; var reason = "Same host, different URL.";} else {var contentOwner = "y";
       }
@@ -39,7 +39,7 @@ if (window.self != window.top && contentOwner = "unset") {
 
 
   if (contentOwner != "y") {
-    if (contentOwner = "n") {
+    if (contentOwner == "n") {
       if (_25embedOptions.rickRoll == "y") {
         rick();
       } else {document.write(_25HoursaDay_on_github);}
