@@ -11,7 +11,7 @@ var _25HoursaDay_on_github = `
 `;
 
 var reason = "Prevented";
-var ogContent = window.self.location;
+var ogContent = self.location;
 var contentOwner = "unset";
 
 // file protection
