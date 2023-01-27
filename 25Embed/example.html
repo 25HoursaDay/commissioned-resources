@@ -29,14 +29,14 @@ var _25HoursaDay_on_github = `
 var reason = "Prevented";
 var ogContent = self.location;
 var contentOwner = "unset";
-
+window.alert(self.location +"<-- loc  loc host-->  "+window.self.location.hostname+" top loc host --> "+window.top.location.hostname);
 // file protection
 if (_25embedOptions.allowFileHost == "n" && contentOwner == "unset") {
   if (window.location.href.startsWith("file:") && contentOwner == "unset") {
     var contentOwner = "n"; var reason = "Content is hosted on a file URL.";
   }
 }
-window.alert(self.location +"<-- loc  loc host-->  "+window.self.location.hostname+" top loc host --> "+window.top.location.hostname);
+
 // check if the source content is NOT the top element
 if (window.self != window.top && contentOwner == "unset") {
   
