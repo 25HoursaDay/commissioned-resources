@@ -16,7 +16,7 @@ var contentOwner = "unset";
 
 // file protection
 if (_25embedOptions.allowFileHost == "n" && contentOwner == "unset") {
-  if (window.location.startsWith("file:") && contentOwner == "unset") {
+  if (window.location.href.startsWith("file:") && contentOwner == "unset") {
     var contentOwner = "n"; var reason = "Content is hosted on a file URL.";
   }
 }
