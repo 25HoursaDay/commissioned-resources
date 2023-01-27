@@ -10,9 +10,13 @@ var override = false;
 var reason = "Prevented";
 
 // file protection
-if (window.top.location.startsWith("file:") && override == false) {if (_25embedOptions.allowFileHost == 0){var contentOwner = false; var override = true; var reason = "Content is embedded on a file URL."; console.log("_25embedOptions.allowFileHost == 0");} else {var override = true;}}
-if (window.self.location.startsWith("file:") && override == false) {if (_25embedOptions.allowFileUrls == 0) {var contentOwner = false; var override = true; var reason = "Content is hosted on a file URL."; console.log("_25embedOptions.allowFileHost == 0");} else {var override = true;}}
+if (_25embedOptions.allowFileHost == 1) {} else {
   
+if (window.top.location.startsWith("file:") && override == false) {var contentOwner = false; var override = true; var reason = "Content is embedded on a file URL."; console.log("_25embedOptions.allowFileHost == 0");} else {}  
+  
+if (window.self.location.startsWith("file:") && override == false) {var contentOwner = false; var override = true; var reason = "Content is hosted on a file URL."; console.log("_25embedOptions.allowFileHost == 0");} else {}
+}
+
 // check if the source content is NOT the top element
 if (window.self != window.top && override == false) {
     console.log("window.self != window.top");
