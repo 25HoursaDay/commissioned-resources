@@ -31,3 +31,7 @@
  .titleMsg:hover, .reason:hover {
   text-shadow:blue 0px 0px 30px;
   }
+ ._25embedScreen {
+  display: flex;
+  justify-content: center;
+  }
