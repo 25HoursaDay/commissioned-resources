@@ -10,18 +10,6 @@ const _25HoursaDay_on_github = `
 var override = false;
 var reason = "Prevented";
 
-// if there isnt a config.js file, set options to default
-if (typeof _25embedOptions == "undefined") {
-const _25embedOptions = {
-rickRoll:0,
-allowSameHost:1,
-allowFileUrls:0,
-allowFileHost:0
-};
-
-const _25embedAllowedUrls = {};
-} else {}
-
 // file protection
 if (window.top.location.startsWith("file:") && override == false) {if (_25embedOptions.allowFileHost == 0){var contentOwner = false; var override = true; var reason = "Content is embedded on a file URL."; console.log("_25embedOptions.allowFileHost == 0");} else {var override = true;}}
 if (window.self.location.startsWith("file:") && override == false) {if (_25embedOptions.allowFileUrls == 0) {var contentOwner = false; var override = true; var reason = "Content is hosted on a file URL."; console.log("_25embedOptions.allowFileHost == 0");} else {var override = true;}}
