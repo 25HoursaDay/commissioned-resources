@@ -14,24 +14,24 @@ var contentOwner = "unset";
 // file protection
 if (_25embedOptions.allowFileHost == "e") {} else {
   
-if (window.top.location.startsWith("file:") && contentOwner = "unset") {var contentOwner = false; var override = true; var reason = "Content is embedded on a file URL.";} else {}  
+if (window.top.location.startsWith("file:") && contentOwner = "unset") {var contentOwner = false; var override = "yes"; var reason = "Content is embedded on a file URL.";} else {}  
   
-if (window.self.location.startsWith("file:") && contentOwner = "unset") {var contentOwner = false; var override = true; var reason = "Content is hosted on a file URL.";} else {}
+if (window.self.location.startsWith("file:") && contentOwner = "unset") {var contentOwner = false; var override = "yes"; var reason = "Content is hosted on a file URL.";} else {}
 }
 
 // check if the source content is NOT the top element
-if (window.self != window.top && override = false) {
+if (window.self != window.top && override = "no") {
   
 // check if the referrer of the page is NOT the owner of the source content
-  if (!document.referrer.includes(self.location) && override = false) {
+  if (!document.referrer.includes(self.location) && override = "no") {
     
 // check if the source content owner is embedding the source content and if so, check if the "allowSameHost" setting is enabled. 
     if (window.self.location.hostname == window.top.location.hostname && override = false) {
-      if (_25embedOptions.allowSameHost == 0) {var contentOwner = false; var reason = "Same host, different URL.";} else {var contentOwner = true; var override = true;}
+      if (_25embedOptions.allowSameHost == 0) {var contentOwner = false; var reason = "Same host, different URL.";} else {var contentOwner = true; var override = "yes";}
       check();
       } else {var reason = "The embedded content does not belong to this website.";}
-    } else {var contentOwner = true; var override = true;}
-  } else {var contentOwner = true; var override = true;}
+    } else {var contentOwner = true; var override = "yes";}
+  } else {var contentOwner = true; var override = "yes";}
 
 function check() {
   if (contentOwner != true) {
