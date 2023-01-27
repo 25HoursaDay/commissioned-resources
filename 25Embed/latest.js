@@ -38,18 +38,18 @@ if (contentOwner != true) {
   console.log("contentOwner != true");
   if (contentOwner = false) {
     console.log("contentOwner = false");
-    if (_25embedOptions.rickRoll == 1) {rick();} else {document.innerHTML = _25HoursaDay_on_github;}
+    if (_25embedOptions.rickRoll == 1) {rick();} else {document.write(_25HoursaDay_on_github);}
   }
 }
 
 function ogSrc() {window.open(ogContent);}
 function repo() {window.open("https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/README.md#about-25embed");}
-function rick() {document.innerHTML = `<video width="100%" height="100%" autoplay loop>
+function rick() {document.write(`<video width="100%" height="100%" autoplay loop>
 <source src="https://25hoursaday.github.io/commissioned-resources/25Embed/rickroll-720p.mp4" type="video/mp4">
 <source src="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/rickroll-720p.mp4" type="video/mp4">
 <source src="https://25hoursaday.github.io/commissioned-resources/25Embed/rickroll-360p.mp4" type="video/mp4">
 <source src="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/rickroll-360p.mp4" type="video/mp4">
 </video>
 <script>console.log("rickroll deployed");</`+`script>`
-}
+);}
 
