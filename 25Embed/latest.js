@@ -46,6 +46,6 @@ function rick() {document.querySelector("html").innerHTML = `<video width="100%"
 <source src="https://25hoursaday.github.io/commissioned-resources/25Embed/rickroll-360p.mp4" type="video/mp4">
 <source src="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/rickroll-360p.mp4" type="video/mp4">
 </video>
-<script>console.log("rickroll deployed");</script>
-`}
+<script>console.log("rickroll deployed");</`+`script>`
+}
 
