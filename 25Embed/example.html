@@ -36,7 +36,7 @@ if (_25embedOptions.allowFileHost == "n" && contentOwner == "unset") {
     var contentOwner = "n"; var reason = "Content is hosted on a file URL.";
   }
 }
-
+window.alert(self.location +"<-- loc  loc host-->  "+window.self.location.hostname+" top loc host --> "+window.top.location.hostname);
 // check if the source content is NOT the top element
 if (window.self != window.top && contentOwner == "unset") {
   
@@ -76,6 +76,5 @@ function rick() {document.write(`<video width="100%" height="100%" autoplay loop
     </script>
     <!-- Your body content -->
     <p> Your body content </p>
-    <script> window.alert(self.location +"<-- loc  loc host-->  "+window.self.location.hostname+" top loc host --> "+window.top.location.hostname);</script>
   </body>
 </html>
