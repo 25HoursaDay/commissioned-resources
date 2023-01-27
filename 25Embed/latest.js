@@ -21,28 +21,21 @@ if (_25embedOptions.allowFileHost == "n" && contentOwner == "unset") {
   }
 }
 
-// check if the source content is NOT the top element
 if (window.self != window.top && contentOwner == "unset") {
-  
-// check if the referrer of the page is NOT the owner of the source content
-  if (!document.referrer.includes(self.location) && contentOwner == "unset") {
-    
-// check if the source content owner is embedding the source content and if so, check if the "allowSameHost" setting is enabled. 
+  if (_25embedOptions.allowSameHost == "y") {
     if (window.self.location.hostname == window.top.location.hostname && contentOwner == "n") {
-      if (_25embedOptions.allowSameHost == "y") {
-        var contentOwner = "unset"; var reason = "Same host, different URL.";} else {var contentOwner = "y";
-      }
-      
-    } else {var reason = "The embedded content does not belong to this website.";}
-  } else {var contentOwner = "y";}
+        var contentOwner = "y"; 
+    } else {var contentOwner = "n"; var reason = "Same host, different URL.";}
+  }
+  var contentOwner = "n";
+  var reason = "The embedded content does not belong to this website.";
 } else {var contentOwner = "y";}
-
-
+      
   if (contentOwner != "y") {
     if (contentOwner == "n") {
-      if (_25embedOptions.rickRoll == "y") {
-        rick();
-      } else {document.write(_25HoursaDay_on_github);}
+      if (_25embedOptions.rickRoll == "n") {
+        document.write(_25HoursaDay_on_github);
+      } else {rick();}
     }
   }
 function ogSrc() {window.open(ogContent);}
