@@ -1,5 +1,9 @@
 if (_25embedOptions) {
-
+  if (_25embedOptions.rickRoll == "n" || _25embedOptions.rickRoll == "y") {} else {_25embedOptions.rickRoll = "n";}
+  if (_25embedOptions.allowHost == "n" || _25embedOptions.allowHost == "y") {} else {_25embedOptions.allowHost = "n";}
+  if (_25embedOptions.allowHost == "n" || _25embedOptions.allowHost == "y") {} else {_25embedOptions.allowHost = "n";}
+  if (_25embedOptions.allowHost == "n" || _25embedOptions.allowHost == "y") {} else {_25embedOptions.allowHost = "n";}
+  if (_25embedOptions.allowHost == "n" || _25embedOptions.allowHost == "y") {} else {_25embedOptions.allowHost = "n";}
 } else {
 const _25embedOptions = {rickRoll:"n",allowSameHost:"n",allowFileHost:"n",allowDataHost:"y",allowBlobHost:"y"};
   }
