@@ -42,9 +42,7 @@ function _25embedLaunch() {
     if (contentOwner != "y") {
         if (contentOwner == "n") {
           if (_25embedOptions.rickRoll == "y") {rick();} 
-            else {
-              document.innerHTML = _25HoursaDay_on_github;
-            }
+          else {document.innerHTML = _25HoursaDay_on_github;}
         } else {var reason = "Content owner is undefined, contact content owner."; document.innerHTML = _25HoursaDay_on_github;}
     }
 }
