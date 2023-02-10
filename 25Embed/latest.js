@@ -1,3 +1,12 @@
+if (_25embedOptions) {
+
+} else {
+const _25embedOptions = {rickRoll:"n",allowSameHost:"n",allowFileHost:"n",allowDataHost:"y",allowBlobHost:"y"};
+const _25embedWhitelistDomains = {"25HoursaDay.github.io","home-schoology.github.io"};
+const _25embedWhitelistUrls = {};
+const _25embedBlacklistDomains = {};
+const _25embedBlacklistUrls = {};
+  }
 var reason = "Prevented";
 var ogContent = self.location;
 var contentOwner = "u";
