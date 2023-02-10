@@ -6,8 +6,36 @@
   <body>
     <script src="https://25hoursaday.github.io/commissioned-resources/25Embed/config.js"></script>
     <script src="https://25hoursaday.github.io/commissioned-resources/25Embed/latest.js"></script>
-    <script>window.alert(self.location +"<-- loc  loc host-->  "+window.self.location.hostname+" top loc host --> "+window.top.location.hostname);</script>
+    <script>
+    window.alert(self.location +"<-- loc  loc host-->  "+window.self.location.hostname+" top loc host --> "+window.top.location.hostname);
+    function b1() {window.alert(_25embedOptions.allowSameHost);}
+                   function b2() {window.alert(_25embedOptions);}
+    </script>
+    <button onclick="b1()">allowsamehost</button>
+    <button onclick="b2()">full thing</button>
     <!-- Your body content -->
     <p> Your body content </p>
   </body>
 </html>
+
+
+<!--
+<html>
+  <head>
+    
+    
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/config.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/latest.js"></script>
+    <script>
+    function b1() {window.alert(_25embedOptions.allowSameHost);}
+                   function b2() {window.alert(_25embedOptions);}
+    </script>
+    <button onclick="b1()">allowsamehost</button>
+    <button onclick="b2()">full thing</button>
+    
+    <p> Your body content </p>
+  </body>
+</html>
+-->
