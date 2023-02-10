@@ -1,6 +1,15 @@
 var reason = "Prevented";
 var ogContent = self.location;
 var contentOwner = "u";
+var _25HoursaDay_on_github = `
+  <link href="https://25hoursaday.github.io/commissioned-resources/25Embed/style.css" rel="stylesheet" type="text/css"/>
+  <div id="_25embedScreen" class="_25embedScreen">
+  <h1 id="titleMsg" class="titleMsg">This content has been guarded by 25Embed.</h1>
+  <h2 id="reason" class="reason">Reason: '` + reason + `'</h2>
+  <button id="ogSrc" class="mBtn" onclick="ogSrc()">Original Content</button>
+  <button id="repo" class="mBtn" onclick="repo()">More Information</button>
+  </div>
+`;
 if (_25embedOptions.allowFileHost == "n" && contentOwner == "u") {
   if (window.location.href.startsWith("file:") && contentOwner == "u") {
     var contentOwner = "n"; var reason = "Content was loaded with a file URL."; _25embedLaunch();
@@ -28,24 +37,15 @@ if (contentOwner == "u") {
     var contentOwner = "n"; var reason = "The embedded content does not belong to this website."; _25embedLaunch();
   } else {var contentOwner = "y";}
 }
-var _25HoursaDay_on_github = `
-  <link href="https://25hoursaday.github.io/commissioned-resources/25Embed/style.css" rel="stylesheet" type="text/css"/>
-  <div id="_25embedScreen" class="_25embedScreen">
-  <h1 id="titleMsg" class="titleMsg">This content has been guarded by 25Embed.</h1>
-  <h2 id="reason" class="reason">Reason: '` + reason + `'</h2>
-  <button id="ogSrc" class="mBtn" onclick="ogSrc()">Original Content</button>
-  <button id="repo" class="mBtn" onclick="repo()">More Information</button>
-  </div>
-`;
+
 function _25embedLaunch() {
     if (contentOwner != "y") {
-      if (contentOwner != "u") {
         if (contentOwner == "n") {
-          if (_25embedOptions.rickRoll == "n") {
-            document.innerHTML = _25HoursaDay_on_github;
-          } else {rick();}
-        } else {var reason = "Content owner undefined, contact content owner."; document.innerHTML = _25HoursaDay_on_github;}
-      } else {var reason = "Content owner undefined, contact content owner."; document.innerHTML = _25HoursaDay_on_github;}
+          if (_25embedOptions.rickRoll == "y") {rick();} 
+            else {
+              document.innerHTML = _25HoursaDay_on_github;
+            }
+        } else {var reason = "Content owner is undefined, contact content owner."; document.innerHTML = _25HoursaDay_on_github;}
     }
 }
 function ogSrc() {window.open(ogContent);}
