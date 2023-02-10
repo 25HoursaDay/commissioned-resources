@@ -16,16 +16,18 @@ if (_25embedOptions.allowBlobHost == "n" && contentOwner == "u") {
     var contentOwner = "n"; var reason = "Content was loaded with a blob URL."; _25embedLaunch();
   }
 }
-if (window.self != window.top && contentOwner == "u") {
-  if (_25embedOptions.allowSameHost == "y") {
-    if (window.self.location.hostname == window.top.location.hostname && contentOwner == "u") {var contentOwner = "y";
-    } else {var contentOwner = "n"; var reason = "Same host, different URL."; _25embedLaunch();}
-  }
-  var contentOwner = "n";
-  var reason = "The embedded content does not belong to this website.";
-  _25embedLaunch();
-} else {var contentOwner = "y";}
 
+if (contentOwner == "u") {
+  if (_25embedOptions.allowSameHost == "y") {
+    if (window.self.location.hostname == window.top.location.hostname) {var contentOwner = "y";
+    } else {var contentOwner = "n"; var reason = "Original content not hosted on this webpage."; _25embedLaunch();}
+  }
+}
+if (contentOwner == "u") {
+  if (window.self != window.top) {
+    var contentOwner = "n"; var reason = "The embedded content does not belong to this website."; _25embedLaunch();
+  } else {var contentOwner = "y";}
+}
 var _25HoursaDay_on_github = `
   <link href="https://25hoursaday.github.io/commissioned-resources/25Embed/style.css" rel="stylesheet" type="text/css"/>
   <div id="_25embedScreen" class="_25embedScreen">
