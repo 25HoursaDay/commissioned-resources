@@ -3,19 +3,29 @@ var ogContent = self.location;
 var contentOwner = "u";
 if (_25embedOptions.allowFileHost == "n" && contentOwner == "u") {
   if (window.location.href.startsWith("file:") && contentOwner == "u") {
-    var contentOwner = "n"; var reason = "Content is hosted on a file URL."; _25embedLaunch();
+    var contentOwner = "n"; var reason = "Content was loaded with a file URL."; _25embedLaunch();
+  }
+}
+if (_25embedOptions.allowDataHost == "n" && contentOwner == "u") {
+  if (window.location.href.startsWith("data:") && contentOwner == "u") {
+    var contentOwner = "n"; var reason = "Content was loaded with a data URL."; _25embedLaunch();
+  }
+}
+if (_25embedOptions.allowBlobHost == "n" && contentOwner == "u") {
+  if (window.location.href.startsWith("blob:") && contentOwner == "u") {
+    var contentOwner = "n"; var reason = "Content was loaded with a blob URL."; _25embedLaunch();
   }
 }
 if (window.self != window.top && contentOwner == "u") {
   if (_25embedOptions.allowSameHost == "y") {
-    if (window.self.location.hostname == window.top.location.hostname && contentOwner == "u") {
-        var contentOwner = "y"; 
+    if (window.self.location.hostname == window.top.location.hostname && contentOwner == "u") {var contentOwner = "y";
     } else {var contentOwner = "n"; var reason = "Same host, different URL."; _25embedLaunch();}
   }
   var contentOwner = "n";
   var reason = "The embedded content does not belong to this website.";
   _25embedLaunch();
 } else {var contentOwner = "y";}
+
 var _25HoursaDay_on_github = `
   <link href="https://25hoursaday.github.io/commissioned-resources/25Embed/style.css" rel="stylesheet" type="text/css"/>
   <div id="_25embedScreen" class="_25embedScreen">
@@ -27,11 +37,13 @@ var _25HoursaDay_on_github = `
 `;
 function _25embedLaunch() {
     if (contentOwner != "y") {
-      if (contentOwner == "n") {
-        if (_25embedOptions.rickRoll == "n") {
-          document.innerHTML = _25HoursaDay_on_github;
-        } else {rick();}
-      }
+      if (contentOwner != "u") {
+        if (contentOwner == "n") {
+          if (_25embedOptions.rickRoll == "n") {
+            document.innerHTML = _25HoursaDay_on_github;
+          } else {rick();}
+        } else {var reason = "Content owner undefined, contact content owner."; document.innerHTML = _25HoursaDay_on_github;}
+      } else {var reason = "Content owner undefined, contact content owner."; document.innerHTML = _25HoursaDay_on_github;}
     }
 }
 function ogSrc() {window.open(ogContent);}
