@@ -1,14 +1,14 @@
 var reason = "Prevented";
 var ogContent = self.location;
-var contentOwner = "unset";
-if (_25embedOptions.allowFileHost == "n" && contentOwner == "unset") {
-  if (window.location.href.startsWith("file:") && contentOwner == "unset") {
+var contentOwner = "u";
+if (_25embedOptions.allowFileHost == "n" && contentOwner == "u") {
+  if (window.location.href.startsWith("file:") && contentOwner == "u") {
     var contentOwner = "n"; var reason = "Content is hosted on a file URL."; _25embedLaunch();
   }
 }
-if (window.self != window.top && contentOwner == "unset") {
+if (window.self != window.top && contentOwner == "u") {
   if (_25embedOptions.allowSameHost == "y") {
-    if (window.self.location.hostname == window.top.location.hostname && contentOwner == "n") {
+    if (window.self.location.hostname == window.top.location.hostname && contentOwner == "u") {
         var contentOwner = "y"; 
     } else {var contentOwner = "n"; var reason = "Same host, different URL."; _25embedLaunch();}
   }
