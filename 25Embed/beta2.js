@@ -1,10 +1,4 @@
-if (_25embed.settings) {
-  if (_25embed.settings.rickRoll == "n" || _25embed.settings.rickRoll == "y") {} else {_25embed.settings.rickRoll = "n";}
-  if (_25embed.settings.perms.SameHost == "n" || _25embed.settings.perms.SameHost == "y") {} else {_25embed.settings.perms.SameHost = "y";}
-  if (_25embed.settings.perms.FileHost == "n" || _25embed.settings.perms.FileHost == "y") {} else {_25embed.settings.perms.FileHost = "n";}
-  if (_25embed.settings.perms.DataHost == "n" || _25embed.settings.perms.DataHost == "y") {} else {_25embed.settings.perms.DataHost = "y";}
-  if (_25embed.settings.perms.BlobHost == "n" || _25embed.settings.perms.BlobHost == "y") {} else {_25embed.settings.perms.BlobHost = "y";}
-} else {
+if (!_25embed) {
 const _25embed = {
   settings: {
     
@@ -26,13 +20,26 @@ const _25embed = {
       blacklist: []
     }
 };
-
+} else {
+if (_25embed.settings) {
+if (!_25embed.settings.perms) {_25embed.settings.push("perms");}
+  if (!_25embed.settings.rickRoll) {_25embed.settings.push("rickRoll");}
+    if (_25embed.settings.rickRoll == "n" || _25embed.settings.rickRoll == "y") {} else {_25embed.settings.rickRoll = "n";}
+  if (!_25embed.settings.perms.SameHost) {_25embed.settings.perms.push("SameHost");}
+    if (_25embed.settings.perms.SameHost == "n" || _25embed.settings.perms.SameHost == "y") {} else {_25embed.settings.perms.SameHost = "y";}
+  if (!_25embed.settings.perms.FileHost) {_25embed.settings.perms.push("FileHost");}
+    if (_25embed.settings.perms.FileHost == "n" || _25embed.settings.perms.FileHost == "y") {} else {_25embed.settings.perms.FileHost = "n";}
+  if (!_25embed.settings.perms.DataHost) {_25embed.settings.perms.push("DataHost");}
+    if (_25embed.settings.perms.DataHost == "n" || _25embed.settings.perms.DataHost == "y") {} else {_25embed.settings.perms.DataHost = "y";}
+  if (!_25embed.settings.perms.BlobHost) {_25embed.settings.perms.push("BlobHost");}
+    if (_25embed.settings.perms.BlobHost == "n" || _25embed.settings.perms.BlobHost == "y") {} else {_25embed.settings.perms.BlobHost = "y";}
   }
+}
+if (!_25embed.domains) {_25embed.push("domains"); _25embed.domains.push("whitelist"); _25embed.domains.push("blacklist"); _25embed.domains.whitelist = ["25HoursaDay.github.io","home-schoology.github.io"]; _25embed.domains.blacklist = [];}
 if (_25embed.domains.whitelist) {
   _25embed.domains.whitelist.push("25HoursaDay.github.io");
   _25embed.domains.whitelist.push("home-schoology.github.io");
-} else {const _25embed.domains.whitelist = ["25HoursaDay.github.io","home-schoology.github.io"];}
-const _25embed.domains.blacklist = [];
+}
 
 var reason = "Prevented";
 var ogContent = self.location;
