@@ -33,7 +33,19 @@ if (!_25embed.settings.perms) {_25embed.settings.push("perms");}
     if (_25embed.settings.perms.DataHost == "n" || _25embed.settings.perms.DataHost == "y") {} else {_25embed.settings.perms.DataHost = "y";}
   if (!_25embed.settings.perms.BlobHost) {_25embed.settings.perms.push("BlobHost");}
     if (_25embed.settings.perms.BlobHost == "n" || _25embed.settings.perms.BlobHost == "y") {} else {_25embed.settings.perms.BlobHost = "y";}
+  } 
+  else {_25embed.push("settings"); 
+    _25embed.settings = {    
+    rickRoll:"n", // default set to n
+    
+    perms: {
+      SameHost:"n", // default set to y
+      FileHost:"n", // default set to n
+      DataHost:"y", // default set to y
+      BlobHost:"y", // default set to y
+    },
   }
+ }
 if (!_25embed.domains) {
   _25embed.push("domains"); 
   _25embed.domains.push("whitelist"); 
