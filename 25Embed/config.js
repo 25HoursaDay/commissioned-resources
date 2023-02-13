@@ -15,8 +15,8 @@ const _25embed = {
       blacklist: []
     },
     urls: {
-      whitelist: {},
-      blacklist: {}
+      whitelist: [],
+      blacklist: []
     }
 };
 
