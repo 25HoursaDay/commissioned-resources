@@ -65,6 +65,7 @@ if (!_25embed.domains) {
     _25embed.domains.blacklist = [];
   }
 }
+if (!_25embed.urls) {_25embed.push("urls"); _25embed.urls.push("whitelist"); _25embed.urls.push("blacklist");}
 }
 
 var reason = "Prevented";
