@@ -1,16 +1,17 @@
 if (_25embedOptions) {
   if (_25embedOptions.rickRoll == "n" || _25embedOptions.rickRoll == "y") {} else {_25embedOptions.rickRoll = "n";}
-  if (_25embedOptions.allowHost == "n" || _25embedOptions.allowHost == "y") {} else {_25embedOptions.allowHost = "n";}
-  if (_25embedOptions.allowHost == "n" || _25embedOptions.allowHost == "y") {} else {_25embedOptions.allowHost = "n";}
-  if (_25embedOptions.allowHost == "n" || _25embedOptions.allowHost == "y") {} else {_25embedOptions.allowHost = "n";}
-  if (_25embedOptions.allowHost == "n" || _25embedOptions.allowHost == "y") {} else {_25embedOptions.allowHost = "n";}
+  if (_25embedOptions.allowSameHost == "n" || _25embedOptions.allowSameHost == "y") {} else {_25embedOptions.allowSameHost = "y";}
+  if (_25embedOptions.allowFileHost == "n" || _25embedOptions.allowFileHost == "y") {} else {_25embedOptions.allowFileHost = "n";}
+  if (_25embedOptions.allowDataHost == "n" || _25embedOptions.allowDataHost == "y") {} else {_25embedOptions.allowDataHost = "y";}
+  if (_25embedOptions.allowBlobHost == "n" || _25embedOptions.allowBlobHost == "y") {} else {_25embedOptions.allowBlobHost = "y";}
 } else {
-const _25embedOptions = {rickRoll:"n",allowSameHost:"n",allowFileHost:"n",allowDataHost:"y",allowBlobHost:"y"};
+const _25embedOptions = {rickRoll:"n",allowSameHost:"y",allowFileHost:"n",allowDataHost:"y",allowBlobHost:"y"};
   }
-const _25embedWhitelistDomains = {"25HoursaDay.github.io","home-schoology.github.io"};
-const _25embedWhitelistUrls = {};
+if (_25embedWhitelistDomains) {
+  _25embedWhitelistDomains.push("25HoursaDay.github.io");
+  _25embedWhitelistDomains.push("home-schoology.github.io");
+} else {const _25embedWhitelistDomains = {"25HoursaDay.github.io","home-schoology.github.io"};}
 const _25embedBlacklistDomains = {};
-const _25embedBlacklistUrls = {};
 
 var reason = "Prevented";
 var ogContent = self.location;
