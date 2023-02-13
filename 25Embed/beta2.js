@@ -34,11 +34,7 @@ if (!_25embed.settings.perms) {_25embed.settings.push("perms");}
   if (!_25embed.settings.perms.BlobHost) {_25embed.settings.perms.push("BlobHost");}
     if (_25embed.settings.perms.BlobHost == "n" || _25embed.settings.perms.BlobHost == "y") {} else {_25embed.settings.perms.BlobHost = "y";}
   }
-}
-if (!_25embed.domains) {_25embed.push("domains"); _25embed.domains.push("whitelist"); _25embed.domains.push("blacklist"); _25embed.domains.whitelist = ["25HoursaDay.github.io","home-schoology.github.io"]; _25embed.domains.blacklist = [];}
-if (_25embed.domains.whitelist) {
-  _25embed.domains.whitelist.push("25HoursaDay.github.io");
-  _25embed.domains.whitelist.push("home-schoology.github.io");
+if (!_25embed.domains) {_25embed.push("domains"); _25embed.domains.push("whitelist"); _25embed.domains.push("blacklist"); _25embed.domains.whitelist = ["25HoursaDay.github.io","home-schoology.github.io"]; _25embed.domains.blacklist = [];} else {}
 }
 
 var reason = "Prevented";
@@ -53,24 +49,24 @@ var _25HoursaDay_on_github = `
   <button id="repo" class="mBtn" onclick="repo()">More Information</button>
   </div>
 `;
-if (_25embed.settings.perms.allowFileHost == "n" && contentOwner == "u") {
+if (_25embed.settings.perms.FileHost == "n" && contentOwner == "u") {
   if (window.location.href.startsWith("file:") && contentOwner == "u") {
     var contentOwner = "n"; var reason = "Content was loaded with a file URL."; _25embedLaunch();
   }
 }
-if (_25embed.settings.perms.allowDataHost == "n" && contentOwner == "u") {
+if (_25embed.settings.perms.DataHost == "n" && contentOwner == "u") {
   if (window.location.href.startsWith("data:") && contentOwner == "u") {
     var contentOwner = "n"; var reason = "Content was loaded with a data URL."; _25embedLaunch();
   }
 }
-if (_25embed.settings.perms.allowBlobHost == "n" && contentOwner == "u") {
+if (_25embed.settings.perms.BlobHost == "n" && contentOwner == "u") {
   if (window.location.href.startsWith("blob:") && contentOwner == "u") {
     var contentOwner = "n"; var reason = "Content was loaded with a blob URL."; _25embedLaunch();
   }
 }
 
 if (contentOwner == "u") {
-  if (_25embed.settings.perms.allowSameHost == "y") {
+  if (_25embed.settings.perms.SameHost == "y") {
     if (window.self.location.hostname == window.top.location.hostname) {var contentOwner = "y";
     } else {var contentOwner = "n"; var reason = "Original content not hosted on this webpage."; _25embedLaunch();}
   }
