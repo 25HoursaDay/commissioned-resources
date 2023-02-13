@@ -47,11 +47,12 @@ if (!_25embed.domains) {
   } else {
     _25embed.domains.whitelist.push("25HoursaDay.github.io"); 
     _25embed.domains.whitelist.push("home-schoology.github.io");}
-}
+
    if (!_25embed.domains.blacklist){
     _25embed.domains.push("blacklist");
     _25embed.domains.blacklist = [];
   }
+}
 }
 
 var reason = "Prevented";
