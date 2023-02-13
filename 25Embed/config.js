@@ -3,7 +3,7 @@ const _25embed = {
     
     rickRoll:"n", // default set to n
     
-    allow: {
+    perms: {
       SameHost:"n", // default set to y
       FileHost:"n", // default set to n
       DataHost:"y", // default set to y
