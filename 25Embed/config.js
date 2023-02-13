@@ -1,5 +1,5 @@
 const _25embed = {
-  options: {
+  settings: {
     
     rickRoll:"n", // default set to n
     
@@ -9,18 +9,15 @@ const _25embed = {
       DataHost:"y", // default set to y
       BlobHost:"y", // default set to y
     },
-
-    
+  },
     domains: {
       whitelist: {"25HoursaDay.github.io","home-schoology.github.io"},
       blacklist: {}
     },
-    
     urls: {
       whitelist: {},
       blacklist: {}
     }
-  }
 };
 
 
