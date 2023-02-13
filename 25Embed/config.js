@@ -1,4 +1,9 @@
-// n is disabled, y is enabled
+const _25embed = {
+  
+}
+
+
+/ n is disabled, y is enabled
 const _25embedOptions = {
 rickRoll:"n", // default set to n
 allowSameHost:"n", // default set to y
