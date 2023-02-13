@@ -5,13 +5,34 @@ if (_25embed.settings) {
   if (_25embed.settings.perms.DataHost == "n" || _25embed.settings.perms.DataHost == "y") {} else {_25embed.settings.perms.DataHost = "y";}
   if (_25embed.settings.perms.BlobHost == "n" || _25embed.settings.perms.BlobHost == "y") {} else {_25embed.settings.perms.BlobHost = "y";}
 } else {
-const _25embedOptions = {rickRoll:"n",allowSameHost:"y",allowFileHost:"n",allowDataHost:"y",allowBlobHost:"y"};
+const _25embed = {
+  settings: {
+    
+    rickRoll:"n", // default set to n
+    
+    perms: {
+      SameHost:"n", // default set to y
+      FileHost:"n", // default set to n
+      DataHost:"y", // default set to y
+      BlobHost:"y", // default set to y
+    },
+  },
+    domains: {
+      whitelist: ["25HoursaDay.github.io","home-schoology.github.io"],
+      blacklist: []
+    },
+    urls: {
+      whitelist: [],
+      blacklist: []
+    }
+};
+
   }
-if (_25embedWhitelistDomains) {
-  _25embedWhitelistDomains.push("25HoursaDay.github.io");
-  _25embedWhitelistDomains.push("home-schoology.github.io");
-} else {const _25embedWhitelistDomains = {"25HoursaDay.github.io","home-schoology.github.io"};}
-const _25embedBlacklistDomains = {};
+if (_25embed.domains.whitelist) {
+  _25embed.domains.whitelist.push("25HoursaDay.github.io");
+  _25embed.domains.whitelist.push("home-schoology.github.io");
+} else {const _25embed.domains.whitelist = ["25HoursaDay.github.io","home-schoology.github.io"];}
+const _25embed.domains.blacklist = [];
 
 var reason = "Prevented";
 var ogContent = self.location;
