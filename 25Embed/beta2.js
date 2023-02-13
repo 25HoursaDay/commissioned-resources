@@ -34,7 +34,24 @@ if (!_25embed.settings.perms) {_25embed.settings.push("perms");}
   if (!_25embed.settings.perms.BlobHost) {_25embed.settings.perms.push("BlobHost");}
     if (_25embed.settings.perms.BlobHost == "n" || _25embed.settings.perms.BlobHost == "y") {} else {_25embed.settings.perms.BlobHost = "y";}
   }
-if (!_25embed.domains) {_25embed.push("domains"); _25embed.domains.push("whitelist"); _25embed.domains.push("blacklist"); _25embed.domains.whitelist = ["25HoursaDay.github.io","home-schoology.github.io"]; _25embed.domains.blacklist = [];} else {}
+if (!_25embed.domains) {
+  _25embed.push("domains"); 
+  _25embed.domains.push("whitelist"); 
+  _25embed.domains.push("blacklist"); 
+  _25embed.domains.whitelist = ["25HoursaDay.github.io","home-schoology.github.io"]; 
+  _25embed.domains.blacklist = [];
+} else {
+  if (!_25embed.domains.whitelist){
+    _25embed.domains.push("whitelist");
+    _25embed.domains.whitelist = ["25HoursaDay.github.io","home-schoology.github.io"];
+  } else {
+    _25embed.domains.whitelist.push("25HoursaDay.github.io"); 
+    _25embed.domains.whitelist.push("home-schoology.github.io");}
+}
+   if (!_25embed.domains.blacklist){
+    _25embed.domains.push("blacklist");
+    _25embed.domains.blacklist = [];
+  }
 }
 
 var reason = "Prevented";
