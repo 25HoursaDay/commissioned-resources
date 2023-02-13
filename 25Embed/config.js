@@ -11,8 +11,8 @@ const _25embed = {
     },
   },
     domains: {
-      whitelist: {"25HoursaDay.github.io","home-schoology.github.io"},
-      blacklist: {}
+      whitelist: ["25HoursaDay.github.io","home-schoology.github.io"],
+      blacklist: []
     },
     urls: {
       whitelist: {},
@@ -31,5 +31,5 @@ allowBlobHost:"y" // default set to y
 };
 
 
-const _25embedWhitelistDomains = {"25HoursaDay.github.io","home-schoology.github.io"}; // domains allowed to embed content, defaulted to blank
-const _25embedBlacklistDomains = {}; // domains not allowed to embed content, defaulted to none
+const _25embedWhitelistDomains = ["25HoursaDay.github.io","home-schoology.github.io"]; // domains allowed to embed content, defaulted to blank
+const _25embedBlacklistDomains = []; // domains not allowed to embed content, defaulted to none
