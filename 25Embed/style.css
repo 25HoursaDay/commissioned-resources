@@ -9,6 +9,12 @@
   -webkit-text-stroke-color:darkblue;
   text-shadow:darkblue 0px 0px 15px;
   user-select: none;
+  
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
   } 
  .mBtn {
   border:4px solid blue;
@@ -31,11 +37,4 @@
  .titleMsg:hover, .reason:hover {
   text-shadow:blue 0px 0px 30px;
   }
- html {
-  /* Credit: https://codepen.io/iamnotsam/pen/mdRVpK */
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  }
+
