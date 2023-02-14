@@ -31,7 +31,7 @@
  .titleMsg:hover, .reason:hover {
   text-shadow:blue 0px 0px 30px;
   }
- ._25embedScreen {
+ html {
   /* Credit: https://codepen.io/iamnotsam/pen/mdRVpK */
   position: absolute;
   left: 50%;
