@@ -72,7 +72,7 @@ var reason = "Prevented";
 var ogContent = self.location;
 var contentOwner = "u";
 var _25HoursaDay_on_github = `
-  <link href="https://25hoursaday.github.io/commissioned-resources/25Embed/style.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/style.css" rel="stylesheet" type="text/css"/>
   <div id="_25embedScreen" class="_25embedScreen">
   <h1 id="titleMsg" class="titleMsg">This content has been guarded by 25Embed.</h1>
   <h2 id="reason" class="reason">Reason: '` + reason + `'</h2>
@@ -112,16 +112,16 @@ function _25embedLaunch() {
     if (contentOwner != "y") {
         if (contentOwner == "n") {
           if (_25embed.settings.perms.rickRoll == "y") {rick();} 
-          else {document.innerHTML = _25HoursaDay_on_github;}
-        } else {var reason = "Content owner is undefined, contact content owner."; document.innerHTML = _25HoursaDay_on_github;}
+          else {document.write(_25HoursaDay_on_github);}
+        } else {var reason = "Content owner is undefined, contact content owner."; document.write(_25HoursaDay_on_github);}
     }
 }
 function ogSrc() {window.open(ogContent);}
 function repo() {window.open("https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/README.md#about-25embed");}
-function rick() {document.innerHTML = `<video width="100%" height="100%" autoplay loop>
+function rick() {document.write(`<video width="100%" height="100%" autoplay loop>
 <source src="https://25hoursaday.github.io/commissioned-resources/25Embed/rickroll-720p.mp4" type="video/mp4">
 <source src="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/rickroll-720p.mp4" type="video/mp4">
 <source src="https://25hoursaday.github.io/commissioned-resources/25Embed/rickroll-360p.mp4" type="video/mp4">
 <source src="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/rickroll-360p.mp4" type="video/mp4">
 </video>
-`;}
+`);}
