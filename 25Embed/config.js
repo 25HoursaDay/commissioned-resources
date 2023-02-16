@@ -1,26 +1,3 @@
-const _25embed = {
-  settings: {
-    
-    rickRoll:"n", // default set to n
-    
-    perms: {
-      SameHost:"n", // default set to y
-      FileHost:"n", // default set to n
-      DataHost:"y", // default set to y
-      BlobHost:"y", // default set to y
-    },
-  },
-    domains: {
-      whitelist: ["25HoursaDay.github.io","home-schoology.github.io"],
-      blacklist: []
-    },
-    urls: {
-      whitelist: [],
-      blacklist: []
-    }
-};
-
-
 // n is disabled, y is enabled
 const _25embedOptions = {
 rickRoll:"n", // default set to n
