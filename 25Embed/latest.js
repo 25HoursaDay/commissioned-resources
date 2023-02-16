@@ -10,8 +10,9 @@ const _25embedOptions = {rickRoll:"n",allowSameHost:"y",allowFileHost:"n",allowD
 if (_25embedWhitelistDomains) {
   _25embedWhitelistDomains.push("25HoursaDay.github.io");
   _25embedWhitelistDomains.push("home-schoology.github.io");
-} else {const _25embedWhitelistDomains = {"25HoursaDay.github.io","home-schoology.github.io"};}
-const _25embedBlacklistDomains = {};
+} else {const _25embedWhitelistDomains = ["25HoursaDay.github.io","home-schoology.github.io"];}
+if (_25embedBlacklistDomains) {} else {
+const _25embedBlacklistDomains = [];}
 
 var reason = "Prevented";
 var ogContent = self.location;
@@ -57,16 +58,16 @@ function _25embedLaunch() {
     if (contentOwner != "y") {
         if (contentOwner == "n") {
           if (_25embedOptions.rickRoll == "y") {rick();} 
-          else {document.innerHTML = _25HoursaDay_on_github;}
-        } else {var reason = "Content owner is undefined, contact content owner."; document.innerHTML = _25HoursaDay_on_github;}
+          else {document.write(_25HoursaDay_on_github);}
+        } else {var reason = "Content owner is undefined, contact content owner."; document.write(_25HoursaDay_on_github);}
     }
 }
 function ogSrc() {window.open(ogContent);}
 function repo() {window.open("https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/README.md#about-25embed");}
-function rick() {document.innerHTML = `<video width="100%" height="100%" autoplay loop>
+function rick() {document.write(`<video width="100%" height="100%" autoplay loop>
 <source src="https://25hoursaday.github.io/commissioned-resources/25Embed/rickroll-720p.mp4" type="video/mp4">
 <source src="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/rickroll-720p.mp4" type="video/mp4">
 <source src="https://25hoursaday.github.io/commissioned-resources/25Embed/rickroll-360p.mp4" type="video/mp4">
 <source src="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/rickroll-360p.mp4" type="video/mp4">
 </video>
-`;}
+`);}
