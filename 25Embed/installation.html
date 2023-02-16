@@ -1,0 +1,14 @@
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br>
+  <label for="cars">Choose a car:</label><br>
+<select id="cars" name="cars">
+  <option value="volvo">Volvo</option>
+</select><br>
+<button onclick="subOpts()"></button>
+<script>
+function subOpts() {
+  alert(document.getElementById('fname').value);
+}
+</script>
