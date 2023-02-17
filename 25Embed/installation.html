@@ -65,13 +65,16 @@
         var wL = document.getElementById("whiteD").value;
         wL = wL.trim();
         wL = wL.toLowerCase();
-        wL = wL.split(",");
+        wL = wL.toString();
         wL = wL.replace(/,/g, '","');
+        wL = wL.split(",");
         var bL = document.getElementById("blackD").value;
         bL = bL.trim();
         bL = bL.toLowerCase();
-        bL = bL.split(",");
+
+        bL = bL.toString();
         bL = bL.replace(/,/g, '","');
+        bL = bL.split(",");
         if (document.getElementById("shd").checked) {
           var val1 = "y"
         } else {
