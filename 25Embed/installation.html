@@ -57,7 +57,7 @@ function subOpts() {
   var bL2 = bL.trim();
   bL = bL2.toLowerCase();
   bL2 = bL.split(",");
-  
+  bL = bL2.replace(/,/g, '","');
   if (document.getElementById("shd").checked) {var val1 = "y"} else {var val1 = "n"}
   if (document.getElementById("fuh").checked) {var val2 = "y"} else {var val2 = "n"}
   if (document.getElementById("duh").checked) {var val3 = "y"} else {var val3 = "n"}
