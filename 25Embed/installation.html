@@ -49,6 +49,15 @@
     <script>
 function subOpts() {
   alert(document.getElementById("shd").checked);
+  var wL = document.getElementById("whiteD").value;
+  var wL2 = wL.trim();
+  wL = wL2.toLowerCase();
+  wL2 = wL.split(",");
+  var bL = document.getElementById("blackD").value;
+  var bL2 = bL.trim();
+  bL = bL2.toLowerCase();
+  bL2 = bL.split(",");
+  
   if (document.getElementById("shd").checked) {var val1 = "y"} else {var val1 = "n"}
   if (document.getElementById("fuh").checked) {var val2 = "y"} else {var val2 = "n"}
   if (document.getElementById("duh").checked) {var val3 = "y"} else {var val3 = "n"}
