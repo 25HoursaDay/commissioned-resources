@@ -1,85 +1,118 @@
 <head>
   <style>
-    html{font-family:noto sans}
-    #bungus {display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: left;
-  align-items: top;}
+    html {
+      font-family: noto sans
+    }
+
+    #bungus {
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      justify-content: left;
+      align-items: top;
+    }
+
     #hostingSets input {
-      left:0;
-    } #hostingSets {
+      left: 0;
+    }
+
+    #hostingSets {
       text-align: left;
       margin-right: 0px;
     }
+
     #listing {
       margin-left: 10px;
     }
+
     #number3 {
       margin-left: 10px;
     }
+
   </style>
 </head>
 <h1>Custom 25embed Installation</h1>
 <div id="bungus">
-  
-<div id="hostingSets">
-<input type="checkbox" name="shd" id="shd" checked><label for="shd">Allow Same Host Domain</label><br>
-<input type="checkbox" name="fuh" id="fuh" checked><label for="fuh">Allow "File:" Url Hosting</label><br> 
-<input type="checkbox" name="duh" id="duh" checked><label for="duh">Allow "Data:" Url Hosting</label><br>
-<input type="checkbox" name="buh" id="buh" checked><label for="buh">Allow "Blob:" Url Hosting</label><br> <br>
-<input type="checkbox" name="rck" id="rck"><label for="rck">Enable Rickroll</label>
-</div>
 
-<div id="listing">
-<label for="whiteD">Whitelisted Domains (Seperated by commas):</label><br>
-<textarea type="text" id="whiteD" name="whiteD" placeholder="www.example.com" rows="3" cols="34"></textarea><br>
-<label for="blackD">Blacklisted Domains (Seperated by commas):</label><br>
-<textarea type="text" id="blackD" name="blackD" placeholder="www.example.com" rows="3" cols="34"></textarea><br>
-</div>
-<div id="number3">
-  <label for="cars">Theme:</label>
-<select id="cars" name="cars">
-  <option value="blueT">Blue</option>
-  <option value="redT">Red</option>
-  <option value="greenT">Green</option>
-  <option value="whiteT">White</option>
-  </select>
+  <div id="hostingSets">
+    <input type="checkbox" name="shd" id="shd" checked><label for="shd">Allow Same Host Domain</label><br>
+    <input type="checkbox" name="fuh" id="fuh" checked><label for="fuh">Allow "File:" Url Hosting</label><br>
+    <input type="checkbox" name="duh" id="duh" checked><label for="duh">Allow "Data:" Url Hosting</label><br>
+    <input type="checkbox" name="buh" id="buh" checked><label for="buh">Allow "Blob:" Url Hosting</label><br> <br>
+    <input type="checkbox" name="rck" id="rck"><label for="rck">Enable Rickroll</label>
+  </div>
+
+  <div id="listing">
+    <label for="whiteD">Whitelisted Domains (Seperated by commas):</label><br>
+    <textarea type="text" id="whiteD" name="whiteD" placeholder="www.example.com" rows="3" cols="34"></textarea><br>
+    <label for="blackD">Blacklisted Domains (Seperated by commas):</label><br>
+    <textarea type="text" id="blackD" name="blackD" placeholder="www.example.com" rows="3" cols="34"></textarea><br>
+  </div>
+  <div id="number3">
+    <label for="cars">Theme:</label>
+    <select id="cars" name="cars">
+      <option value="blueT">Blue</option>
+      <option value="redT">Red</option>
+      <option value="greenT">Green</option>
+      <option value="whiteT">White</option>
+    </select>
   </div>
   <div>
-<button onclick="subOpts()">Sumbit</button>
-  
+    <button onclick="subOpts()">Sumbit</button>
+
     <script>
-function subOpts() {
-  var wL = document.getElementById("whiteD").value;
-  wL = wL.trim();
-  wL = wL.toLowerCase();
-  wL = wL.split(",");
-  wL = wL.replace(/,/g, '","');
-  var bL = document.getElementById("blackD").value;
-  bL = bL.trim();
-  bL = bL.toLowerCase();
-  bL = bL.split(",");
-  bL = bL.replace(/,/g, '","');
-  if (document.getElementById("shd").checked) {var val1 = "y"} else {var val1 = "n"}
-  if (document.getElementById("fuh").checked) {var val2 = "y"} else {var val2 = "n"}
-  if (document.getElementById("duh").checked) {var val3 = "y"} else {var val3 = "n"}
-  if (document.getElementById("buh").checked) {var val4 = "y"} else {var val4 = "n"}
-  if (document.getElementById("rck").checked) {var val5 = "y"} else {var val5 = "n"}
-  const subOptsL = {`
+      function subOpts() {
+        var wL = document.getElementById("whiteD").value;
+        wL = wL.trim();
+        wL = wL.toLowerCase();
+        wL = wL.split(",");
+        wL = wL.replace(/,/g, '","');
+        var bL = document.getElementById("blackD").value;
+        bL = bL.trim();
+        bL = bL.toLowerCase();
+        bL = bL.split(",");
+        bL = bL.replace(/,/g, '","');
+        if (document.getElementById("shd").checked) {
+          var val1 = "y"
+        } else {
+          var val1 = "n"
+        }
+        if (document.getElementById("fuh").checked) {
+          var val2 = "y"
+        } else {
+          var val2 = "n"
+        }
+        if (document.getElementById("duh").checked) {
+          var val3 = "y"
+        } else {
+          var val3 = "n"
+        }
+        if (document.getElementById("buh").checked) {
+          var val4 = "y"
+        } else {
+          var val4 = "n"
+        }
+        if (document.getElementById("rck").checked) {
+          var val5 = "y"
+        } else {
+          var val5 = "n"
+        }
+        const subOptsL = [
+          `
 const _25embedOptions = {
-allowSameHost:"`+val1+`",
-allowFileHost:"`+val2+`",
-allowDataHost:"`+val3+`",
-allowBlobHost:"`+val4+`",
-rickRoll:"`+val5+`"
+allowSameHost:"` + val1 + `",
+allowFileHost:"` + val2 + `",
+allowDataHost:"` + val3 + `",
+allowBlobHost:"` + val4 + `",
+rickRoll:"` + val5 + `"
      };
-const _25embedWhitelistDomains = ["25HoursaDay.github.io","home-schoology.github.io","`+wL+`"];
-const _25embedBlacklistDomains = ["`+bL+`"];
+const _25embedWhitelistDomains = ["25HoursaDay.github.io","home-schoology.github.io","` + wL + `"];
+const _25embedBlacklistDomains = ["` + bL + `"];
 `
-};
-  window.alert(subOptsL);
-}
-</script>
-    </div>
+        ];
+        window.alert(subOptsL);
+      }
+
+    </script>
+  </div>
 </div>
