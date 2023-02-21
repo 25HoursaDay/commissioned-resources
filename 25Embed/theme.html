@@ -1,0 +1,29 @@
+<style>
+  html {
+  /* var1 is gonna be background color */
+    --var1: black;
+  /* var2 is gonna be text and border color */
+    --var2: blue;
+  /* var3 is gonna be text border color */
+    --var3: darkblue;
+  /* var4 is gonna be text hover color */
+    --var4: var(--var2, blue);
+  /* var5 is gonna be glow color */
+    --var5: blue;
+  }
+</style>
+<button onclick="changeTheme(black, blue, var3, var4, var5)">Default (Blue)</button>
+<button onclick="changeTheme(black, green, var3, var4, var5)">Green</button>
+<script>
+function changeTheme(var1, var2, var3, var4, var5) { 
+     localStorage.removeItem("themeinfo");
+     document.body.style.setProperty('--var1', var1);
+     document.body.style.setProperty('--var2', var2);
+     document.body.style.setProperty('--var3', var3);
+     document.body.style.setProperty('--var4', var4); 
+     document.body.style.setProperty('--var5', var5);  
+     localStorage.setItem("themeinfo", var1 +','+ var2 +','+ var3 +','+ var4 +','+ var5 + ','); 
+     } 
+    if (localStorage.getItem("themeinfo")) {const themeArray = localStorage.getItem("themeinfo").split(","); 
+    changeTheme(themeArray[0], themeArray[1], themeArray[2], themeArray[3], themeArray[4]);}
+</script>
