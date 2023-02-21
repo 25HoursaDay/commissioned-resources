@@ -19,6 +19,12 @@
       align-items: center;
     }
 
+    .btnd {
+      height: auto;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
     #hostingSets input {
       left: 0;
     }
@@ -71,7 +77,8 @@
 <br>
 <div id="btns">
 
-  <button onclick="subOpts()" style="height:auto;">Download File</button><button onclick="subOpts()" style="height:auto;">Download File</button>
+  <button class="btnd" onclick="subOpts()">Download File</button>
+  <button class="btnd" onclick="subOpts()">Download File</button>
 
   <script>
     function subOpts() {
@@ -84,7 +91,6 @@
       var bL = document.getElementById("blackD").value;
       bL = bL.trim();
       bL = bL.toLowerCase();
-
       bL = bL.toString();
       bL = bL.replace(/,/g, '","');
       bL = bL.split(",");
