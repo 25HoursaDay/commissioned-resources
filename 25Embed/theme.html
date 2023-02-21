@@ -5,15 +5,15 @@
   /* var2 is gonna be text and border color */
     --var2: blue;
   /* var3 is gonna be text border color */
-    --var3: darkblue;
+    --var3: mediumblue;
   /* var4 is gonna be text hover color */
     --var4: var(--var2, blue);
   /* var5 is gonna be glow color */
     --var5: blue;
   }
 </style>
-<button onclick="changeTheme(black, blue, var3, var4, var5)">Default (Blue)</button>
-<button onclick="changeTheme(black, green, var3, var4, var5)">Green</button>
+<button onclick="changeTheme(black, blue, mediumblue, blue, blue)">Default (Blue)</button>
+<button onclick="changeTheme(black, lime, limegreen, lime, lime)">Green</button>
 <script>
 function changeTheme(var1, var2, var3, var4, var5) { 
      localStorage.removeItem("themeinfo");
