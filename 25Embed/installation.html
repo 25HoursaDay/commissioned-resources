@@ -16,7 +16,7 @@
       display: flex;
       width: 100vw;
       justify-content: left;
-
+      align-items: center;
     }
 
     #hostingSets input {
@@ -70,9 +70,9 @@
 </div>
 <br>
 <div id="btns">
-  <h3>Copy File: </h3>
-  <button onclick="subOpts()">Sumbit</button>
-  <h3>Dowload File: </h3>
+
+  <button onclick="subOpts()" style="height:auto;">Download File</button><button onclick="subOpts()" style="height:auto;">Download File</button>
+
   <script>
     function subOpts() {
       var wL = document.getElementById("whiteD").value;
