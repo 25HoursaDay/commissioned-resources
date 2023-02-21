@@ -20,7 +20,7 @@ var ogContent = self.location;
 var contentOwner = "u";
 function _25HoursaDay_on_github (rsn) {document.write(`
   <link href="https://25hoursaday.github.io/commissioned-resources/25Embed/style.css" rel="stylesheet" type="text/css"/>
-  <link href="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources/25Embed/style.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/style.css" rel="stylesheet" type="text/css"/>
   <div id="_25embedScreen" class="_25embedScreen">
   <h1 id="titleMsg" class="titleMsg">This content has been guarded by 25Embed.</h1>
   <h2 id="reason" class="reason">Reason: '` + rsn + `'</h2>
