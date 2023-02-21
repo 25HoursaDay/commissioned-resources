@@ -44,13 +44,13 @@ If you would like to change your config file to enable/disable the default setti
 25Embed has many varius settings, some are very important to how 25Embed works (such as allowSameHost), but others are purly for fun (like rickRoll).
 [Here]() you will find a complete list of all settings, what they do, and how they work.
 
-# More protection
-If you want your content to be even more safe, be sure to add the html tags to your html file
-
 # History
 I first thought of the concept of 25Embed back when I was not so technologically inclined, when I would just embed things into google sites.
 I figured there had to be a way to prevent someone from so easily stealing your content, but I didn't know how to create something like that.
 Fast forward two years, I have the ability to make something like that so I did.
+
+# More protection
+If you want your content to be even more safe, be sure to add the html tags to your html file
 
 # Similar tools
 ## Here are some noteworthy tools similar to 25Embed:
