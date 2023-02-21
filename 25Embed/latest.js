@@ -4,8 +4,9 @@ if (_25embedOptions) {
   if (_25embedOptions.allowFileHost == "n" || _25embedOptions.allowFileHost == "y") {} else {_25embedOptions.allowFileHost = "n";}
   if (_25embedOptions.allowDataHost == "n" || _25embedOptions.allowDataHost == "y") {} else {_25embedOptions.allowDataHost = "y";}
   if (_25embedOptions.allowBlobHost == "n" || _25embedOptions.allowBlobHost == "y") {} else {_25embedOptions.allowBlobHost = "y";}
+  if (_25embedOptions.supportDevs == "n" || _25embedOptions.supportDevs == "y") {} else {_25embedOptions.supportDevs = "y";}
 } else {
-const _25embedOptions = {rickRoll:"n",allowSameHost:"y",allowFileHost:"n",allowDataHost:"y",allowBlobHost:"y"};
+const _25embedOptions = {rickRoll:"n",allowSameHost:"y",allowFileHost:"n",allowDataHost:"y",allowBlobHost:"y",supportDevs:"y"};
   }
 if (_25embedWhitelistDomains) {
   _25embedWhitelistDomains.push("25HoursaDay.github.io");
