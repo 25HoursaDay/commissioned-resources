@@ -42,7 +42,7 @@ If you would like to change your config file to enable/disable the default setti
 
 ### Settings list
 25Embed has many varius settings, some are very important to how 25Embed works (such as allowSameHost), but others are purly for fun (like rickRoll).
-Here you will find a complete list of all settings, what they do, and how they work.
+[Here]() you will find a complete list of all settings, what they do, and how they work.
 
 # More protection
 If you want your content to be even more safe, be sure to add the html tags to your html file
