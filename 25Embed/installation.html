@@ -11,17 +11,30 @@
       justify-content: center;
       align-items: top;
     }
+
+    #key {
+      display: flex;
+      width: 100vw;
+      justify-content: center;
+      align-items: top;
+    }
+
+    #key h4 {
+      margin: 0 5px 0 5px;
+    }
+
     #bungus2 {
       display: flex;
       width: 100vw;
       justify-content: center;
       align-items: top;
     }
+
     #btns {
       display: flex;
       width: 100vw;
       justify-content: center;
-      align-items: center; 
+      align-items: center;
     }
 
     .btnd {
@@ -36,24 +49,25 @@
 
     #hostingSets {
       box-sizing: border-box;
-      text-align: left; 
+      text-align: left;
     }
 
     #listing {
       box-sizing: border-box;
-      text-align: left; 
-      margin-right:10px;
-      margin-left:10px;
+      text-align: left;
+      margin-right: 10px;
+      margin-left: 10px;
       padding-right: 10px;
       padding-left: 10px;
       border-left: 3px solid grey;
-      border-right: 3px solid grey; 
+      border-right: 3px solid grey;
     }
 
     #number3 {
       box-sizing: border-box;
-      text-align:left;
+      text-align: left;
     }
+
     .disabled {
       color: grey;
     }
@@ -63,10 +77,18 @@
 <div id="bungus2">
   <h1>Custom 25embed Installation</h1>
 </div>
+<div id="key">
+  <h4>|<a style="">Normal</a> = <a style="">Default</a>|</h4>
+
+
+  <h4>|<a style="color:lime;">Green</a> = <a style="color:lime;">Enabled</a>|</h4>
+  <h4>|<a style="color:red;">Red</a> = <a style="color:red;">Disabled</a>|</h4>
+  <h4>|<a style="color:grey;">Greyed Out</a> = <a style="color:grey;">Forced to Default</a>|</h4>
+</div>
 <div id="bungus">
 
   <div id="hostingSets">
-  <h3>Basic:</h3>
+    <h3>Basic:</h3>
     <input type="checkbox" name="shd" id="shd" checked><label for="shd">Allow Same Host Domain</label><br>
     <input type="checkbox" name="fuh" id="fuh" checked><label for="fuh">Allow "File:" Url Hosting</label><br>
     <input type="checkbox" name="duh" id="duh" checked><label for="duh">Allow "Data:" Url Hosting</label><br>
@@ -77,14 +99,14 @@
   </div>
 
   <div id="listing">
-  <h3>Advanced:</h3>
+    <h3>Advanced:</h3>
     <label for="whiteD">Whitelisted Domains (Seperated by commas):</label><br>
     <textarea type="text" id="whiteD" name="whiteD" placeholder="www.example.com" rows="3" cols="34"></textarea><br>
     <label for="blackD">Blacklisted Domains (Seperated by commas):</label><br>
     <textarea type="text" id="blackD" name="blackD" placeholder="www.example.com" rows="3" cols="34"></textarea><br>
   </div>
   <div id="number3">
-  <h3>Basic:</h3>
+    <h3>Basic:</h3>
     <label for="cars">Theme:</label>
     <select id="cars" name="cars">
       <option value="blueT">Blue</option>
@@ -155,6 +177,5 @@ const _25embedBlacklistDomains = ["` + bL + `"];
       window.alert(subOptsL);
     }
 
-    
   </script>
 </div>
