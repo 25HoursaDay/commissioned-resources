@@ -97,7 +97,7 @@
     <label for="buh"><input type="checkbox" name="buh" id="buh" checked>Allow "Blob:" Url Hosting</label><br>
     <h3>Advanced:</h3>
     <label for="spd"><input type="checkbox" name="spd" id="spd" checked>Support The Devs?</label><br>
-    <label for="rck" class="disabled"><input type="checkbox" name="rck" id="rck" disabled>Enable Rickroll</label>
+    <label for="rck"><input type="checkbox" name="rck" id="rck" disabled>Enable Rickroll</label>
   </div>
 
   <div id="listing">
@@ -182,12 +182,35 @@ const _25embedBlacklistDomains = ["` + bL + `"];
       ];
       window.alert(subOptsL);
     }
-    function changeC(){
-    if (this.disabled) this.nextElementSibling.addClass();
+    var inputList = document.getElementsByTagName('input');
+
+    function changeC() {
+      for (var i = 0; i < inputList.length; i++) {
+
+        if (inputList[i].disabled) {
+          inputList[i].parentElement.style.color = "grey";
+        }
+      }
     }
-const deip = document.querySelectorAll("input");
-var gag = Array.prototype.slice.call(deip);
-alert(gag);
-gag.forEach(changeC);
+
+
+    if (inputList[i].defaultChecked) {
+      if (inputList[i].checked) {
+        inputList[i].parentElement.style.color = "black";
+      } else {
+        inputList[i].parentElement.style.color = "red";
+      }
+    } else {
+      if (inputList[i].checked) {
+        inputList[i].parentElement.style.color = "lime";
+      } else {
+        inputList[i].parentElement.style.color = "black";
+      }
+    }
+    const deip = document.querySelectorAll("input");
+    var gag = Array.prototype.slice.call(deip);
+    alert(gag);
+    gag.forEach(changeC);
+
   </script>
 </div>
