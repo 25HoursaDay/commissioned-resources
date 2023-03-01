@@ -78,15 +78,18 @@
   <h1>Custom 25embed Installation</h1>
 </div>
 <div id="key">
-  <h4><a style="">Normal</a> = <a style="">Default</a></h4> <h4>|</h4>
-  <h4><a style="color:lime;">Green</a> = <a style="color:lime;">Enabled</a></h4> <h4>|</h4>
-  <h4><a style="color:red;">Red</a> = <a style="color:red;">Disabled</a></h4> <h4>|</h4>
+  <h4><a style="">Normal</a> = <a style="">Default</a></h4>
+  <h4>|</h4>
+  <h4><a style="color:lime;">Green</a> = <a style="color:lime;">Enabled</a></h4>
+  <h4>|</h4>
+  <h4><a style="color:red;">Red</a> = <a style="color:red;">Disabled</a></h4>
+  <h4>|</h4>
   <h4><a style="color:grey;">Grey</a> = <a style="color:grey;">Forced</a></h4>
 </div><br>
 <div id="bungus">
   <div id="hostingSets">
-  <h2>Settings:</h2>
-  <p>Main settings for _25embedOptions.</p>
+    <h2>Settings:</h2>
+    <p>Main settings for _25embedOptions.</p>
     <h3>Basic:</h3>
     <input type="checkbox" name="shd" id="shd" checked><label for="shd">Allow Same Host Domain</label><br>
     <input type="checkbox" name="fuh" id="fuh" checked><label for="fuh">Allow "File:" Url Hosting</label><br>
@@ -98,17 +101,17 @@
   </div>
 
   <div id="listing">
-  <h2>Domain Control (Advanced):</h2>
-  <p>Blacklist / Whitelist Domains.</p>
-  <h3>Advanced:</h3>
+    <h2>Domain Control (Advanced):</h2>
+    <p>Blacklist / Whitelist Domains.</p>
+    <h3>Advanced:</h3>
     <label for="whiteD">Whitelisted Domains (Seperated by commas):</label><br>
     <textarea type="text" id="whiteD" name="whiteD" placeholder="www.example.com" rows="3" cols="34"></textarea><br>
     <label for="blackD">Blacklisted Domains (Seperated by commas):</label><br>
     <textarea type="text" id="blackD" name="blackD" placeholder="www.example.com" rows="3" cols="34"></textarea><br>
   </div>
   <div id="number3">
-  <h2>Style Control:</h2>
-  <p>Change style settings.</p>
+    <h2>Style Control:</h2>
+    <p>Change style settings.</p>
     <h3>Basic:</h3>
     <label for="cars">Theme:</label>
     <select id="cars" name="cars">
@@ -179,6 +182,12 @@ const _25embedBlacklistDomains = ["` + bL + `"];
       ];
       window.alert(subOptsL);
     }
-
+    function changeC(){
+    if (this.disabled) this.nextElementSibling.addClass();
+    }
+const deip = document.querySelectorAll("input");
+var gag = Array.prototype.slice.call(deip);
+alert(gag);
+gag.forEach(changeC);
   </script>
 </div>
