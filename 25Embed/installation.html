@@ -182,31 +182,31 @@ const _25embedBlacklistDomains = ["` + bL + `"];
       ];
       window.alert(subOptsL);
     }
-    var inputList = document.getElementsByTagName('input');
+
 
     function changeC() {
+      var inputList = document.getElementsByTagName('input');
       for (var i = 0; i < inputList.length; i++) {
-
         if (inputList[i].disabled) {
           inputList[i].parentElement.style.color = "grey";
+        } else {
+          if (inputList[i].checked) {
+            if (inputList[i].defaultChecked) {
+              inputList[i].parentElement.style.color = "black";
+            } else {
+              inputList[i].parentElement.style.color = "lime";
+            }
+          } else {
+            if (inputList[i].defaultChecked) {
+              inputList[i].parentElement.style.color = "red";
+            } else {
+              inputList[i].parentElement.style.color = "black";
+            }
+          }
         }
       }
     }
 
-
-    if (inputList[i].defaultChecked) {
-      if (inputList[i].checked) {
-        inputList[i].parentElement.style.color = "black";
-      } else {
-        inputList[i].parentElement.style.color = "red";
-      }
-    } else {
-      if (inputList[i].checked) {
-        inputList[i].parentElement.style.color = "lime";
-      } else {
-        inputList[i].parentElement.style.color = "black";
-      }
-    }
     const deip = document.querySelectorAll("input");
     var gag = Array.prototype.slice.call(deip);
     alert(gag);
