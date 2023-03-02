@@ -1,13 +1,12 @@
 <head>
   <style>
     html {
-      font-family: "noto sans", Roboto, Tahoma, Verdana;
+      font-family: "noto sans", "Helvetica", Arial, Roboto, Verdana;
     }
 
     #bungus {
       display: flex;
       width: 100vw;
-      height: 100vh;
       justify-content: center;
       align-items: top;
     }
@@ -33,14 +32,13 @@
     #btns {
       display: flex;
       width: 100vw;
+      position: relative;
       justify-content: center;
       align-items: bottom;
     }
 
     .btnd {
-      height: auto;
-      font-weight: bold;
-      margin-right: 10px;
+      margin: 0 2px 0 2px;
     }
 
     #hostingSets input {
@@ -104,9 +102,9 @@
     <h2>Domain Control (Advanced):</h2>
     <p>Blacklist / Whitelist Domains.</p>
     <h3>Advanced:</h3>
-    <label for="whiteD">Whitelisted Domains (Seperated by commas):<textarea type="text" id="whiteD" name="whiteD" placeholder="www.example.com" rows="3" cols="34"></textarea></label><br>
+    <label for="whiteD">Whitelisted Domains (Seperated by commas):<br><textarea type="text" id="whiteD" name="whiteD" placeholder="www.example.com" rows="3" cols="34"></textarea></label><br>
     <br>
-    <label for="blackD">Blacklisted Domains (Seperated by commas):<textarea type="text" id="blackD" name="blackD" placeholder="www.example.com" rows="3" cols="34"></textarea></label><br>
+    <label for="blackD">Blacklisted Domains (Seperated by commas):<br><textarea type="text" id="blackD" name="blackD" placeholder="www.example.com" rows="3" cols="34"></textarea></label><br>
     <br>
   </div>
   <div id="number3">
