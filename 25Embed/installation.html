@@ -91,13 +91,13 @@
     <h2>Settings:</h2>
     <p>Main settings for _25embedOptions.</p>
     <h3>Basic:</h3>
-    <label for="shd"><input type="checkbox" name="shd" id="shd" checked>Allow Same Host Domain</label><br>
-    <label for="fuh"><input type="checkbox" name="fuh" id="fuh" checked>Allow "File:" Url Hosting</label><br>
-    <label for="duh"><input type="checkbox" name="duh" id="duh" checked>Allow "Data:" Url Hosting</label><br>
-    <label for="buh"><input type="checkbox" name="buh" id="buh" checked>Allow "Blob:" Url Hosting</label><br>
+    <label for="shd"><input type="checkbox" name="shd" id="shd" onChange="changeC()" checked>Allow Same Host Domain</label><br>
+    <label for="fuh"><input type="checkbox" name="fuh" id="fuh" onChange="changeC()" checked>Allow "File:" Url Hosting</label><br>
+    <label for="duh"><input type="checkbox" name="duh" id="duh" onChange="changeC()" checked>Allow "Data:" Url Hosting</label><br>
+    <label for="buh"><input type="checkbox" name="buh" id="buh" onChange="changeC()" checked>Allow "Blob:" Url Hosting</label><br>
     <h3>Advanced:</h3>
-    <label for="spd"><input type="checkbox" name="spd" id="spd" checked>Support The Devs?</label><br>
-    <label for="rck"><input type="checkbox" name="rck" id="rck" disabled>Enable Rickroll</label>
+    <label for="spd"><input type="checkbox" name="spd" id="spd" onChange="changeC()" checked>Support The Devs?</label><br>
+    <label for="rck"><input type="checkbox" name="rck" id="rck" onChange="changeC()" disabled>Enable Rickroll</label>
   </div>
 
   <div id="listing">
@@ -206,6 +206,7 @@ const _25embedBlacklistDomains = ["` + bL + `"];
       }
     }
     changeC();
+
     /* const deip = document.querySelectorAll("input");
      var gag = Array.prototype.slice.call(deip);
      alert(gag);
