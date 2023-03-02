@@ -94,7 +94,7 @@
     <label for="duh"><input type="checkbox" name="duh" id="duh" onChange="changeC()" checked>Allow "Data:" Url Hosting</label><br>
     <label for="buh"><input type="checkbox" name="buh" id="buh" onChange="changeC()" checked>Allow "Blob:" Url Hosting</label><br>
     <h3>Advanced:</h3>
-    <label for="spd"><input type="checkbox" name="spd" id="spd" onChange="changeC()" checked>Support The Devs?</label><br>
+    <label for="spd"><input type="checkbox" name="spd" id="spd" onChange="changeC()" checked>Support The Dev</label><br>
     <label for="rck"><input type="checkbox" name="rck" id="rck" onChange="changeC()" disabled>Enable Rickroll</label>
   </div>
 
@@ -165,6 +165,11 @@
       } else {
         var val5 = "n"
       }
+      if (document.getElementById("spd").checked) {
+        var val6 = "y"
+      } else {
+        var val6 = "n"
+      }
       const subOptsL = [
         `
 const _25embedOptions = {
@@ -172,7 +177,8 @@ allowSameHost:"` + val1 + `",
 allowFileHost:"` + val2 + `",
 allowDataHost:"` + val3 + `",
 allowBlobHost:"` + val4 + `",
-rickRoll:"` + val5 + `"
+rickRoll:"` + val5 + `",
+supportDevs:"` + val6 + `"
      };
 const _25embedWhitelistDomains = ["25HoursaDay.github.io","home-schoology.github.io","` + wL + `"];
 const _25embedBlacklistDomains = ["` + bL + `"];
