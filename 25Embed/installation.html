@@ -124,7 +124,7 @@
 <div id="btns">
 
   <button class="btnd" id="copy" onclick='subOpts("0")'>Copy Result</button>
-  <button class="btnd" onclick='subOpts("1")'>Download as File</button>
+  <button class="btnd" id="dwnl" onclick='subOpts("1")'>Download as File</button>
 
   <script>
     function subOpts(ii) {
@@ -194,12 +194,16 @@ const _25embedBlacklistDomains = ["` + bL + `"];
       }
       if (ii == "1") {
         var element = document.createElement('a');
-        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(subOptsL));
+        element.setAttribute('href', 'data:text/javascript;charset=utf-8,' + encodeURIComponent(subOptsL));
         element.setAttribute('download', '25EmbedConfig.js');
         element.style.display = 'none';
         document.body.appendChild(element);
         element.click();
         document.body.removeChild(element);
+        document.getElementById('dwnl').innerHTML = "Downloaded!";
+        setTimeout(() => {
+          document.getElementById('dwnl').innerHTML = `Download as File`
+        }, 1000);
       }
       window.alert(subOptsL);
     }
