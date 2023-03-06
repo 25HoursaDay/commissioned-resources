@@ -123,11 +123,11 @@
 <br>
 <div id="btns">
 
-  <button class="btnd" onclick="subOpts()">Download File</button>
-  <button class="btnd" onclick="subOpts()">Download File</button>
+  <button class="btnd" id="copy" onclick='subOpts("0")'>Copy Result</button>
+  <button class="btnd" onclick='subOpts("1")'>Download as File</button>
 
   <script>
-    function subOpts() {
+    function subOpts(ii) {
       var wL = document.getElementById("whiteD").value;
       wL = wL.trim();
       wL = wL.toLowerCase();
@@ -184,6 +184,14 @@ const _25embedWhitelistDomains = ["25HoursaDay.github.io","home-schoology.github
 const _25embedBlacklistDomains = ["` + bL + `"];
 `
       ];
+      if (ii == "0") {
+        navigator.clipboard.writeText(subOptsL);
+        /* clipboard successfully set */
+        document.getElementById('copy').innerHTML = "Copied!";
+        setTimeout(() => {
+          document.getElementById('copy').innerHTML = `Copy Result`
+        }, 1000);
+      }
       window.alert(subOptsL);
     }
 
