@@ -16,6 +16,7 @@
       width: 100vw;
       justify-content: center;
       align-items: top;
+      text-align: center;
     }
 
     #key h4 {
@@ -27,6 +28,7 @@
       width: 100vw;
       justify-content: center;
       align-items: top;
+      text-align: center;
     }
 
     #btns {
@@ -35,6 +37,16 @@
       position: relative;
       justify-content: center;
       align-items: bottom;
+      text-align: center;
+    }
+
+    #warning {
+      display: flex;
+      width: 100vw;
+      position: relative;
+      justify-content: center;
+      align-items: bottom;
+      text-align: center;
     }
 
     .btnd {
@@ -46,7 +58,7 @@
       user-select: none;
     }
 
-    #hostingSets input:hover {
+    input:hover {
       cursor: pointer;
     }
 
@@ -135,10 +147,14 @@
   </div>
 </div>
 <br>
+<div id="warning">
+  <h4>
+    A warning will pop up if you try to run the file on windows, feel free to look through the code yourself.
+  </h4>
+</div>
 <div id="btns">
   <button class="btnd" id="copy" onclick='subOpts("0")'>Copy Result</button>
   <button class="btnd" id="dwnl" onclick='subOpts("1")'>Download as File</button>
-
   <script>
     var linkToLatest = "https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/latest.js";
     var _25embedCrunch = '';
@@ -257,11 +273,6 @@ const _25embedBlacklistDomains = ["` + bL + `"];
       }
     }
     changeC();
-
-    /* const deip = document.querySelectorAll("input");
-     var gag = Array.prototype.slice.call(deip);
-     alert(gag);
-     gag.forEach(changeC); */
 
   </script>
 </div>
