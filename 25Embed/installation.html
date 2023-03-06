@@ -192,6 +192,15 @@ const _25embedBlacklistDomains = ["` + bL + `"];
           document.getElementById('copy').innerHTML = `Copy Result`
         }, 1000);
       }
+      if (ii == "1") {
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(subOptsL));
+        element.setAttribute('download', '25EmbedConfig.js');
+        element.style.display = 'none';
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+      }
       window.alert(subOptsL);
     }
 
