@@ -117,7 +117,8 @@
     <h3>Advanced:</h3>
     <label for="whiteD">Whitelisted Domains (Seperated by commas):<br><textarea type="text" id="whiteD" name="whiteD" placeholder="www.example.com" rows="3" cols="34"></textarea></label><br>
     <br>
-    <label for="blackD">Blacklisted Domains (Seperated by commas):<br><textarea type="text" id="blackD" name="blackD" placeholder="www.example.com" rows="3" cols="34"></textarea></label><br>
+    <label for="blackD">Blacklisted Domains (Seperated by commas):<br><textarea type="text" id="blackD" name="blackD" placeholder="www.example.com" rows="3" cols="34"></textarea></label><br><br>
+    <label for="lnktl"><input type="checkbox" name="lnktl" id="lnktl" onChange="changeC()">Include Latest.js Script</label>
     <br>
   </div>
   <div id="number3">
@@ -135,11 +136,13 @@
 </div>
 <br>
 <div id="btns">
-
   <button class="btnd" id="copy" onclick='subOpts("0")'>Copy Result</button>
   <button class="btnd" id="dwnl" onclick='subOpts("1")'>Download as File</button>
 
   <script>
+    var linkToLatest = "https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/latest.js";
+    var _25embedCrunch = '';
+
     function subOpts(ii) {
       var wL = document.getElementById("whiteD").value;
       wL = wL.trim();
@@ -183,6 +186,14 @@
       } else {
         var val6 = "n"
       }
+      if (document.getElementById("lnktl").checked) {
+        var _25embedCrunch = `let _25embedImport = document.createElement(script);
+_25embedImport.src = 'https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/latest.js';
+document.head.append(_25embedImport);`;
+      } else {
+        var _25embedCrunch = '';
+      }
+
       const subOptsL = [
         `
 const _25embedOptions = {
@@ -195,8 +206,10 @@ supportDevs:"` + val6 + `"
      };
 const _25embedWhitelistDomains = ["25HoursaDay.github.io","home-schoology.github.io","` + wL + `"];
 const _25embedBlacklistDomains = ["` + bL + `"];
-`
+
+` + _25embedCrunch + ``
       ];
+
       if (ii == "0") {
         navigator.clipboard.writeText(subOptsL);
         /* clipboard successfully set */
