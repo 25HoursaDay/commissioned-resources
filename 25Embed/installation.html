@@ -70,17 +70,17 @@
     #listing {
       box-sizing: border-box;
       text-align: left;
-      margin-right: 10px;
-      margin-left: 10px;
-      padding-right: 10px;
-      padding-left: 10px;
-      border-left: 3px solid grey;
-      border-right: 3px solid grey;
     }
 
     #number3 {
       box-sizing: border-box;
       text-align: left;
+      margin-right: 10px;
+      padding-right: 10px;
+      margin-left: 10px;
+      padding-left: 10px;
+      border-left: 3px solid grey;
+      border-right: 3px solid grey;
     }
 
     .disabled {
@@ -123,16 +123,6 @@
     <p>Please contact the developer to change these.</p>
     <label for="rck"><input type="checkbox" name="rck" id="rck" onChange="changeC()" disabled>Enable Rickroll</label><br><label for="spd"><input type="checkbox" name="spd" id="spd" onChange="changeC()" checked disabled>Support The Dev</label>
   </div>
-  <div id="listing">
-    <h2>Domain Control (Advanced):</h2>
-    <p>Blacklist / Whitelist Domains.</p>
-    <h3>Advanced:</h3>
-    <label for="whiteD">Whitelisted Domains (Seperated by commas):<br><textarea type="text" id="whiteD" name="whiteD" placeholder="www.example.com" rows="3" cols="34"></textarea></label><br>
-    <br>
-    <label for="blackD">Blacklisted Domains (Seperated by commas):<br><textarea type="text" id="blackD" name="blackD" placeholder="www.example.com" rows="3" cols="34"></textarea></label><br><br>
-    <label for="lnktl"><input type="checkbox" name="lnktl" id="lnktl" onChange="changeC()">Include Latest.js Script</label>
-    <br>
-  </div>
   <div id="number3">
     <h2>Style Control:</h2>
     <p>Change style settings.</p>
@@ -144,6 +134,19 @@
       <option value="greenT">Green</option>
       <option value="whiteT">White</option>
     </select>
+    <h2>Misc.</h2>
+    <p>Other settings.</p>
+    <h3>Basic:</h3>
+    <label for="lnktl"><input type="checkbox" name="lnktl" id="lnktl" onChange="changeC()">Include Latest.js Script</label>
+  </div>
+  <div id="listing">
+    <h2>Domain Control (Advanced):</h2>
+    <p>Blacklist / Whitelist Domains.</p>
+    <h3>Advanced:</h3>
+    <label for="whiteD">Whitelisted Domains (Seperated by commas):<br><textarea type="text" id="whiteD" name="whiteD" placeholder="www.example.com" rows="3" cols="34"></textarea></label><br>
+    <br>
+    <label for="blackD">Blacklisted Domains (Seperated by commas):<br><textarea type="text" id="blackD" name="blackD" placeholder="www.example.com" rows="3" cols="34"></textarea></label>
+    <br>
   </div>
 </div>
 <br>
