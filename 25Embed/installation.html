@@ -180,7 +180,7 @@
   <button class="btnd" id="copy" onclick='subOpts("0")'>Copy Result</button>
   <button class="btnd" id="dwnl" onclick='subOpts("1")'>Download as File</button>
   <script>
-    var _25embedCrunch = '';
+    var _25embedCrunch = "";
 
     function subOpts(ii) {
       var wL = document.getElementById("whiteD").value;
@@ -228,31 +228,32 @@
       /* CDN stuff */
       var cdnURL = "https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/latest.js";
       var valL = document.getElementById("cdnListL").value;
-      if (valL = 1) {
-        var cdnURL = "https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/latest.js";
-      }
-      if (valL = 2) {
-        var cdnURL = "https://commissioned-resources.pages.dev/25Embed/latest.js";
-      }
-      if (valL = 3) {
-        var cdnURL = "https://25HoursaDay.github.io/commissioned-resources/25Embed/latest.js";
-      }
-      if (valL = 4) {
-        var cdnURL = "https://raw.githubusercontent.com/25HoursaDay/commissioned-resources/main/25Embed/latest.js";
-      }
-      if (valL = 5) {
-        var cdnURL = "https://raw.githack.com/25HoursaDay/commissioned-resources/main/25Embed/latest.js";
-      }
-      if (valL = 6) {
-        var cdnURL = "";
-      }
-
       if (document.getElementById("lnktl").checked) {
+        //
+        if (valL = 1) {
+          var cdnURL = "https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/latest.js";
+        }
+        if (valL = 2) {
+          var cdnURL = "https://commissioned-resources.pages.dev/25Embed/latest.js";
+        }
+        if (valL = 3) {
+          var cdnURL = "https://25HoursaDay.github.io/commissioned-resources/25Embed/latest.js";
+        }
+        if (valL = 4) {
+          var cdnURL = "https://raw.githubusercontent.com/25HoursaDay/commissioned-resources/main/25Embed/latest.js";
+        }
+        if (valL = 5) {
+          var cdnURL = "https://raw.githack.com/25HoursaDay/commissioned-resources/main/25Embed/latest.js";
+        }
+        if (valL = 6) {
+          var cdnURL = "";
+        }
+        //
         var _25embedCrunch = `let _25embedImport = document.createElement(script);
-_25embedImport.src = '` + cdnURL + `';
+_25embedImport.src = "` + cdnURL + `";
 document.head.append(_25embedImport);`;
       } else {
-        var _25embedCrunch = '';
+        var _25embedCrunch = "";
       }
       /* end of CDN stuff */
       /* note 2 self: new code on end here */
