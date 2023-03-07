@@ -225,13 +225,6 @@
       } else {
         var val6 = "n"
       }
-      if (document.getElementById("lnktl").checked) {
-        var _25embedCrunch = `let _25embedImport = document.createElement(script);
-_25embedImport.src = '` + cdnURL + `';
-document.head.append(_25embedImport);`;
-      } else {
-        var _25embedCrunch = '';
-      }
       /* CDN stuff */
       var cdnURL = "https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/latest.js";
       var valL = document.getElementById("cdnListL").value;
@@ -252,6 +245,14 @@ document.head.append(_25embedImport);`;
       }
       if (valL = 6) {
         var cdnURL = "";
+      }
+
+      if (document.getElementById("lnktl").checked) {
+        var _25embedCrunch = `let _25embedImport = document.createElement(script);
+_25embedImport.src = '` + cdnURL + `';
+document.head.append(_25embedImport);`;
+      } else {
+        var _25embedCrunch = '';
       }
       /* end of CDN stuff */
       /* note 2 self: new code on end here */
