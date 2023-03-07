@@ -3,12 +3,14 @@
     html {
       font-family: "noto sans", "Helvetica", Arial, Roboto, Verdana;
     }
+
     #bungus {
       display: flex;
       width: 100vw;
       justify-content: center;
       align-items: top;
     }
+
     #key {
       display: flex;
       width: 100vw;
@@ -16,9 +18,11 @@
       align-items: top;
       text-align: center;
     }
+
     #key h4 {
       margin: 0 5px 0 5px;
     }
+
     #bungus2 {
       display: flex;
       width: 100vw;
@@ -26,6 +30,7 @@
       align-items: top;
       text-align: center;
     }
+
     #btns {
       display: flex;
       width: 100vw;
@@ -34,6 +39,7 @@
       align-items: bottom;
       text-align: center;
     }
+
     #warning {
       display: flex;
       width: 100vw;
@@ -42,13 +48,16 @@
       align-items: bottom;
       text-align: center;
     }
+
     .btnd {
       margin: 0 2px 0 2px;
     }
+
     #hostingSets input {
       left: 0;
       user-select: none;
     }
+
     #testingF {
       box-sizing: border-box;
       text-align: left;
@@ -56,17 +65,21 @@
       padding-left: 10px;
       border-left: 3px solid grey;
     }
+
     input:hover {
       cursor: pointer;
     }
+
     #hostingSets {
       box-sizing: border-box;
       text-align: left;
     }
+
     #listing {
       box-sizing: border-box;
       text-align: left;
     }
+
     #number3 {
       box-sizing: border-box;
       text-align: left;
@@ -77,15 +90,19 @@
       border-left: 3px solid grey;
       border-right: 3px solid grey;
     }
+
     .disabled {
       color: grey;
     }
+
     label {
       user-select: none;
     }
+
     label:hover {
       cursor: pointer;
     }
+
   </style>
 </head>
 <div id="bungus2">
@@ -128,13 +145,15 @@
     </label>
     <h2>Other Settings:</h2>
     <h3>Basic:</h3>
-    <label for="lnktl"><input type="checkbox" name="lnktl" id="lnktl" onChange="changeC()">Include Latest.js Script</label>
+    <label for="lnktl"><input type="checkbox" name="lnktl" id="lnktl" onChange="changeC()">Include Latest.js Script</label><br>
     <label id="cdnListL" for="cdnList">CDN:
       <select id="cdnList" name="cdnList">
-        <option value="blueT">Blue</option>
-        <option value="redT">Red</option>
-        <option value="greenT">Green</option>
-        <option value="whiteT">White</option>
+        <option value="jsDelivr">jsDelivr</option>
+        <option value="cloudflare">Cloudflare</option>
+        <option value="githubIo">Github.io</option>
+        <option value="githubRaw">Github Raw</option>
+        <option value="githack">Githack</option>
+        <option value="unpkg">unpkg</option>
       </select>
     </label>
   </div>
