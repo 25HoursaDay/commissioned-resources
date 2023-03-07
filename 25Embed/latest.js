@@ -43,7 +43,6 @@ if (_25embedBlacklistDomains) {} else {
 var reason = "Prevented";
 var ogContent = self.location;
 var contentOwner = "u";
-
 function _25HoursaDay_on_github(rsn) {
   var supDev;
   if (_25embedOptions.supportDevs != "n") {
@@ -82,7 +81,6 @@ if (_25embedOptions.allowBlobHost == "n" && contentOwner == "u") {
     _25embedLaunch();
   }
 }
-
 if (contentOwner == "u") {
   if (_25embedOptions.allowSameHost == "y") {
     if (window.self.location.hostname == window.top.location.hostname) {
@@ -98,7 +96,7 @@ if (contentOwner == "u") {
   if (_25embedOptions.ultraThreatProtection == "y") {
     if (window.top.location.hostname == "http://webcache.googleusercontent.com/" || window.self.location.hostname == "http://webcache.googleusercontent.com/") {
       var contentOwner = "n";
-      reason = "Original content not hosted on this webpage.";
+      reason = 'Protocol "ultraThreatProtection"';
       _25embedLaunch();
     }
   }
