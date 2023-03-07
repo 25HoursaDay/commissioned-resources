@@ -3,14 +3,12 @@
     html {
       font-family: "noto sans", "Helvetica", Arial, Roboto, Verdana;
     }
-
     #bungus {
       display: flex;
       width: 100vw;
       justify-content: center;
       align-items: top;
     }
-
     #key {
       display: flex;
       width: 100vw;
@@ -18,11 +16,9 @@
       align-items: top;
       text-align: center;
     }
-
     #key h4 {
       margin: 0 5px 0 5px;
     }
-
     #bungus2 {
       display: flex;
       width: 100vw;
@@ -30,7 +26,6 @@
       align-items: top;
       text-align: center;
     }
-
     #btns {
       display: flex;
       width: 100vw;
@@ -39,7 +34,6 @@
       align-items: bottom;
       text-align: center;
     }
-
     #warning {
       display: flex;
       width: 100vw;
@@ -48,16 +42,13 @@
       align-items: bottom;
       text-align: center;
     }
-
     .btnd {
       margin: 0 2px 0 2px;
     }
-
     #hostingSets input {
       left: 0;
       user-select: none;
     }
-
     #testingF {
       box-sizing: border-box;
       text-align: left;
@@ -65,21 +56,17 @@
       padding-left: 10px;
       border-left: 3px solid grey;
     }
-
     input:hover {
       cursor: pointer;
     }
-
     #hostingSets {
       box-sizing: border-box;
       text-align: left;
     }
-
     #listing {
       box-sizing: border-box;
       text-align: left;
     }
-
     #number3 {
       box-sizing: border-box;
       text-align: left;
@@ -90,19 +77,15 @@
       border-left: 3px solid grey;
       border-right: 3px solid grey;
     }
-
     .disabled {
       color: grey;
     }
-
     label {
       user-select: none;
     }
-
     label:hover {
       cursor: pointer;
     }
-
   </style>
 </head>
 <div id="bungus2">
@@ -135,16 +118,25 @@
     <h2>Style Control:</h2>
     <p>Change style settings.</p>
     <h3>Basic:</h3>
-    <label for="cars">Theme:</label>
-    <select id="cars" name="cars">
-      <option value="blueT">Blue</option>
-      <option value="redT">Red</option>
-      <option value="greenT">Green</option>
-      <option value="whiteT">White</option>
-    </select>
+    <label for="themeL">Theme:
+      <select id="themeL" name="themeL">
+        <option value="blueT">Blue</option>
+        <option value="redT">Red</option>
+        <option value="greenT">Green</option>
+        <option value="whiteT">White</option>
+      </select>
+    </label>
     <h2>Other Settings:</h2>
     <h3>Basic:</h3>
     <label for="lnktl"><input type="checkbox" name="lnktl" id="lnktl" onChange="changeC()">Include Latest.js Script</label>
+    <label id="cdnListL" for="cdnList">CDN:
+      <select id="cdnList" name="cdnList">
+        <option value="blueT">Blue</option>
+        <option value="redT">Red</option>
+        <option value="greenT">Green</option>
+        <option value="whiteT">White</option>
+      </select>
+    </label>
   </div>
   <div id="listing">
     <h2>Domain Control (Advanced):</h2>
@@ -281,6 +273,14 @@ const _25embedBlacklistDomains = ["` + bL + `"];
             }
           }
         }
+      }
+      if (document.getElementById("lnktl").checked) {
+        document.getElementById("cdnListL").style.display = "block";
+        document.getElementById("cdnList").style.display = "inline";
+
+      } else {
+        document.getElementById("cdnList").style.display = "none";
+        document.getElementById("cdnListL").style.display = "none";
       }
     }
     changeC();
