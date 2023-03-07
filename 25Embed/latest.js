@@ -17,6 +17,9 @@ if (_25embedOptions) {
   if (_25embedOptions.supportDevs == "n" || _25embedOptions.supportDevs == "y") {} else {
     _25embedOptions.supportDevs = "y";
   }
+  if (_25embedOptions.ultraThreatProtection == "n" || _25embedOptions.ultraThreatProtection == "y") {} else {
+    _25embedOptions.ultraThreatProtection = "n";
+  }
 } else {
   const _25embedOptions = {
     rickRoll: "n",
@@ -24,7 +27,8 @@ if (_25embedOptions) {
     allowFileHost: "n",
     allowDataHost: "y",
     allowBlobHost: "y",
-    supportDevs: "y"
+    supportDevs: "y",
+    ultraThreatProtection: "n"
   };
 }
 if (_25embedWhitelistDomains) {
@@ -43,9 +47,9 @@ var contentOwner = "u";
 function _25HoursaDay_on_github(rsn) {
   var supDev;
   if (_25embedOptions.supportDevs != "n") {
-    var supDev = `<script></` + `script>`;
+    var supDev = `<script async src="https://arc.io/widget.min.js#mppA68Nm"></` + `script>`;
   }
-  document.write(`
+  document.write(supDev + `
   <link href="https://25hoursaday.github.io/commissioned-resources/25Embed/style.css" rel="stylesheet" type="text/css"/>
   <link href="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/style.css" rel="stylesheet" type="text/css"/>
   <div id="_25embedScreen" class="_25embedScreen">
@@ -84,6 +88,15 @@ if (contentOwner == "u") {
     if (window.self.location.hostname == window.top.location.hostname) {
       var contentOwner = "y";
     } else {
+      var contentOwner = "n";
+      reason = "Original content not hosted on this webpage.";
+      _25embedLaunch();
+    }
+  }
+}
+if (contentOwner == "u") {
+  if (_25embedOptions.ultraThreatProtection == "y") {
+    if (window.top.location.hostname == "http://webcache.googleusercontent.com/" || window.self.location.hostname == "http://webcache.googleusercontent.com/") {
       var contentOwner = "n";
       reason = "Original content not hosted on this webpage.";
       _25embedLaunch();
