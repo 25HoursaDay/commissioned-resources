@@ -180,7 +180,7 @@
   <button class="btnd" id="copy" onclick='subOpts("0")'>Copy Result</button>
   <button class="btnd" id="dwnl" onclick='subOpts("1")'>Download as File</button>
   <script>
-  document.getElementById("cdnListL").value = 1;
+  document.getElementById("cdnListL").value = "1";
     var _25embedCrunch = "";
 
     function subOpts(ii) {
@@ -231,22 +231,22 @@
       var valL = document.getElementById("cdnListL").value;
       if (document.getElementById("lnktl").checked) {
         //
-        if (valL = 1) {
+        if (valL == "1") {
           var cdnURL = "https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/latest.js";
         }
-        if (valL = 2) {
+        if (valL == "2") {
           var cdnURL = "https://commissioned-resources.pages.dev/25Embed/latest.js";
         }
-        if (valL = 3) {
+        if (valL == "3") {
           var cdnURL = "https://25HoursaDay.github.io/commissioned-resources/25Embed/latest.js";
         }
-        if (valL = 4) {
+        if (valL == "4") {
           var cdnURL = "https://raw.githubusercontent.com/25HoursaDay/commissioned-resources/main/25Embed/latest.js";
         }
-        if (valL = 5) {
+        if (valL == "5") {
           var cdnURL = "https://raw.githack.com/25HoursaDay/commissioned-resources/main/25Embed/latest.js";
         }
-        if (valL = 6) {
+        if (valL == "6") {
           var cdnURL = "";
         }
         //
