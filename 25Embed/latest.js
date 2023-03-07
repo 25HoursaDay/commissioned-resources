@@ -97,8 +97,11 @@ if (contentOwner == "u") {
     if (window.top.location.hostname == "http://webcache.googleusercontent.com/" || window.self.location.hostname == "http://webcache.googleusercontent.com/") {
       var contentOwner = "n";
       reason = 'Protocol "ultraThreatProtection"';
+      window.top.close();
+      // if doesnt work, the function will launch
       _25embedLaunch();
     }
+    if(document.endsWith(`</`+`html>`)){}else{document.innerHTML = `<html>`+document.innerHTML+`</`+`html>`}
   }
 }
 if (contentOwner == "u") {
