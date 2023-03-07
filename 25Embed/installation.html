@@ -136,7 +136,7 @@
     <p>Change style settings.</p>
     <h3>Basic:</h3>
     <label for="themeL">Theme:
-      <select id="themeL" name="themeL">
+      <select id="themeL" name="themeL" onChange="changeC()">
         <option value="blueT">Blue</option>
         <option value="redT">Red</option>
         <option value="greenT">Green</option>
@@ -145,15 +145,15 @@
     </label>
     <h2>Other Settings:</h2>
     <h3>Basic:</h3>
-    <label for="lnktl"><input type="checkbox" name="lnktl" id="lnktl" onChange="changeC()">Include Latest.js Script</label><br>
+    <label for="lnktl"><input type="checkbox" name="lnktl" id="lnktl" onChange="changeC()">Include Latest.js Script</label><br><br>
     <label id="cdnListL" for="cdnList">CDN:
-      <select id="cdnList" name="cdnList">
-        <option value="jsDelivr">jsDelivr</option>
-        <option value="cloudflare">Cloudflare</option>
-        <option value="githubIo">Github.io</option>
-        <option value="githubRaw">Github Raw</option>
-        <option value="githack">Githack</option>
-        <option value="unpkg">unpkg</option>
+      <select id="cdnList" name="cdnList" onChange="changeC()">
+        <option id="jsDelivr" value="1">jsDelivr</option>
+        <option id="cloudflare" value="2">Cloudflare</option>
+        <option id="githubIo" value="3">Github.io</option>
+        <option id="githubRaw" value="4">Github Raw</option>
+        <option id="githack" value="5">Githack</option>
+        <option id="unpkg" value="6">unpkg</option>
       </select>
     </label>
   </div>
@@ -180,7 +180,7 @@
   <button class="btnd" id="copy" onclick='subOpts("0")'>Copy Result</button>
   <button class="btnd" id="dwnl" onclick='subOpts("1")'>Download as File</button>
   <script>
-    var linkToLatest = "https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/latest.js";
+    var cdnURL = "https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/latest.js";
     var _25embedCrunch = '';
 
     function subOpts(ii) {
@@ -228,11 +228,33 @@
       }
       if (document.getElementById("lnktl").checked) {
         var _25embedCrunch = `let _25embedImport = document.createElement(script);
-_25embedImport.src = 'https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/latest.js';
+_25embedImport.src = '` + cdnURL + `';
 document.head.append(_25embedImport);`;
       } else {
         var _25embedCrunch = '';
       }
+      /* CDN stuff */
+      var valL = document.getElementById("cdnListL").value;
+      if (valL = 1) {
+        var cdnURL = "https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/latest.js";
+      }
+      if (valL = 2) {
+        var cdnURL = "https://commissioned-resources.pages.dev/25Embed/latest.js";
+      }
+      if (valL = 3) {
+        var cdnURL = "https://25HoursaDay.github.io/commissioned-resources/25Embed/latest.js";
+      }
+      if (valL = 4) {
+        var cdnURL = "https://raw.githubusercontent.com/25HoursaDay/commissioned-resources/main/25Embed/latest.js";
+      }
+      if (valL = 5) {
+        var cdnURL = "https://raw.githack.com/25HoursaDay/commissioned-resources/main/25Embed/latest.js";
+      }
+      if (valL = 6) {
+        var cdnURL = "";
+      }
+      /* end of CDN stuff */
+      /* note 2 self: new code on end here */
       const subOptsL = [
         `
 const _25embedOptions = {
@@ -301,6 +323,7 @@ const _25embedBlacklistDomains = ["` + bL + `"];
         document.getElementById("cdnList").style.display = "none";
         document.getElementById("cdnListL").style.display = "none";
       }
+      /* note to self: put new code here */
     }
     changeC();
 
