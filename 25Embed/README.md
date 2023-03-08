@@ -1,5 +1,5 @@
 <h1 align="center">25Embed</h1>
-# About 25Embed
+<h1>About 25Embed</h1>
 25Embed is a tool to prevent your content from being embedded on sites that are not yours.
 
 **If you were directed to this page from an embed, please contact the original content owner to let them know their hard work is being stolen!**
