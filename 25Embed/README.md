@@ -3,10 +3,10 @@
 <p>25Embed is a tool to prevent your content from being stolen using embeds.</p>
 
 <h1>Installation</h1>
-To install 25Embed, first you must create your own [config.js](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js) file with settings to your liking (see [here]() for more information on config.js) or leave the settings default. You may also use the tool I have made to help with this process: [here]()
+<p>To install 25Embed, first you must create your own <a href="https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js">config.js</a> file using the <a href="">25Embed Config Tool</a> or have the settings set to default.</p>
 
 <h3>HTML file (recommended)</h3>
-To install 25Embed in an HTML file, you must add the [latest.js](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/latest.js) file and your custom [config.js](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js) to a script tag in the head of your file (two script tags in total).
+<p>To install 25Embed in an HTML file, you must add the <a href="https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/latest.js">latest.js</a> file and the [config.js](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js) file to a script tag in the head of your file (two script tags in total).</p>
 
 Example:
 ```
