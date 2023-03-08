@@ -38,7 +38,7 @@ Put your [config.js](https://github.com/25HoursaDay/commissioned-resources/blob/
 The [config.js](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js) file is the file where your 25Embed settings are held.
 If you would like to change your config file to enable/disable the default settings, you must create your own [config.js](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js) file with the settings adjusted to your liking.
 To see a list of all settings and their functions, [click here!]()
-## History
+# History
 I first thought of the concept of 25Embed back when I was not so technologically inclined, when I would just embed things into google sites.
 I figured there had to be a way to prevent someone from so easily stealing your content, but I didn't know how to create something like that.
 Fast forward two years, I have the ability to make something like that so I did.
@@ -46,7 +46,7 @@ Fast forward two years, I have the ability to make something like that so I did.
 ## More protection
 If you want your content to be even more safe, be sure to add the html tags to your html file
 
-## Similar tools
+# Similar tools
 ### Here are some noteworthy tools similar to 25Embed:
 [Unframed](https://unframed.netlify.app/) a friend actually found and told me about this while I was working on 25Embed in class instead of doing work.
 (I kinda stole the idea of the Unframed UI)
