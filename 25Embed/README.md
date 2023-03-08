@@ -8,7 +8,8 @@
 <h3>HTML file (recommended)</h3>
 <p>To install 25Embed in an HTML file, you must add the <a href="https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/latest.js">latest.js</a> file and the <a href="https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js">config.js</a> file to two script tags in the head of your file (two script tags in total).</p>
 
-Example:
+<p>Example:</p>
+
 ```
 <html>
   <head>
