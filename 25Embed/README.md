@@ -25,6 +25,7 @@ Example:
 Put your [config.js](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js) file url where it says "path to config file", and put the [25Embed](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/latest.js) file url where it says "path to 25Embed file".
 
 <h3>Javascript file</h3>
+
 If you would like to install 25Embed in your index.js file, you must add the following code:
 ```
 document.head.append(`
