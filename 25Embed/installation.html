@@ -344,5 +344,12 @@ const _25embedBlacklistDomains = ["` + bL + `"];
     }
     changeC();
 
+function conflictingInputs(Aid,Aclass,Bid,Bclass,e,f,g) {
+document.getElementById(Aid).classList.add("conflictedEnabled");
+document.getElementsByClassName(Bclass).classList.add("conflictedDisabled");
+
+document.getElementsByClassName(Bclass).checked = false;
+document.getElementById(Aid).checked = false;
+}
   </script>
 </div>
