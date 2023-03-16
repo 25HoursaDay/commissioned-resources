@@ -6,6 +6,8 @@ allowFileHost:"n", // default set to n
 allowDataHost:"y", // default set to y
 allowBlobHost:"y", // default set to y
 supportDevs:"y", // default set to y
+onlyAllowHTTP:"n", // default set to n
+onlyAllowHTTPS:"n", // default set to n
 ultraThreatProtection:"n" // default set to n because it has the ability to break everything
 };
 
