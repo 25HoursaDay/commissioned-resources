@@ -129,8 +129,8 @@
     <label for="duh"><input type="checkbox" name="duh" id="duh" onChange="changeC()">Allow "Data:" Url Hosting</label><br>
     <label for="buh"><input type="checkbox" name="buh" id="buh" onChange="changeC()" checked>Allow "Blob:" Url Hosting</label><br>
 
-    <label for="aohahp"><input type="checkbox" name="aohahp" id="aohahp" class="proto1" onChange='conflictedInputs("aohahp","proto1","proto1")'>Allow only "http:" and "https:" Protocols</label><br>
-    <label for="aohp"><input type="checkbox" name="aohp" id="aohp" class="proto1" onChange='conflictedInputs("aohp","proto1","proto1")'>Allow only "https:" Protocol</label><br>
+    <label for="aohahp"><input type="checkbox" name="aohahp" id="aohahp" class="proto1" onChange='conflictedInputs("aohahp","proto1")'>Allow only "http:" and "https:" Protocols</label><br>
+    <label for="aohp"><input type="checkbox" name="aohp" id="aohp" class="proto1" onChange='conflictedInputs("aohp","proto1")'>Allow only "https:" Protocol</label><br>
 
     <h3>Advanced:</h3>
     <p>These features are not yet ready.</p>
@@ -346,22 +346,19 @@ const _25embedBlacklistDomains = ["` + bL + `"];
     }
     changeC();
 
-    function conflictedInputs(Aid, Aclass, Bclass, Bid) {
-      var tempVar1 = document.getElementById(Aid);
-      var tempVar2 = document.getElementsByClassName(Bclass);
-
-      if (document.getElementById(Aid).disabled = true) {} else {
-        if (document.getElementById(Aid).checked = true) {
+    function conflictedInputs(Aid, Aclass) {
+      if (document.getElementById(Aid).disabled) {} else {
+        if (document.getElementById(Aid).checked) {
           document.getElementById(Aid).classList.remove(Aclass);
-          document.getElementsByClassName(Bclass).classList.add("conflicted");
-          document.getElementsByClassName(Bclass).checked = false;
-          document.getElementsByClassName(Bclass).disabled = true;
+          document.getElementsByClassName(Aclass).checked = false;
+          document.getElementsByClassName(Aclass).disabled = true;
           document.getElementById(Aid).classList.add(Aclass);
+          alert("gada");
         }
-        if (document.getElementById(Aid).checked = false) {
+        if (!document.getElementById(Aid).checked) {
+          alert("fesfe");
           document.getElementById(Aid).classList.remove(Aclass);
-          document.getElementsByClassName(Bclass).classList.remove("conflicted");
-          document.getElementsByClassName(Bclass).disabled = false;
+          document.getElementsByClassName(Aclass).disabled = false;
           document.getElementById(Aid).classList.add(Aclass);
         }
       }
