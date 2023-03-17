@@ -127,8 +127,8 @@
     <label for="duh"><input type="checkbox" name="duh" id="duh" onChange="changeC()">Allow "Data:" Url Hosting</label><br>
     <label for="buh"><input type="checkbox" name="buh" id="buh" onChange="changeC()" checked>Allow "Blob:" Url Hosting</label><br>
 
-    <label for="aohahp"><input type="checkbox" name="aohahp" id="aohahp" onChange="changeC()">Allow only the "http:" and "https:" Protocols</label><br>
-    <label for="aohp"><input type="checkbox" name="aohp" id="aohp" onChange="changeC()">Allow only the "https:" Protocol</label><br>
+    <label for="aohahp" class="proto"><input type="checkbox" name="aohahp" id="aohahp" class="proto" onChange="conflictedInputs(aohahp,proto,proto)">Allow only "http:" and "https:" Protocols</label><br>
+    <label for="aohp" class="proto"><input type="checkbox" name="aohp" id="aohp" class="proto" onChange="conflictedInputs(aohp,proto,proto)">Allow only "https:" Protocol</label><br>
 
     <h3>Advanced:</h3>
     <p>These features are not yet ready.</p>
