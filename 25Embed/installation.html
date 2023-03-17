@@ -344,12 +344,27 @@ const _25embedBlacklistDomains = ["` + bL + `"];
     }
     changeC();
 
-function conflictingInputs(Aid,Aclass,Bid,Bclass,e,f,g) {
-document.getElementById(Aid).classList.add("conflictedEnabled");
-document.getElementsByClassName(Bclass).classList.add("conflictedDisabled");
+    function conflictedInputs(Aid, Aclass, Bclass, Bid) {
+      var tempVar1 = document.getElementById(Aid);
+      var tempVar2 = document.getElementsByClassName(Bclass);
+      if (tempVar1.disabled = true) {} else {
+        if (tempVar1.checked = true) {
+          tempVar1.classList.remove(Aclass);
+          tempVar2.classList.add("conflicted");
+          tempVar2.checked = false;
+          tempVar2.disabled = true;
+          tempVar1.classList.add(Aclass);
+        }
+        if (tempVar1.checked = false) {
+          tempVar1.classList.remove(Aclass);
+          tempVar2.classList.remove("conflicted");
+          tempVar2.disabled = false;
+          tempVar1.classList.add(Aclass);
+        }
+      }
+      // document.getElementById(Aid).checked = false;
+      changeC();
+    }
 
-document.getElementsByClassName(Bclass).checked = false;
-document.getElementById(Aid).checked = false;
-}
   </script>
 </div>
