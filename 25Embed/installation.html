@@ -348,17 +348,16 @@ const _25embedBlacklistDomains = ["` + bL + `"];
 
     function conflictedInputs(Aid, Aclass) {
       if (document.getElementById(Aid).disabled) {} else {
+        document.getElementById(Aid).classList.remove(Aclass);
         if (document.getElementById(Aid).checked) {
-          document.getElementById(Aid).classList.remove(Aclass);
           document.getElementsByClassName(Aclass).checked = false;
           document.getElementsByClassName(Aclass).disabled = true;
-          document.getElementById(Aid).classList.add(Aclass);
           alert("gada");
-        }
-        if (!document.getElementById(Aid).checked) {
-          alert("fesfe");
-          document.getElementById(Aid).classList.remove(Aclass);
-          document.getElementsByClassName(Aclass).disabled = false;
+        } else {
+          if (!document.getElementById(Aid).checked) {
+            alert("fesfe");
+            document.getElementsByClassName(Aclass).disabled = false;
+          }
           document.getElementById(Aid).classList.add(Aclass);
         }
       }
