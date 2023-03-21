@@ -1,10 +1,10 @@
 <label for="exportURL">URL to convert<br>
-  <textarea type="text" id="exportURL" name="exportURL" placeholder="www.example.com" rows="1" cols="34" onchange="change()"></textarea>
+  <textarea type="text" id="exportURL" name="exportURL" placeholder="www.example.com" rows="1" cols="34" onchange="changee()"></textarea>
 </label><br>
 <script type="module">
-  export
-  function change() {
-    let exportUrl = document.getElementById("exportURL").value;
+  
+  function changee() {
+    let exportUrl = "www.example.com/?q="+document.getElementById("exportURL").value+"";
     document.getElementById("outputURL").value = exportURL;
   }
 
@@ -18,9 +18,8 @@
 fetch(exportURL).then((result) => { return result.text(); })
   .then((content) => { alert(content); });
   
-  
 </script>
 <label for="outputURL">Result:<br>
   <textarea type="text" id="outputURL" name="outputURL" placeholder="www.example.com" rows="1" cols="34" readonly></textarea>
-</label>
+</label><br>
 <button onclick="btnClick()" id="btn">Copy Result</button>
