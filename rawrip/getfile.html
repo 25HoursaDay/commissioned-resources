@@ -1,0 +1,16 @@
+<label for="exportURL">URL to convert<br>
+  <textarea type="text" id="exportURL" name="exportURL" placeholder="www.example.com" rows="1" cols="34"></textarea>
+</label>
+<script>
+  let exportUrl = document.getElementById("exportURL").value;
+  document.getElementById("outputURL").value = exportURL;
+</script>
+<script type="module">
+export exportUrl;
+fetch()
+  .then((result) => { return result.text(); })
+  .then((content) => { document.write(content); });
+</script>
+<label for="outputURL">Result:<br>
+  <textarea type="text" id="outputURL" name="outputURL" placeholder="www.example.com" rows="1" cols="34" readonly></textarea>
+</label>
