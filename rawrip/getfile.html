@@ -1,16 +1,26 @@
 <label for="exportURL">URL to convert<br>
-  <textarea type="text" id="exportURL" name="exportURL" placeholder="www.example.com" rows="1" cols="34"></textarea>
-</label>
-<script>
-  let exportUrl = document.getElementById("exportURL").value;
-  document.getElementById("outputURL").value = exportURL;
-</script>
+  <textarea type="text" id="exportURL" name="exportURL" placeholder="www.example.com" rows="1" cols="34" onchange="change()"></textarea>
+</label><br>
 <script type="module">
-export exportUrl;
-fetch()
-  .then((result) => { return result.text(); })
-  .then((content) => { document.write(content); });
+  export
+  function change() {
+    let exportUrl = document.getElementById("exportURL").value;
+    document.getElementById("outputURL").value = exportURL;
+  }
+
+  function btnClick() {
+    navigator.clipboard.writeText(exportURL);
+    document.getElementById('btn').innerHTML = "Copied!";
+    setTimeout(() => {
+      document.getElementById('btn').innerHTML = `Copy Result`
+    }, 1000);
+  }
+fetch(exportURL).then((result) => { return result.text(); })
+  .then((content) => { alert(content); });
+  
+  
 </script>
 <label for="outputURL">Result:<br>
   <textarea type="text" id="outputURL" name="outputURL" placeholder="www.example.com" rows="1" cols="34" readonly></textarea>
 </label>
+<button onclick="btnClick()" id="btn">Copy Result</button>
