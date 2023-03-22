@@ -9,17 +9,6 @@
     document.getElementById("outputURL").style.display = "block";
     // document.getElementById("btn").innerHTML = "Update";
     document.getElementById("outputURL").value = 'https://25HoursaDay.github.io/commissioned-resources/rawrip/index.html?exportURL=' + encodeURIComponent(document.getElementById("exportURL").value);
-
-    fetch(document.getElementById("exportURL").value)
-      .then((result) => {
-        return result.text();
-      })
-      .then((exportCode) => {
-        export {
-          encodeURIComponent(exportCode)
-        }
-      });
-  });
   }
 
   function btn2Click() {
