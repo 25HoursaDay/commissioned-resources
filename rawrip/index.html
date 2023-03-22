@@ -2,12 +2,7 @@
   <textarea type="text" id="exportURL" name="exportURL" placeholder="www.example.com" rows="1" cols="34" onchange="changee()"></textarea>
 </label><br>
 <script type="module">
-  
-  function changee() {
-    let exportUrl = "www.example.com/?q="+document.getElementById("exportURL").value+"";
-    document.getElementById("outputURL").value = exportURL;
-  }
-
+ 
   function btnClick() {
     navigator.clipboard.writeText(exportURL);
     document.getElementById('btn').innerHTML = "Copied!";
@@ -15,8 +10,11 @@
       document.getElementById('btn').innerHTML = `Copy Result`
     }, 1000);
   }
-fetch(exportURL).then((result) => { return result.text(); })
-  .then((content) => { alert(content); });
+  
+  let params = new URLSearchParams(document.location.search);
+  let site = params.get("site");
+  
+fetch(site).then((result) => { return result.text(); }).then((content) => {export {content}); });
   
 </script>
 <label for="outputURL">Result:<br>
