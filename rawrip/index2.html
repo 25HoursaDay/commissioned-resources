@@ -8,11 +8,11 @@
     document.getElementById("btn2").style.display = "block";
     document.getElementById("outputURL").style.display = "block";
     // document.getElementById("btn").innerHTML = "Update";
-    document.getElementById("outputURL").value = 'https://25HoursaDay.github.io/commissioned-resources/rawrip/index.html?exportURL=' + encodeURIComponent(document.getElementById("exportURL").value);
+    document.getElementById("outputURL").value = 'https://25HoursaDay.github.io/commissioned-resources/rawrip/index.html?exportURL=' + encodeURIComponent(document.getElementById("exportURL").value + '');
   }
 
   function btn2Click() {
-    navigator.clipboard.writeText(exportURL);
+    navigator.clipboard.writeText('https://25HoursaDay.github.io/commissioned-resources/rawrip/index.html?exportURL=' + encodeURIComponent(document.getElementById("exportURL").value) + '');
     document.getElementById('btn2').innerHTML = "Copied!";
     setTimeout(() => {
       document.getElementById('btn2').innerHTML = `Copy Result`
