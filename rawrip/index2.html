@@ -1,8 +1,12 @@
-<label for="exportURL">URL to RawRip<br>
+<label for="exportURL">URL to RawRip:<br>
   <textarea type="text" id="exportURL" name="exportURL" placeholder="www.example.com" rows="1" cols="34"></textarea>
 </label><br>
 <button onclick="btnClick()" id="btn">Get RawRip URL</button>
-<br>
+<br><br>
+<label for="outputURL">RawRipped URL:<br>
+  <textarea type="text" id="outputURL" name="outputURL" placeholder="www.example.com" rows="1" cols="34" readonly></textarea>
+</label><br>
+<button onclick="btn2Click()" id="btn2">Copy Result</button>
 <script>
   function btnClick() {
     document.getElementById("btn2").style.display = "block";
@@ -20,7 +24,3 @@
   }
 
 </script>
-<label for="outputURL">RawRipped URL:<br>
-  <textarea type="text" id="outputURL" name="outputURL" placeholder="www.example.com" rows="1" cols="34" readonly></textarea>
-</label><br>
-<button onclick="btn2Click()" id="btn2">Copy Result</button>
