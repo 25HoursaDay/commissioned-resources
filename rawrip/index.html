@@ -10,7 +10,7 @@
   
   let params = new URLSearchParams(document.location.search);
   let exportURL = params.get("exportURL");
-  
+  export {exportURL};
 fetch(exportURL).then((result) => { return result.text(); }).then((exportCode) => {export {exportCode}); });
   
 </script>
