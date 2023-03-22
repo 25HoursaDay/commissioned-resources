@@ -1,23 +1,26 @@
-<label for="exportURL">URL to convert<br>
-  <textarea type="text" id="exportURL" name="exportURL" placeholder="www.example.com" rows="1" cols="34" onchange="changee()"></textarea>
+<label for="exportURL">URL to RawRip<br>
+  <textarea type="text" id="exportURL" name="exportURL" placeholder="www.example.com" rows="1" cols="34"></textarea>
 </label><br>
-<script type="module">
- 
+<button onclick="btnClick()" id="btn">Get RawRip URL</button>
+<br>
+<script>
   function btnClick() {
+    document.getElementById("btn2").style.display = "block";
+    document.getElementById("outputURL").style.display = "block";
+    // document.getElementById("btn").innerHTML = "Update";
+    document.getElementById("outputURL").value = 'https://25HoursaDay.github.io/commissioned-resources/rawrip/index.html?exportURL=' + encodeURIComponent(document.getElementById("exportURL").value);
+  }
+
+  function btn2Click() {
     navigator.clipboard.writeText(exportURL);
-    document.getElementById('btn').innerHTML = "Copied!";
+    document.getElementById('btn2').innerHTML = "Copied!";
     setTimeout(() => {
-      document.getElementById('btn').innerHTML = `Copy Result`
+      document.getElementById('btn2').innerHTML = `Copy Result`
     }, 1000);
   }
-  
-  let params = new URLSearchParams(document.location.search);
-  let site = params.get("site");
-  
-fetch(site).then((result) => { return result.text(); }).then((content) => {export {content}); });
-  
+
 </script>
-<label for="outputURL">Result:<br>
+<label for="outputURL">RawRipped URL:<br>
   <textarea type="text" id="outputURL" name="outputURL" placeholder="www.example.com" rows="1" cols="34" readonly></textarea>
 </label><br>
-<button onclick="btnClick()" id="btn">Copy Result</button>
+<button onclick="btn2Click()" id="btn2">Copy Result</button>
