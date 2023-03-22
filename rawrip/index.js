@@ -4,7 +4,8 @@
 
 fetch(decodeURIComponent(exportURL))
   .then((result) => { return result.text();})
-  .then((exportCode) => { exportCode; }); 
+  .then((exportCode) => { document.currentScript.after(exportCode); }); 
   
+
   export {decodeURIComponent(exportURL)};
   export {decodeURIComponent(exportCode)};
