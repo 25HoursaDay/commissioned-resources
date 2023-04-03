@@ -3,6 +3,8 @@
   let exportURL = rawParams.get("exportURL");
   let thisScr = doument.currentScript;
 
-fetch(decodeURIComponent(exportURL))
-  .then((result) => { return result.text();})
-  .then((exportCode) => { this.innerHTML = exportCode;}); 
+function htmlRip(url) {
+  fetch(url)
+  .then((result) => {return result.text();})
+  .then((exportCode) => {return exportCode;}); 
+}
