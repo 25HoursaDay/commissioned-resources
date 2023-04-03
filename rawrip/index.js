@@ -1,11 +1,9 @@
-// dont forget to add type="module" to your script tag
-  let rawParams = new URLSearchParams(document.currentScript.src.search);
+// put script tag in containing element  
+let rawParams = new URLSearchParams(document.currentScript.src.search);
   let exportURL = rawParams.get("exportURL");
+  let thisScr = doument.currentScript;
+  let gssuh = document.createElement("");
 
 fetch(decodeURIComponent(exportURL))
   .then((result) => { return result.text();})
-  .then((exportCode) => { document.currentScript.after(exportCode); }); 
-  
-
-  export {decodeURIComponent(exportURL)};
-  export {decodeURIComponent(exportCode)};
+  .then((exportCode) => { thisScr.after(exportCode);}); 
