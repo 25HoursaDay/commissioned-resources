@@ -5,4 +5,4 @@
 
 fetch(decodeURIComponent(exportURL))
   .then((result) => { return result.text();})
-  .then((exportCode) => { thisScr.insertAdjacentHTML("afterend", exportCode);}); 
+  .then((exportCode) => { this.innerHTML = exportCode;}); 
