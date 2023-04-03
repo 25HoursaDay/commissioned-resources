@@ -1,8 +1,9 @@
 class HelloWorld extends HTMLElement {
-
+// constructor start
     constructor() {
         super()
     }
+// constructor end
 // custom callbacks start
     connectedCallback() {
         if (this.hasAttribute("ishidden")) {
