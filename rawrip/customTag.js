@@ -18,5 +18,6 @@ class HelloWorld extends HTMLElement {
     }
 // custom methods end
 }
-
-customElements.define("hello-world", HelloWorld)
+// start of custom element definitions
+customElements.define("hello-world", HelloWorld);
+// end of custom element definitions
