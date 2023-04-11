@@ -8,3 +8,4 @@ function htmlRip(url) {
   .then((result) => {return result.text();})
   .then((exportCode) => {return exportCode;}); 
 }
+htmlRip(exportURL);
