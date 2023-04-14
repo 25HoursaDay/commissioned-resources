@@ -6,10 +6,11 @@ if (document.currentScript) {
   let rawRippedURL = atob(rawRiparams.get("rawRipURL"));
   let thisRawScript = doument.currentScript;
   let rawTarget = getAttribute("rawRipTarget");
-} else {}
+
 function htmlRip() {
   fetch(rawRippedURL)
   .then((result) => {return result.text();})
   .then((rippedCode) => {rawTarget.innerHTML = rippedCode;}); 
 }
 htmlRip();
+} else {}
