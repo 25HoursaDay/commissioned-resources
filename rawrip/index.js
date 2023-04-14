@@ -3,9 +3,10 @@
   let rawRipars = new URLSearchParams(document.currentScript.src.search);
   let rawRippedURL = atob(rawRipars.get("rawRipURL"));
   let thisRawScript = doument.currentScript;
+  let rawTarget = atob(rawRipars.get("rawTarget"));
 
-function htmlRip(target) {
+function htmlRip() {
   fetch(rawRippedURL)
   .then((result) => {return result.text();})
-  .then((rippedCode) => {target.innerHTML = rippedCode;}); 
+  .then((rippedCode) => {rawTarget.innerHTML = rippedCode;}); 
 }
