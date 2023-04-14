@@ -4,8 +4,8 @@
   let rawRippedURL = atob(rawRipars.get("rawRipURL"));
   let thisRawScript = doument.currentScript;
 
-function htmlRip() {
+function htmlRip(target) {
   fetch(rawRippedURL)
   .then((result) => {return result.text();})
-  .then((rippedCode) => {return rippedCode;}); 
+  .then((rippedCode) => {target.innerHTML = rippedCode;}); 
 }
