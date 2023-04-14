@@ -1,11 +1,12 @@
 // put script tag in containing element  
-  let rawParams = new URLSearchParams(document.currentScript.src.search);
-  let exportURL = rawParams.get("exportURL");
-  let thisScr = doument.currentScript;
+  let rawRipars = new URLSearchParams(document.currentScript.src.search);
+  let rawRippedURL = atob(rawRipars.get("rawRipURL"));
+  let rawRipVars = atob(rawRipars.get("rawRipVars"));
+  let thisRawScript = doument.currentScript;
 
-function htmlRip(url) {
-  fetch(url)
+function htmlRip() {
+  fetch(rawRippedURL)
   .then((result) => {return result.text();})
   .then((exportCode) => {return exportCode;}); 
 }
-htmlRip(exportURL);
+
