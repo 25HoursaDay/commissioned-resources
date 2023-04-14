@@ -1,10 +1,10 @@
 // does not import modules to my knowledge
-// example of a valid url: https://example.com/?rawTarget=element&rawRipURL=
+// example of a valid url: https://example.com/?rawRipURL=
 // put script tag in containing element  
   let rawRipars = new URLSearchParams(document.currentScript.src.search);
   let rawRippedURL = atob(rawRipars.get("rawRipURL"));
   let thisRawScript = doument.currentScript;
-  let rawTarget = atob(rawRipars.get("rawTarget"));
+  let rawTarget = getAttribute("rawRipTarget");
 
 function htmlRip() {
   fetch(rawRippedURL)
