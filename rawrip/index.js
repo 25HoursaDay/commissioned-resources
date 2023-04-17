@@ -4,9 +4,8 @@
 // example: <script src="link to rawRip" ripTar="url of page to rip" ripLoc="location to put the ripped page"></script>
 if (document.currentScript) {
   let rawRip = document.currentScript;
-  let rawRipTar = getAttribute("ripTar");
-  let thisRawScript = doument.currentScript;
-  let ripLoc = getAttribute("ripLoc");
+  let rawRipTar = rawRip.getAttribute("ripTar");
+  let ripLoc = rawRip.getAttribute("ripLoc");
 
 function htmlRip() {
   fetch(rawRipTar)
