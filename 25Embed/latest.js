@@ -1,23 +1,37 @@
 if (_25embedOptions) {
-  if (_25embedOptions.rickRoll == "n" || _25embedOptions.rickRoll == "y") {} else {
+  if (_25embedOptions.rickRoll == "n" || _25embedOptions.rickRoll == "y") {
+    console.log("true");
+  } else {
     _25embedOptions.rickRoll = "n";
   }
-  if (_25embedOptions.allowSameHost == "n" || _25embedOptions.allowSameHost == "y") {} else {
+  if (_25embedOptions.allowSameHost == "n" || _25embedOptions.allowSameHost == "y") {
+    console.log("true");
+  } else {
     _25embedOptions.allowSameHost = "y";
   }
-  if (_25embedOptions.allowFileHost == "n" || _25embedOptions.allowFileHost == "y") {} else {
+  if (_25embedOptions.allowFileHost == "n" || _25embedOptions.allowFileHost == "y") {
+    console.log("true");
+  } else {
     _25embedOptions.allowFileHost = "n";
   }
-  if (_25embedOptions.allowDataHost == "n" || _25embedOptions.allowDataHost == "y") {} else {
+  if (_25embedOptions.allowDataHost == "n" || _25embedOptions.allowDataHost == "y") {
+    console.log("true");
+  } else {
     _25embedOptions.allowDataHost = "y";
   }
-  if (_25embedOptions.allowBlobHost == "n" || _25embedOptions.allowBlobHost == "y") {} else {
+  if (_25embedOptions.allowBlobHost == "n" || _25embedOptions.allowBlobHost == "y") {
+    console.log("true");
+  } else {
     _25embedOptions.allowBlobHost = "y";
   }
-  if (_25embedOptions.supportDevs == "n" || _25embedOptions.supportDevs == "y") {} else {
+  if (_25embedOptions.supportDevs == "n" || _25embedOptions.supportDevs == "y") {
+    console.log("true");
+  } else {
     _25embedOptions.supportDevs = "y";
   }
-  if (_25embedOptions.ultraThreatProtection == "n" || _25embedOptions.ultraThreatProtection == "y") {} else {
+  if (_25embedOptions.ultraThreatProtection == "n" || _25embedOptions.ultraThreatProtection == "y") {
+    console.log("true");
+  } else {
     _25embedOptions.ultraThreatProtection = "n";
   }
 } else {
@@ -40,16 +54,17 @@ if (_25embedWhitelistDomains) {
 if (_25embedBlacklistDomains) {} else {
   const _25embedBlacklistDomains = [];
 }
+
 var reason = "Prevented";
 var ogContent = self.location;
 var contentOwner = "u";
+
 function _25HoursaDay_on_github(rsn) {
-  var supDev;
+  var supDev = "";
   if (_25embedOptions.supportDevs != "n") {
     var supDev = `<script async src="https://arc.io/widget.min.js#mppA68Nm"></` + `script>`;
   }
   document.write(supDev + `
-  <link href="https://25hoursaday.github.io/commissioned-resources/25Embed/style.css" rel="stylesheet" type="text/css"/>
   <link href="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/style.css" rel="stylesheet" type="text/css"/>
   <div id="_25embedScreen" class="_25embedScreen">
   <h1 id="titleMsg" class="titleMsg">This content has been guarded by 25Embed.</h1>
@@ -63,21 +78,21 @@ function _25HoursaDay_on_github(rsn) {
 if (_25embedOptions.allowFileHost == "n" && contentOwner == "u") {
   if (window.location.href.startsWith("file:") && contentOwner == "u") {
     var contentOwner = "n";
-    reason = "Content was loaded with a file URL.";
+    var reason = "Content was loaded with a file URL.";
     _25embedLaunch();
   }
 }
 if (_25embedOptions.allowDataHost == "n" && contentOwner == "u") {
   if (window.location.href.startsWith("data:") && contentOwner == "u") {
     var contentOwner = "n";
-    reason = "Content was loaded with a data URL.";
+    var reason = "Content was loaded with a data URL.";
     _25embedLaunch();
   }
 }
 if (_25embedOptions.allowBlobHost == "n" && contentOwner == "u") {
   if (window.location.href.startsWith("blob:") && contentOwner == "u") {
     var contentOwner = "n";
-    reason = "Content was loaded with a blob URL.";
+    var reason = "Content was loaded with a blob URL.";
     _25embedLaunch();
   }
 }
@@ -87,7 +102,7 @@ if (contentOwner == "u") {
       var contentOwner = "y";
     } else {
       var contentOwner = "n";
-      reason = "Original content not hosted on this webpage.";
+      var reason = "Original content not hosted on this webpage.";
       _25embedLaunch();
     }
   }
@@ -96,18 +111,20 @@ if (contentOwner == "u") {
   if (_25embedOptions.ultraThreatProtection == "y") {
     if (window.top.location.hostname == "http://webcache.googleusercontent.com/" || window.self.location.hostname == "http://webcache.googleusercontent.com/") {
       var contentOwner = "n";
-      reason = 'Protocol "ultraThreatProtection"';
+      var reason = 'Protocol "ultraThreatProtection"';
       window.top.close();
       // if doesnt work, the function will launch
       _25embedLaunch();
     }
-    if(document.endsWith(`</`+`html>`)){}else{document.innerHTML = `<html>`+document.innerHTML+`</`+`html>`}
+    if (document.endsWith(`</` + `html>`)) {} else {
+      document.innerHTML = `<html>` + document.innerHTML + `</` + `html>`
+    }
   }
 }
 if (contentOwner == "u") {
   if (window.self != window.top) {
     var contentOwner = "n";
-    reason = "The embedded content does not belong to this website.";
+    var reason = "The embedded content does not belong to this website.";
     _25embedLaunch();
   } else {
     var contentOwner = "y";
@@ -119,7 +136,7 @@ function _25embedLaunch() {
     if (contentOwner == "n") {
       _25HoursaDay_on_github(reason);
     } else {
-      reason = "Content owner is undefined, contact content owner.";
+      var reason = "Content owner is undefined, contact content owner.";
       _25HoursaDay_on_github(reason);
     }
   }
