@@ -116,18 +116,20 @@ if (contentOwner == "u") {
 }
 if (contentOwner == "u") {
   if (window.self != window.top) {
+    let contentOwner = "n";
     _25embedLaunch("n", "The embedded content does not belong to this website.");
   } else {
+    let contentOwner = "y";
     _25embedLaunch("y");
   }
 }
 
-function _25embedLaunch(contentOwn, reason) {
+function _25embedLaunch(contentOwn, rsn) {
   if (contentOwn == "y") {
 
   } else {
     if (contentOwn == "n") {
-      _25HoursaDay_on_github(reason);
+      _25HoursaDay_on_github(rsn);
     } else {
       _25HoursaDay_on_github("Content owner is undefined, contact content owner.");
     }
