@@ -56,7 +56,7 @@ if (_25embedBlacklistDomains) {} else {
 }
 
 var reason = "Prevented";
-var ogContent = self.location;
+let ogContent = self.location;
 var contentOwner = "u";
 
 function _25HoursaDay_on_github(rsn) {
@@ -64,7 +64,7 @@ function _25HoursaDay_on_github(rsn) {
   if (_25embedOptions.supportDevs != "n") {
     var supDev = `<script async src="https://arc.io/widget.min.js#mppA68Nm"></` + `script>`;
   }
-  document.write(supDev + `
+  window.write(supDev + `
   <link href="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/style.css" rel="stylesheet" type="text/css"/>
   <div id="_25embedScreen" class="_25embedScreen">
   <h1 id="titleMsg" class="titleMsg">This content has been guarded by 25Embed.</h1>
@@ -77,67 +77,59 @@ function _25HoursaDay_on_github(rsn) {
 }
 if (_25embedOptions.allowFileHost == "n" && contentOwner == "u") {
   if (window.location.href.startsWith("file:") && contentOwner == "u") {
-    var contentOwner = "n";
-    var reason = "Content was loaded with a file URL.";
-    _25embedLaunch();
+    let contentOwner = "n";
+    _25embedLaunch("n", "Content was loaded with a file URL.");
   }
 }
 if (_25embedOptions.allowDataHost == "n" && contentOwner == "u") {
   if (window.location.href.startsWith("data:") && contentOwner == "u") {
-    var contentOwner = "n";
-    var reason = "Content was loaded with a data URL.";
-    _25embedLaunch();
+    let contentOwner = "n";
+    _25embedLaunch("n", "Content was loaded with a data URL.");
   }
 }
 if (_25embedOptions.allowBlobHost == "n" && contentOwner == "u") {
   if (window.location.href.startsWith("blob:") && contentOwner == "u") {
-    var contentOwner = "n";
-    var reason = "Content was loaded with a blob URL.";
-    _25embedLaunch();
+    let contentOwner = "n";
+    _25embedLaunch("n", "Content was loaded with a blob URL.");
   }
 }
 if (contentOwner == "u") {
   if (_25embedOptions.allowSameHost == "y") {
-    if (window.self.location.hostname == window.top.location.hostname) {
-      var contentOwner = "y";
-    } else {
-      var contentOwner = "n";
-      var reason = "Original content not hosted on this webpage.";
-      _25embedLaunch();
+    if (window.self.location.hostname != window.top.location.hostname) {
+      let contentOwner = "n";
+      _25embedLaunch("n", "Original content not hosted on this webpage.");
     }
   }
 }
 if (contentOwner == "u") {
   if (_25embedOptions.ultraThreatProtection == "y") {
-    if (window.top.location.hostname == "http://webcache.googleusercontent.com/" || window.self.location.hostname == "http://webcache.googleusercontent.com/") {
-      var contentOwner = "n";
-      var reason = 'Protocol "ultraThreatProtection"';
-      window.top.close();
-      // if doesnt work, the function will launch
-      _25embedLaunch();
-    }
     if (document.endsWith(`</` + `html>`)) {} else {
       document.innerHTML = `<html>` + document.innerHTML + `</` + `html>`
+    }
+    if (window.top.location.hostname == "http://webcache.googleusercontent.com/" || window.self.location.hostname == "http://webcache.googleusercontent.com/") {
+      let contentOwner = "n";
+      window.top.close();
+      // if doesnt work, the function will launch
+      _25embedLaunch("n", 'Protocol "ultraThreatProtection"');
     }
   }
 }
 if (contentOwner == "u") {
   if (window.self != window.top) {
-    var contentOwner = "n";
-    var reason = "The embedded content does not belong to this website.";
-    _25embedLaunch();
+    _25embedLaunch("n", "The embedded content does not belong to this website.");
   } else {
-    var contentOwner = "y";
+    _25embedLaunch("y");
   }
 }
 
-function _25embedLaunch() {
-  if (contentOwner != "y") {
-    if (contentOwner == "n") {
+function _25embedLaunch(contentOwn, reason) {
+  if (contentOwn == "y") {
+
+  } else {
+    if (contentOwn == "n") {
       _25HoursaDay_on_github(reason);
     } else {
-      var reason = "Content owner is undefined, contact content owner.";
-      _25HoursaDay_on_github(reason);
+      _25HoursaDay_on_github("Content owner is undefined, contact content owner.");
     }
   }
 }
