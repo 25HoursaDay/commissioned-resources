@@ -37,7 +37,6 @@ const _25embedBlacklistDomains = []; // domains not allowed to embed content, de
 
 function changeTheme(var1, var2, var3, var4, var5) {
   const rdadad = document.querySelector('html');
-  localStorage.removeItem("themeinfo");
   rdadad.style.setProperty('--var1', var1);
   rdadad.style.setProperty('--var2', var2);
   rdadad.style.setProperty('--var3', var3);
