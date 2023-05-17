@@ -102,7 +102,28 @@ function _25HoursaDay_on_github(rsn) {
   <h2 id="reason" class="reason">Reason: '` + rsn + `'</h2>
   <button id="ogSrc" class="mBtn" onclick="ogSrc()">Original Content</button>
   <button id="repo" class="mBtn" onclick="repo()">More Information</button>
-  <script>var theme = "` + _25embedOptions.theme + `"; var ogContent = self.location; function ogSrc() {window.open(ogContent);} function repo() {window.open("https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/README.md#about-25embed");}</` + `script>
+  <script>
+  var theme = "` + _25embedOptions.theme + `";
+  var ogContent = self.location;
+  function ogSrc() {window.open(ogContent);}
+  function repo() {window.open("https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/README.md#about-25embed");}
+  
+  function changeTheme(var1, var2, var3, var4, var5) {
+  const rdadad = document.querySelector('html');
+  rdadad.style.setProperty('--var1', var1);
+  rdadad.style.setProperty('--var2', var2);
+  rdadad.style.setProperty('--var3', var3);
+  rdadad.style.setProperty('--var4', var4);
+  rdadad.style.setProperty('--var5', var5);
+}
+
+  if (theme == "green") {
+    changeTheme("black", "lime", "green", "lime", "lime");
+  }
+  if (theme == "blue") {
+    changeTheme("black", "#1a1aff", "darkblue", "blue", "blue");
+  }
+  </` + `script>
   </div>
 `);
 }
