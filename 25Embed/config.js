@@ -1,6 +1,5 @@
 // n is disabled, y is enabled
 const _25embedOptions = {
-rickRoll:"n",
 allowSameHost:"y",
 allowFileHost:"n",
 allowDataHost:"y",
@@ -10,12 +9,12 @@ allowProxyHost:"y",
 supportDevs:"y",
 onlyAllowHTTP:"n",
 onlyAllowHTTPS:"n",
+rickRoll:"n",
 ultraThreatProtection:"n"
 };
 
 /* DEFAULT SETTINGS: */
 /*
-rickRoll:"n",
 allowSameHost:"y",
 allowFileHost:"n",
 allowDataHost:"y",
@@ -25,6 +24,7 @@ allowProxyHost:"y",
 supportDevs:"y",
 onlyAllowHTTP:"n",
 onlyAllowHTTPS:"n",
+rickRoll:"n",
 ultraThreatProtection:"n" <-because it has the ability to break everything
 */
 
