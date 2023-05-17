@@ -10,14 +10,14 @@
    text-shadow: var(--var2, darkblue) 0px 0px 15px;
    user-select: none;
    display: flex;
-   width: 100vw;
-   height: 100vh;
+   width: 100%;
+   height: 100%;
    justify-content: center;
    align-items: center;
    /* var1 is gonna be background color */
    --var1: black;
    /* var2 is gonna be text and border color */
-   --var2: blue;
+   --var2: #1a1aff;
    /* var3 is gonna be text border color */
    --var3: darkblue;
    /* var4 is gonna be text hover color */
