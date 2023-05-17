@@ -1,41 +1,8 @@
-<html>
-  <head>
-    <!-- Your head content -->
-    
-  </head>
-  <body>
-    <script src="https://25hoursaday.github.io/commissioned-resources/25Embed/config.js"></script>
-    <script src="https://25hoursaday.github.io/commissioned-resources/25Embed/latest.js"></script>
-    <script>
-    window.alert(self.location +"<-- loc  loc host-->  "+window.self.location.hostname+" top loc host --> "+window.top.location.hostname);
-    function b1() {window.alert(_25embedOptions.allowSameHost);}
-                   function b2() {window.alert(_25embedOptions);}
-    </script>
-    <button onclick="b1()">allowsamehost</button>
-    <button onclick="b2()">full thing</button>
-    <!-- Your body content -->
-    <p> Your body content </p>
-  </body>
-</html>
-
-
-<!--
-<html>
-  <head>
-    
-    
-  </head>
-  <body>
-    <script src="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/config.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/latest.js"></script>
-    <script>
-    function b1() {window.alert(_25embedOptions.allowSameHost);}
-                   function b2() {window.alert(_25embedOptions);}
-    </script>
-    <button onclick="b1()">allowsamehost</button>
-    <button onclick="b2()">full thing</button>
-    
-    <p> Your body content </p>
-  </body>
-</html>
--->
+<link href="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/style.css" rel="stylesheet" type="text/css"/>
+  <div id="_25embedScreen" class="_25embedScreen">
+  <h1 id="titleMsg" class="titleMsg">This content has been guarded by 25Embed.</h1>
+  <h2 id="reason" class="reason">Reason: ''</h2>
+  <button id="ogSrc" class="mBtn" onclick="ogSrc()">Original Content</button>
+  <button id="repo" class="mBtn" onclick="repo()">More Information</button>
+  <script>var ogContent = self.location; function ogSrc() {window.open(ogContent);} function repo() {window.open("https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/README.md#about-25embed");}</` + `script>
+  </div>
