@@ -33,23 +33,19 @@ const _25embedBlacklistDomains = []; // domains not allowed to embed content, de
 
 
 
+const rdadad = document.querySelector('html');
 function changeTheme(var1, var2, var3, var4, var5) {
   localStorage.removeItem("themeinfo");
-  document.style.setProperty('--var1', var1);
-  document.style.setProperty('--var2', var2);
-  document.style.setProperty('--var3', var3);
-  document.style.setProperty('--var4', var4);
-  document.style.setProperty('--var5', var5);
+  rdadad.style.setProperty('--var1', var1);
+  rdadad.style.setProperty('--var2', var2);
+  rdadad.style.setProperty('--var3', var3);
+  rdadad.style.setProperty('--var4', var4);
+  rdadad.style.setProperty('--var5', var5);
 }
 
-if (theme) {
   if (theme == "green") {
     changeTheme("black", "lime", "limegreen", "lime", "lime");
   }
   if (theme == "blue") {
     changeTheme("black", "blue", "mediumblue", "blue", "blue");
   }
-} else {
-  let theme = "blue";
-  changeTheme("black", "blue", "mediumblue", "blue", "blue");
-}
