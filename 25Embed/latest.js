@@ -55,7 +55,7 @@ if (_25embedOptions) {
     _25embedOptions.onlyAllowHTTPS = "n";
   }
   if (_25embedOptions.theme) {
-    console.log("true");
+    console.log("trfue");
   } else {
     _25embedOptions.theme = "blue";
   }
