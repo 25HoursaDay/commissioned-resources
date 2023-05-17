@@ -129,8 +129,8 @@
     <label for="duh"><input type="checkbox" name="duh" id="duh" onChange="changeC()">Allow "Data:" Url Hosting</label><br>
     <label for="buh"><input type="checkbox" name="buh" id="buh" onChange="changeC()" checked>Allow "Blob:" Url Hosting</label><br>
 
-    <label for="aohahp"><input type="checkbox" name="aohahp" id="aohahp" class="proto1" onChange='conflictedInputs("aohahp","proto1")'>Allow only "http:" and "https:" Protocols</label><br>
-    <label for="aohp"><input type="checkbox" name="aohp" id="aohp" class="proto1" onChange='conflictedInputs("aohp","proto1")'>Allow only "https:" Protocol</label><br>
+    <label for="aohahp"><input type="checkbox" name="aohahp" id="aohahp" class="proto1" onChange='conflictedInputs("aohahp","aohp")'>Allow only "http:" and "https:" Protocols</label><br>
+    <label for="aohp"><input type="checkbox" name="aohp" id="aohp" class="proto1" onChange='conflictedInputs("aohp","aohahp")'>Allow only "https:" Protocol</label><br>
 
     <h3>Advanced:</h3>
     <p>These features are not yet ready.</p>
@@ -346,22 +346,13 @@ const _25embedBlacklistDomains = ["` + bL + `"];
     }
     changeC();
 
-    function conflictedInputs(Aid, Aclass) {
-      if (document.getElementById(Aid).disabled) {} else {
-        document.getElementById(Aid).classList.remove(Aclass);
-        if (document.getElementById(Aid).checked) {
-          document.getElementsByClassName(Aclass).checked = false;
-          document.getElementsByClassName(Aclass).disabled = true;
-          alert("gada");
-        } else {
-          if (!document.getElementById(Aid).checked) {
-            alert("fesfe");
-            document.getElementsByClassName(Aclass).disabled = false;
-          }
+    function conflictedInputs(selfID, IDs) {
+      const xax = IDs.trim().toLowerCase().toString().split(",");
+      for (var i = 0; i < xax.length; i++) {
+        if (document.getElementById(xax[i]).checked) {
+          document.getElementById(xax[i]).checked = false;
         }
-        document.getElementById(Aid).classList.add(Aclass);
       }
-      // document.getElementById(Aid).checked = false;
       changeC();
     }
 
