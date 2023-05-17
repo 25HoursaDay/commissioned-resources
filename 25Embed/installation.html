@@ -129,8 +129,8 @@
     <label for="duh"><input type="checkbox" name="duh" id="duh" onChange="changeC()">Allow "Data:" Url Hosting</label><br>
     <label for="buh"><input type="checkbox" name="buh" id="buh" onChange="changeC()" checked>Allow "Blob:" Url Hosting</label><br>
 
-    <label for="aohahp"><input type="checkbox" name="aohahp" id="aohahp" class="proto1" onChange='conflictedInputs("aohahp","aohp")'>Allow only "http:" and "https:" Protocols</label><br>
-    <label for="aohp"><input type="checkbox" name="aohp" id="aohp" class="proto1" onChange='conflictedInputs("aohp","aohahp")'>Allow only "https:" Protocol</label><br>
+    <label for="aohahp"><input type="checkbox" name="aohahp" id="aohahp" class="proto1" onChange='conflictedInputs("aohp")'>Allow only "http:" and "https:" Protocols</label><br>
+    <label for="aohp"><input type="checkbox" name="aohp" id="aohp" class="proto1" onChange='conflictedInputs("aohahp")'>Allow only "https:" Protocol</label><br>
 
     <h3>Advanced:</h3>
     <p>These features are not yet ready.</p>
@@ -346,7 +346,7 @@ const _25embedBlacklistDomains = ["` + bL + `"];
     }
     changeC();
 
-    function conflictedInputs(selfID, IDs) {
+    function conflictedInputs(IDs) {
       const xax = IDs.trim().toLowerCase().toString().split(",");
       for (var i = 0; i < xax.length; i++) {
         if (document.getElementById(xax[i]).checked) {
