@@ -34,6 +34,26 @@ if (_25embedOptions) {
   } else {
     _25embedOptions.ultraThreatProtection = "n";
   }
+  if (_25embedOptions.allowBlankHost == "n" || _25embedOptions.allowBlankHost == "y") {
+    console.log("true");
+  } else {
+    _25embedOptions.allowBlankHost = "n";
+  }
+  if (_25embedOptions.allowProxyHost == "n" || _25embedOptions.allowProxyHost == "y") {
+    console.log("true");
+  } else {
+    _25embedOptions.allowProxyHost = "y";
+  }
+  if (_25embedOptions.onlyAllowHTTP == "n" || _25embedOptions.onlyAllowHTTP == "y") {
+    console.log("true");
+  } else {
+    _25embedOptions.onlyAllowHTTP = "n";
+  }
+  if (_25embedOptions.onlyAllowHTTPS == "n" || _25embedOptions.onlyAllowHTTPS == "y") {
+    console.log("true");
+  } else {
+    _25embedOptions.onlyAllowHTTPS = "n";
+  }
 } else {
   const _25embedOptions = {
     rickRoll: "n",
@@ -41,7 +61,11 @@ if (_25embedOptions) {
     allowFileHost: "n",
     allowDataHost: "y",
     allowBlobHost: "y",
+    allowBlankHost: "n",
+    allowProxyHost: "y",
     supportDevs: "y",
+    onlyAllowHTTP: "n",
+    onlyAllowHTTPS: "n",
     ultraThreatProtection: "n"
   };
 }
