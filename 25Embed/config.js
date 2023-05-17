@@ -10,7 +10,8 @@ const _25embedOptions = {
   onlyAllowHTTP: "n",
   onlyAllowHTTPS: "n",
   rickRoll: "n",
-  ultraThreatProtection: "n"
+  ultraThreatProtection: "n",
+  theme: "blue"
 };
 
 /* DEFAULT SETTINGS: */
@@ -25,7 +26,8 @@ supportDevs:"y",
 onlyAllowHTTP:"n",
 onlyAllowHTTPS:"n",
 rickRoll:"n",
-ultraThreatProtection:"n" <-because it has the ability to break everything
+ultraThreatProtection:"n", <-because it has the ability to break everything
+theme: "blue"
 */
 
 const _25embedWhitelistDomains = ["25HoursaDay.github.io", "home-schoology.github.io"]; // domains allowed to embed content, defaulted to blank
