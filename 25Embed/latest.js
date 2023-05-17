@@ -57,7 +57,7 @@ if (_25embedOptions) {
   if (_25embedOptions.theme) {
     console.log("true");
   } else {
-    _25embedOptions.theme = 'changeTheme("black", "#1a1aff", "darkblue", "blue", "blue");';
+    _25embedOptions.theme = "blue";
   }
 } else {
   const _25embedOptions = {
@@ -72,7 +72,7 @@ if (_25embedOptions) {
     onlyAllowHTTPS: "n",
     rickRoll: "n",
     ultraThreatProtection: "n",
-    theme: 'changeTheme("black", "#1a1aff", "darkblue", "blue", "blue");'
+    theme: "blue"
   };
 }
 if (_25embedWhitelistDomains) {
@@ -95,11 +95,11 @@ function _25HoursaDay_on_github(rsn) {
     var supDev = `<script async src="https://arc.io/widget.min.js#mppA68Nm"></` + `script>`;
   }
   console.log(rsn);
-  document.write(supDev + `
-  <link href="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/style.css" rel="stylesheet" type="text/css"/>
+  document.write(`
+  <link href="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@a1cc93c205fe1821e358eb433ce9289cfba02a29/25Embed/style.css" rel="stylesheet" type="text/css"/>
   <div id="_25embedScreen" class="_25embedScreen">
   <h1 id="titleMsg" class="titleMsg">This content has been guarded by 25Embed.</h1>
-  <h2 id="reason" class="reason">Reason: '` + rsn + `'</h2>
+  <h2 id="reason" class="reason">Reason: ''</h2>
   <button id="ogSrc" class="mBtn" onclick="ogSrc()">Original Content</button>
   <button id="repo" class="mBtn" onclick="repo()">More Information</button>
   <script>
@@ -107,15 +107,20 @@ function _25HoursaDay_on_github(rsn) {
   function ogSrc() {window.open(ogContent);}
   function repo() {window.open("https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/README.md#about-25embed");}
   
-  function changeTheme(var1, var2, var3, var4, var5) {
+  function changeTheme(tvar1, tvar2, tvar3, tvar4, tvar5) {
   const rdadad = document.querySelector('html');
-  rdadad.style.setProperty('--var1', var1);
-  rdadad.style.setProperty('--var2', var2);
-  rdadad.style.setProperty('--var3', var3);
-  rdadad.style.setProperty('--var4', var4);
-  rdadad.style.setProperty('--var5', var5);
+  rdadad.style.setProperty('--var1', tvar1);
+  rdadad.style.setProperty('--var2', tvar2);
+  rdadad.style.setProperty('--var3', tvar3);
+  rdadad.style.setProperty('--var4', tvar4);
+  rdadad.style.setProperty('--var5', tvar5);
 }
-` + _25embedOptions.theme + `
+
+console.log(_25embedOptions.theme);
+if (_25embedOptions.theme == "green") {
+console.log("dgdgdrg");
+changeTheme("black","lime","green","lime","lime");
+}
   </` + `script>
   </div>
 `);
