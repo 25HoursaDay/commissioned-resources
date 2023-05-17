@@ -57,7 +57,7 @@ if (_25embedOptions) {
   if (_25embedOptions.theme) {
     console.log("true");
   } else {
-    _25embedOptions.theme = "blue";
+    _25embedOptions.theme = 'changeTheme("black", "#1a1aff", "darkblue", "blue", "blue");';
   }
 } else {
   const _25embedOptions = {
@@ -72,7 +72,7 @@ if (_25embedOptions) {
     onlyAllowHTTPS: "n",
     rickRoll: "n",
     ultraThreatProtection: "n",
-    theme: "blue"
+    theme: 'changeTheme("black", "#1a1aff", "darkblue", "blue", "blue");'
   };
 }
 if (_25embedWhitelistDomains) {
@@ -95,7 +95,7 @@ function _25HoursaDay_on_github(rsn) {
     var supDev = `<script async src="https://arc.io/widget.min.js#mppA68Nm"></` + `script>`;
   }
   console.log(rsn);
-  window.write(supDev + `
+  document.write(supDev + `
   <link href="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/style.css" rel="stylesheet" type="text/css"/>
   <div id="_25embedScreen" class="_25embedScreen">
   <h1 id="titleMsg" class="titleMsg">This content has been guarded by 25Embed.</h1>
@@ -103,7 +103,6 @@ function _25HoursaDay_on_github(rsn) {
   <button id="ogSrc" class="mBtn" onclick="ogSrc()">Original Content</button>
   <button id="repo" class="mBtn" onclick="repo()">More Information</button>
   <script>
-  var theme = "` + _25embedOptions.theme + `";
   var ogContent = self.location;
   function ogSrc() {window.open(ogContent);}
   function repo() {window.open("https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/README.md#about-25embed");}
@@ -116,13 +115,7 @@ function _25HoursaDay_on_github(rsn) {
   rdadad.style.setProperty('--var4', var4);
   rdadad.style.setProperty('--var5', var5);
 }
-
-  if (theme == "green") {
-    changeTheme("black", "lime", "green", "lime", "lime");
-  }
-  if (theme == "blue") {
-    changeTheme("black", "#1a1aff", "darkblue", "blue", "blue");
-  }
+` + _25embedOptions.theme + `
   </` + `script>
   </div>
 `);
