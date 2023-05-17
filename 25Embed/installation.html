@@ -124,10 +124,10 @@
     <h2>Settings:</h2>
     <p>Main settings for _25embedOptions.</p>
     <h3>Basic:</h3>
-    <label for="shd"><input type="checkbox" name="shd" id="shd" onChange="changeC()" checked>Allow Same Host Domain</label><br>
+    <label for="ash"><input type="checkbox" name="ash" id="ash" onChange="changeC()" checked>Allow Same Host Domain</label><br>
     <label for="fuh"><input type="checkbox" name="fuh" id="fuh" onChange="changeC()">Allow "File:" Url Hosting</label><br>
     <label for="duh"><input type="checkbox" name="duh" id="duh" onChange="changeC()">Allow "Data:" Url Hosting</label><br>
-    <label for="buh"><input type="checkbox" name="buh" id="buh" onChange="changeC()" checked>Allow "Blob:" Url Hosting</label><br>
+    <label for="abh"><input type="checkbox" name="abh" id="abh" onChange="changeC()" checked>Allow "Blob:" Url Hosting</label><br>
 
     <label for="aohahp"><input type="checkbox" name="aohahp" id="aohahp" class="proto1" onChange='conflictedInputs("aohp")'>Allow only "http:" and "https:" Protocols</label><br>
     <label for="aohp"><input type="checkbox" name="aohp" id="aohp" class="proto1" onChange='conflictedInputs("aohahp")'>Allow only "https:" Protocol</label><br>
@@ -135,7 +135,7 @@
     <h3>Advanced:</h3>
     <p>These features are not yet ready.</p>
     <p>Please contact the developer to change these.</p>
-    <label for="rck"><input type="checkbox" name="rck" id="rck" onChange="changeC()" disabled>Enable Rickroll</label><br><label for="spd"><input type="checkbox" name="spd" id="spd" onChange="changeC()" checked disabled>Support The Dev</label>
+    <label for="rck"><input type="checkbox" name="rck" id="rck" onChange="changeC()" disabled>Enable Rickroll</label><br><label for="std"><input type="checkbox" name="std" id="std" onChange="changeC()" checked disabled>Support The Dev</label>
   </div>
   <div id="number3">
     <h2>Style Control:</h2>
@@ -191,58 +191,6 @@
     var _25embedCrunch = "";
 
     function subOpts(ii) {
-      var wL = document.getElementById("whiteD").value;
-      wL = wL.trim();
-      wL = wL.toLowerCase();
-      wL = wL.toString();
-      wL = wL.replace(/,/g, '","');
-      wL = wL.split(",");
-      var bL = document.getElementById("blackD").value;
-      bL = bL.trim();
-      bL = bL.toLowerCase();
-      bL = bL.toString();
-      bL = bL.replace(/,/g, '","');
-      bL = bL.split(",");
-      if (document.getElementById("shd").checked) {
-        var val1 = "y"
-      } else {
-        var val1 = "n"
-      }
-      if (document.getElementById("fuh").checked) {
-        var val2 = "y"
-      } else {
-        var val2 = "n"
-      }
-      if (document.getElementById("duh").checked) {
-        var val3 = "y"
-      } else {
-        var val3 = "n"
-      }
-      if (document.getElementById("buh").checked) {
-        var val4 = "y"
-      } else {
-        var val4 = "n"
-      }
-      if (document.getElementById("rck").checked) {
-        var val5 = "y"
-      } else {
-        var val5 = "n"
-      }
-      if (document.getElementById("spd").checked) {
-        var val6 = "y"
-      } else {
-        var val6 = "n"
-      }
-      if (document.getElementById("aohahp").checked) {
-        var val7 = "y"
-      } else {
-        var val7 = "n"
-      }
-      if (document.getElementById("aohp").checked) {
-        var val8 = "y"
-      } else {
-        var val8 = "n"
-      }
       /* CDN stuff */
       var valL = document.getElementById("cdnListL").value;
       if (document.getElementById("lnktl").checked) {
@@ -272,6 +220,59 @@ document.head.append(_25embedImport);`;
       }
       /* end of CDN stuff */
       /* note 2 self: new code on end here */
+      var wL = document.getElementById("whiteD").value;
+      wL = wL.trim();
+      wL = wL.toLowerCase();
+      wL = wL.toString();
+      wL = wL.replace(/,/g, '","');
+      wL = wL.split(",");
+      var bL = document.getElementById("blackD").value;
+      bL = bL.trim();
+      bL = bL.toLowerCase();
+      bL = bL.toString();
+      bL = bL.replace(/,/g, '","');
+      bL = bL.split(",");
+      if (document.getElementById("ash").checked) {
+        var val1 = "y"
+      } else {
+        var val1 = "n"
+      }
+      if (document.getElementById("fuh").checked) {
+        var val2 = "y"
+      } else {
+        var val2 = "n"
+      }
+      if (document.getElementById("duh").checked) {
+        var val3 = "y"
+      } else {
+        var val3 = "n"
+      }
+      if (document.getElementById("abh").checked) {
+        var val4 = "y"
+      } else {
+        var val4 = "n"
+      }
+      if (document.getElementById("abh2").checked) {
+        var val5 = "y"
+      } else {
+        var val5 = "n"
+      }
+      if (document.getElementById("aph").checked) {
+        var val6 = "y"
+      } else {
+        var val6 = "n"
+      }
+      if (document.getElementById("std").checked) {
+        var val7 = "y"
+      } else {
+        var val7 = "n"
+      }
+      if (document.getElementById("aohp").checked) {
+        var val8 = "y"
+      } else {
+        var val8 = "n"
+      }
+
       const subOptsL = [
         `
 const _25embedOptions = {
@@ -279,10 +280,13 @@ allowSameHost:"` + val1 + `",
 allowFileHost:"` + val2 + `",
 allowDataHost:"` + val3 + `",
 allowBlobHost:"` + val4 + `",
-rickRoll:"` + val5 + `",
-supportDevs:"` + val6 + `",
-onlyAllowHTTP:"` + val7 + `",
-onlyAllowHTTPS:"` + val8 + `"
+allowBlankHost:"` + val5 + `",
+allowProxyHost:"` + val6 + `",
+supportDevs:"` + val7 + `",
+onlyAllowHTTP:"` + val8 + `",
+onlyAllowHTTPS:"` + val9 + `",
+rickRoll:"` + val10 + `",
+ultraThreatProtection:"` + val11 + `"
      };
 const _25embedWhitelistDomains = ["25HoursaDay.github.io","home-schoology.github.io","` + wL + `"];
 const _25embedBlacklistDomains = ["` + bL + `"];
