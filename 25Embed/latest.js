@@ -56,7 +56,6 @@ if (_25embedOptions) {
   }
 } else {
   const _25embedOptions = {
-    rickRoll: "n",
     allowSameHost: "y",
     allowFileHost: "n",
     allowDataHost: "y",
@@ -66,6 +65,7 @@ if (_25embedOptions) {
     supportDevs: "y",
     onlyAllowHTTP: "n",
     onlyAllowHTTPS: "n",
+    rickRoll: "n",
     ultraThreatProtection: "n"
   };
 }
