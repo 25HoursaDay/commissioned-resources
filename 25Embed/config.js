@@ -44,8 +44,8 @@ function changeTheme(var1, var2, var3, var4, var5) {
 }
 
   if (theme == "green") {
-    changeTheme("black", "lime", "limegreen", "lime", "lime");
+    changeTheme("black", "lime", "green", "lime", "lime");
   }
   if (theme == "blue") {
-    changeTheme("black", "blue", "mediumblue", "blue", "blue");
+    changeTheme("black", "blue", "darkblue", "blue", "blue");
   }
