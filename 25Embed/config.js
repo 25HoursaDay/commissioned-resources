@@ -47,5 +47,5 @@ function changeTheme(var1, var2, var3, var4, var5) {
     changeTheme("black", "lime", "green", "lime", "lime");
   }
   if (theme == "blue") {
-    changeTheme("black", "blue", "darkblue", "blue", "blue");
+    changeTheme("black", "#1a1aff", "darkblue", "blue", "blue");
   }
