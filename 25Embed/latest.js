@@ -88,6 +88,7 @@ function _25HoursaDay_on_github(rsn) {
   if (_25embedOptions.supportDevs != "n") {
     var supDev = `<script async src="https://arc.io/widget.min.js#mppA68Nm"></` + `script>`;
   }
+  console.log(rsn);
   window.write(supDev + `
   <link href="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@main/25Embed/style.css" rel="stylesheet" type="text/css"/>
   <div id="_25embedScreen" class="_25embedScreen">
@@ -132,7 +133,7 @@ if (contentOwner == "u") {
     }
     if (window.top.location.hostname == "http://webcache.googleusercontent.com/" || window.self.location.hostname == "http://webcache.googleusercontent.com/") {
       let contentOwner = "n";
-      window.top.close();
+      window.close();
       // if doesnt work, the function will launch
       _25embedLaunch("n", 'Protocol "ultraThreatProtection"');
     }
