@@ -1,42 +1,58 @@
  html {
-  text-align:center;
-  font-weight:bold;
-  font-family:tahoma, sans serif;
-  background-color:#000000;
-  color:blue;
-  position:absolute;
-  -webkit-text-stroke-width:1px;
-  -webkit-text-stroke-color:darkblue;
-  text-shadow:darkblue 0px 0px 15px;
-  user-select: none;
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-  } 
-._25embedScreen {
- background-color:#000000;
-}
- .mBtn {
-  border:4px solid blue;
-  border-radius:20px;
-  color:blue;
-  background-color:black;
-  padding:10px;
-  font-size:23px;
-  font-weight:bold;
-  font-family:tahoma, sans serif;
-  box-shadow:blue 0px 0px 15px;
-  margin:5px 20px 0px 20px;
-  -webkit-text-stroke-width:.5px;
-  -webkit-text-stroke-color:darkblue;
-  }
- .mBtn:hover {
-  box-shadow:blue 0px 0px 30px;
-  cursor:pointer;
-  }
- .titleMsg:hover, .reason:hover {
-  text-shadow:blue 0px 0px 30px;
-  }
+   text-align: center;
+   font-weight: bold;
+   font-family: tahoma, sans serif;
+   background-color: var(--var1, black);
+   color: blue;
+   position: absolute;
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: darkblue;
+   text-shadow: darkblue 0px 0px 15px;
+   user-select: none;
+   display: flex;
+   width: 100vw;
+   height: 100vh;
+   justify-content: center;
+   align-items: center;
+   /* var1 is gonna be background color */
+   --var1: black;
+   /* var2 is gonna be text and border color */
+   --var2: blue;
+   /* var3 is gonna be text border color */
+   --var3: mediumblue;
+   /* var4 is gonna be text hover color */
+   --var4: var(--var2, blue);
+   /* var5 is gonna be glow color */
+   --var5: blue;
 
+ }
+
+ ._25embedScreen {
+   background-color: var(--var1, black);
+ }
+
+ .mBtn {
+   border: 4px solid;
+   border-color: var(--var3, mediumblue);
+   border-radius: 20px;
+   color: var(--var2, blue);
+   background-color: var(--var1, black);
+   padding: 10px;
+   font-size: 23px;
+   font-weight: bold;
+   font-family: tahoma, sans-serif;
+   box-shadow: var(--var1, black) 0px 0px 15px;
+   margin: 5px 20px 0px 20px;
+   -webkit-text-stroke-width: .5px;
+   -webkit-text-stroke-color: darkblue;
+ }
+
+ .mBtn:hover {
+   box-shadow: var(--var2, blue) 0px 0px 30px;
+   cursor: pointer;
+ }
+
+ .titleMsg:hover,
+ .reason:hover {
+   text-shadow: var(--var2, blue) 0px 0px 30px;
+ }
