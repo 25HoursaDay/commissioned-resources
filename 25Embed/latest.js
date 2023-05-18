@@ -1,4 +1,4 @@
-if (_25embedOptions) {
+if (typeof _25embedOptions !== "undefined") {
   if (_25embedOptions.rickRoll == "n" || _25embedOptions.rickRoll == "y") {
     console.log("true");
   } else {
@@ -75,13 +75,13 @@ if (_25embedOptions) {
     theme: "blue"
   };
 }
-if (_25embedWhitelistDomains) {
+if (typeof _25embedWhitelistDomains !== "undefined") {
   _25embedWhitelistDomains.push("25HoursaDay.github.io");
   _25embedWhitelistDomains.push("home-schoology.github.io");
 } else {
   const _25embedWhitelistDomains = ["25HoursaDay.github.io", "home-schoology.github.io"];
 }
-if (_25embedBlacklistDomains) {} else {
+if (typeof _25embedBlacklistDomains !== "undefined") {} else {
   const _25embedBlacklistDomains = [];
 }
 
@@ -90,16 +90,17 @@ let ogContent = self.location;
 var contentOwner = "u";
 
 function _25HoursaDay_on_github(rsn) {
-  var supDev = "";
   if (_25embedOptions.supportDevs != "n") {
-    var supDev = `<script async src="https://arc.io/widget.min.js#mppA68Nm"></` + `script>`;
+    let supDev = `<script async src="https://arc.io/widget.min.js#mppA68Nm"></` + `script>`;
+  } else {
+    let supDev = "";
   }
   console.log(rsn);
   document.write(`
   <link href="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@a1cc93c205fe1821e358eb433ce9289cfba02a29/25Embed/style.css" rel="stylesheet" type="text/css"/>
   <div id="_25embedScreen" class="_25embedScreen">
   <h1 id="titleMsg" class="titleMsg">This content has been guarded by 25Embed.</h1>
-  <h2 id="reason" class="reason">Reason: ''</h2>
+  <h2 id="reason" class="reason">Reason: '` + rsn + `'</h2>
   <button id="ogSrc" class="mBtn" onclick="ogSrc()">Original Content</button>
   <button id="repo" class="mBtn" onclick="repo()">More Information</button>
   <script>
