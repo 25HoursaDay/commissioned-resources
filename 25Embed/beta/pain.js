@@ -109,29 +109,34 @@ if (_25embedOptions.allowBlobHost == "n" && window.location.protocol == "blob:")
 
 
 ASH: if (_25embedOptions.allowSameHost == "y") {
-if (typeof document.location.ancestorOrigins !== "undefined") {}
-  ASH1: for (var i = 0; i < document.location.ancestorOrigins.length; i++) {
-    if (document.location.hostname != new URL(document.location.ancestorOrigins[i]).hostname) {
-      _25embedLaunch("n", "Original content not hosted on this webpage.");
-      break ASH;
-    } else {
-      console.log("passed");
-      break ASH1;
+  ASH1: if (typeof document.location.ancestorOrigins !== "undefined") {
+    ASH2: for (var i = 0; i < document.location.ancestorOrigins.length; i++) {
+      if (document.location.hostname != new URL(document.location.ancestorOrigins[i]).hostname) {
+        _25embedLaunch("n", "Original content not hosted on this webpage.");
+        break ASH;
+      } else {
+        console.log("passed");
+        break ASH2;
+      }
     }
   }
   if (new URL(document.referrer).hostname != new URL(document.location.href).hostname) {
     _25embedLaunch("n", "Original content not hosted on this webpage URL.");
-    break;
+    break ASH;
   }
 }
 else {
   if (window != window.top) {
     _25embedLaunch("n", "Original content not hosted on this webpage URL.");
-    break;
+    break ASH;
   }
   if (document.referrer != document.location.href) {
     _25embedLaunch("n", "Original content not hosted on this webpage URL.");
-    break;
+    break ASH;
+  }
+  if (typeof document.location.ancestorOrigins == "undefined") {
+    _25embedLaunch("n", "Original content not hosted on this webpage URL.");
+    break ASH;
   }
 }
 /*
