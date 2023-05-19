@@ -1,30 +1,16 @@
-const _25embedOptions = {
-  allowSameHost: "y",
-  allowFileHost: "n",
-  allowDataHost: "y",
-  allowBlobHost: "y",
-  allowBlankHost: "n",
-  allowProxyHost: "y",
-  supportDevs: "y",
-  onlyAllowHTTP: "n",
-  onlyAllowHTTPS: "n",
-  rickRoll: "n",
-  ultraThreatProtection: "n"
-};
-const _25embedWhitelistDomains = ["25HoursaDay.github.io", "home-schoology.github.io"]; // domains allowed to embed content, defaulted to blank
-const _25embedBlacklistDomains = []; // domains not allowed to embed content, defaulted to none
-
 var reason = "Prevented";
 var contentOwner = "u";
 
 function _25HoursaDay_on_github(rsn) {
-  if (_25embedOptions.supportDevs != "n") {
-    let supDev = `<script async src="https://arc.io/widget.min.js#mppA68Nm"></` + `script>`;
+  var supDev = "";
+  if (_25embedOptions.supportDevs !== "n") {
+    var supDev = `<script async src="https://arc.io/widget.min.js#mppA68Nm"></` + `script>`;
   } else {
-    let supDev = "";
+    var supDev = "";
   }
   document.write(`
   <link href="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@a1cc93c205fe1821e358eb433ce9289cfba02a29/25Embed/style.css" rel="stylesheet" type="text/css"/>
+  ` + supDev + `
   <div id="_25embedScreen" class="_25embedScreen">
   <h1 id="titleMsg" class="titleMsg">This content has been guarded by 25Embed.</h1>
   <h2 id="reason" class="reason">Reason: '` + rsn + `'</h2>
@@ -67,7 +53,9 @@ const _25embedDefaults = {
   rickRoll: "n",
   ultraThreatProtection: "n"
 };
+
 const themeList = ["blue", "green"];
+
 
 if (typeof _25embedOptions == "undefined") {
   const _25embedOptions = _25embedDefaults;
