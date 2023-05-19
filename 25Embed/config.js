@@ -1,5 +1,5 @@
 // n is disabled, y is enabled
-const _25embedOptions = {
+const _25embedDefaults = {
   allowSameHost: "y",
   allowFileHost: "n",
   allowDataHost: "y",
@@ -10,9 +10,10 @@ const _25embedOptions = {
   onlyAllowHTTP: "n",
   onlyAllowHTTPS: "n",
   rickRoll: "n",
-  ultraThreatProtection: "n",
-  theme: "blue"
+  ultraThreatProtection: "n"
 };
+const themeList = ["blue", "green"];
+// let theme = "blue";
 
 /* DEFAULT SETTINGS: */
 /*
