@@ -25,7 +25,6 @@ function _25HoursaDay_on_github(rsn) {
   } else {
     let supDev = "";
   }
-  console.log(rsn);
   document.write(`
   <link href="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@a1cc93c205fe1821e358eb433ce9289cfba02a29/25Embed/style.css" rel="stylesheet" type="text/css"/>
   <div id="_25embedScreen" class="_25embedScreen">
@@ -69,16 +68,25 @@ const _25embedDefaults = {
   onlyAllowHTTPS: "n",
   rickRoll: "n",
   ultraThreatProtection: "n",
+  theme: "blue"
 };
 
-if (typeof _25embedOptions !== "undefined") {}
-for (var i = 0; i < _25embedDefaults.length; i++) {
-  if (!_25embedOptions.includes(_25embedDefaults[i])) {
-_25embedOptions.push(_25embedDefaults[i]);
-  }
+if (typeof _25embedOptions !== "undefined") {
+  const _25embedOptions = _25embedDefaults;
+}
+
+var text = "";
+var x;
+for (x in _25embedOptions) {
+  // text += _25embedOptions[x];
+  console.log(x);
+  console.log(_25embedOptions[x]);
 }
 
 
+
+
+/*
 if (_25embedOptions.allowFileHost == "n" && window.location.href.startsWith("file:")) {
   _25HoursaDay_on_github("Content was loaded with a file: URL.");
 }
@@ -94,8 +102,9 @@ if (_25embedOptions.allowSameHost == "y") {
     _25embedLaunch("n", "Original content not hosted on this webpage.");
   }
 }
+*/
 
-
+/*
 if (_25embedOptions.ultraThreatProtection == "y") {
   if (document.endsWith(`</` + `html>`)) {} else {
     document.innerHTML = `<html>` + document.innerHTML + `</` + `html>`
@@ -125,3 +134,4 @@ function ogSrc() {
 function repo() {
   window.open("https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/README.md#about-25embed");
 }
+*/
