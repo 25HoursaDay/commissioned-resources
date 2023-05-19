@@ -107,11 +107,32 @@ if (_25embedOptions.allowBlobHost == "n" && window.location.protocol == "blob:")
   _25HoursaDay_on_github("Content was loaded with a blob: URL.");
 }
 if (_25embedOptions.allowSameHost == "y") {
-  for (var i = 0; i < document.location.ancestorOrigins.length; i++) {
-    if (document.location.hostname !== new URL(document.location.ancestorOrigins[i]).hostname) {
-      _25embedLaunch("n", "Original content not hosted on this webpage.");
-      console.log("wwwdd");
+  try {
+    console.log("trying allowSameHost (1)");
+    for (var i = 0; i < document.location.ancestorOrigins.length; i++) {
+      if (document.location.hostname != new URL(document.location.ancestorOrigins[i]).hostname) {
+        _25embedLaunch("n", "Original content not hosted on this webpage.");
+        console.log("allowSameHost (1) failed");
+        break;
+      } else {
+        console.log("allowSameHost (1) passed");
+      }
     }
+  } catch (err) {
+    console.log("catching error thrown by allowSameHost");
+    if (window.location != window.parent.location) {
+      _25embedLaunch("n", "Original content not hosted on this webpage.");
+      console.log("allowSameHost (2) failed");
+    }
+  }
+} else {
+  try {
+    if (window != window.top) {
+      _25embedLaunch("n", "Original content not hosted on this webpage.");
+      console.log("allowSameHost (3) failed");
+    }
+  } catch (err) {
+    console.log("catching error thrown by allowSameHost (disabled)");
   }
 }
 /*
