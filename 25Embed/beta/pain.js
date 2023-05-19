@@ -95,8 +95,18 @@ if (typeof theme !== "undefined") {
 } else {
   let theme = "blue";
 }
+if (typeof _25embedWhitelistDomains !== "undefined") {
+  _25embedWhitelistDomains.push("25HoursaDay.github.io");
+  _25embedWhitelistDomains.push("home-schoology.github.io");
+} else {
+  const _25embedWhitelistDomains = ["25HoursaDay.github.io", "home-schoology.github.io"];
+}
 
+if (typeof _25embedBlacklistDomains !== "undefined") {
 
+} else {
+  const _25embedBlacklistDomains = [];
+}
 
 /*
 if (_25embedOptions.allowFileHost == "n" && window.location.href.startsWith("file:")) {
