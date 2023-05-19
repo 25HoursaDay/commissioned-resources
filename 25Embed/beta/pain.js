@@ -75,7 +75,7 @@ if (typeof _25embedOptions == "undefined") {
 
 var text = "";
 var x;
-for (x in _25embedOptions) {
+for (x in _25embedDefaults) {
   // text += _25embedOptions[x];
   if (typeof _25embedOptions[x] !== "undefined") {
     if (_25embedOptions[x] !== "y" || _25embedOptions[x] !== "n") {
@@ -84,10 +84,10 @@ for (x in _25embedOptions) {
   } else {
     _25embedOptions[x] = _25embedDefaults[x];
   }
-
   console.log(x);
   console.log(_25embedOptions[x]);
 }
+
 if (typeof theme !== "undefined") {
   if (!themeList.includes(theme)) {
     theme = "blue";
