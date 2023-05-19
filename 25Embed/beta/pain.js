@@ -109,8 +109,11 @@ if (_25embedOptions.allowBlobHost == "n" && window.location.protocol == "blob:")
 if (_25embedOptions.allowSameHost == "y" && window.self.location.hostname !== window.top.location.hostname) {
   _25embedLaunch("n", "Original content not hosted on this webpage.");
 }
-
-
+for (var i = 0; i < document.location.ancestorOrigins.length; i++) {
+  if (document.location.hostname !== new URL(document.location.ancestorOrigins[i]).hostname) {
+    console.log("wwwdd");
+  }
+}
 /*
 if (_25embedOptions.ultraThreatProtection == "y") {
   if (document.endsWith(`</` + `html>`)) {} else {
