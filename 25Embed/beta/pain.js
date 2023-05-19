@@ -106,38 +106,32 @@ if (_25embedOptions.allowDataHost == "n" && window.location.protocol == "data:")
 if (_25embedOptions.allowBlobHost == "n" && window.location.protocol == "blob:") {
   _25HoursaDay_on_github("Content was loaded with a blob: URL.");
 }
-if (_25embedOptions.allowSameHost == "y") {
-  try {
-    console.log("trying allowSameHost (1)");
-    for (var i = 0; i < document.location.ancestorOrigins.length; i++) {
-      if (document.location.hostname != new URL(document.location.ancestorOrigins[i]).hostname) {
-        _25embedLaunch("n", "Original content not hosted on this webpage.");
-        console.log("allowSameHost (1) failed");
-        break;
-      } else {
-        console.log("allowSameHost (1) passed");
-      }
-    }
-  } catch (err) {
-    console.log("catching error thrown by allowSameHost (1)");
-    if (window.location != window.parent.location) {
+
+
+ASH: if (_25embedOptions.allowSameHost == "y") {
+if (typeof document.location.ancestorOrigins !== "undefined") {}
+  ASH1: for (var i = 0; i < document.location.ancestorOrigins.length; i++) {
+    if (document.location.hostname != new URL(document.location.ancestorOrigins[i]).hostname) {
       _25embedLaunch("n", "Original content not hosted on this webpage.");
-      console.log("allowSameHost (2) failed");
+      break ASH;
+    } else {
+      console.log("passed");
+      break ASH1;
     }
   }
-} else {
-  try {
-    console.log("trying allowSameHost (disabled)");
-    if (window != window.top) {
-      _25embedLaunch("n", "Original content not hosted on this webpage URL.");
-      console.log("allowSameHost (disabled) (1) failed");
-    }
-  } catch (err) {
-    console.log("catching error thrown by allowSameHost (disabled) (1)");
-    if (document.refferer != document.location.href) {
-      _25embedLaunch("n", "Original content not hosted on this webpage URL.");
-      console.log("allowSameHost (disabled) (2) failed");
-    }
+  if (new URL(document.referrer).hostname != new URL(document.location.href).hostname) {
+    _25embedLaunch("n", "Original content not hosted on this webpage URL.");
+    break;
+  }
+}
+else {
+  if (window != window.top) {
+    _25embedLaunch("n", "Original content not hosted on this webpage URL.");
+    break;
+  }
+  if (document.referrer != document.location.href) {
+    _25embedLaunch("n", "Original content not hosted on this webpage URL.");
+    break;
   }
 }
 /*
