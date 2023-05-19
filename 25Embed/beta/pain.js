@@ -96,23 +96,20 @@ if (typeof _25embedBlacklistDomains !== "undefined") {
   const _25embedBlacklistDomains = [];
 }
 
-/*
-if (_25embedOptions.allowFileHost == "n" && window.location.href.startsWith("file:")) {
+
+if (_25embedOptions.allowFileHost == "n" && window.location.protocol == "file:") {
   _25HoursaDay_on_github("Content was loaded with a file: URL.");
 }
-if (_25embedOptions.allowDataHost == "n" && window.location.href.startsWith("data:")) {
+if (_25embedOptions.allowDataHost == "n" && window.location.protocol == "data:") {
   _25HoursaDay_on_github("Content was loaded with a data: URL.");
 }
-if (_25embedOptions.allowBlobHost == "n" && window.location.href.startsWith("blob:")) {
+if (_25embedOptions.allowBlobHost == "n" && window.location.protocol == "blob:") {
   _25HoursaDay_on_github("Content was loaded with a blob: URL.");
 }
-
-if (_25embedOptions.allowSameHost == "y") {
-  if (window.self.location.hostname !== window.top.location.hostname) {
-    _25embedLaunch("n", "Original content not hosted on this webpage.");
-  }
+if (_25embedOptions.allowSameHost == "y" && window.self.location.hostname !== window.top.location.hostname) {
+  _25embedLaunch("n", "Original content not hosted on this webpage.");
 }
-*/
+
 
 /*
 if (_25embedOptions.ultraThreatProtection == "y") {
@@ -128,7 +125,7 @@ if (_25embedOptions.ultraThreatProtection == "y") {
 }
 
 if (contentOwner == "u") {
-  if (window.self != window.top) {
+  if (window.self !== window.top) {
 
     _25embedLaunch("n", "The embedded content does not belong to this website.");
   } else {
