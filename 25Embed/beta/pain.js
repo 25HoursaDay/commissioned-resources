@@ -9,14 +9,12 @@ const _25embedOptions = {
   onlyAllowHTTP: "n",
   onlyAllowHTTPS: "n",
   rickRoll: "n",
-  ultraThreatProtection: "n",
-  theme: "blue"
+  ultraThreatProtection: "n"
 };
 const _25embedWhitelistDomains = ["25HoursaDay.github.io", "home-schoology.github.io"]; // domains allowed to embed content, defaulted to blank
 const _25embedBlacklistDomains = []; // domains not allowed to embed content, defaulted to none
 
 var reason = "Prevented";
-let ogContent = self.location;
 var contentOwner = "u";
 
 function _25HoursaDay_on_github(rsn) {
@@ -67,11 +65,11 @@ const _25embedDefaults = {
   onlyAllowHTTP: "n",
   onlyAllowHTTPS: "n",
   rickRoll: "n",
-  ultraThreatProtection: "n",
-  theme: "blue"
+  ultraThreatProtection: "n"
 };
+const themeList = ["blue", "green"];
 
-if (typeof _25embedOptions !== "undefined") {
+if (typeof _25embedOptions == "undefined") {
   const _25embedOptions = _25embedDefaults;
 }
 
@@ -79,10 +77,24 @@ var text = "";
 var x;
 for (x in _25embedOptions) {
   // text += _25embedOptions[x];
+  if (typeof _25embedOptions[x] !== "undefined") {
+    if (_25embedOptions[x] !== "y" || _25embedOptions[x] !== "n") {
+      _25embedOptions[x] = _25embedDefaults[x];
+    }
+  } else {
+    _25embedOptions[x] = _25embedDefaults[x];
+  }
+
   console.log(x);
   console.log(_25embedOptions[x]);
 }
-
+if (typeof theme !== "undefined") {
+  if (!themeList.includes(theme)) {
+    theme = "blue";
+  }
+} else {
+  let theme = "blue";
+}
 
 
 
