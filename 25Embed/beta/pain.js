@@ -119,7 +119,7 @@ if (_25embedOptions.allowSameHost == "y") {
       }
     }
   } catch (err) {
-    console.log("catching error thrown by allowSameHost");
+    console.log("catching error thrown by allowSameHost (1)");
     if (window.location != window.parent.location) {
       _25embedLaunch("n", "Original content not hosted on this webpage.");
       console.log("allowSameHost (2) failed");
@@ -127,12 +127,17 @@ if (_25embedOptions.allowSameHost == "y") {
   }
 } else {
   try {
+    console.log("trying allowSameHost (disabled)");
     if (window != window.top) {
-      _25embedLaunch("n", "Original content not hosted on this webpage.");
-      console.log("allowSameHost (3) failed");
+      _25embedLaunch("n", "Original content not hosted on this webpage URL.");
+      console.log("allowSameHost (disabled) (1) failed");
     }
   } catch (err) {
-    console.log("catching error thrown by allowSameHost (disabled)");
+    console.log("catching error thrown by allowSameHost (disabled) (1)");
+    if (document.refferer != document.location.href) {
+      _25embedLaunch("n", "Original content not hosted on this webpage URL.");
+      console.log("allowSameHost (disabled) (2) failed");
+    }
   }
 }
 /*
