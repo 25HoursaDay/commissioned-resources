@@ -23,10 +23,8 @@ if (typeof _25embedOptions == "undefined") {
   console.log(_25embedOptions);
 }
 
-var text = "";
-var x;
+let x;
 for (x in _25embedDefaults) {
-  // text += _25embedOptions[x];
   if (typeof _25embedOptions[x] !== "undefined") {
     if (_25embedOptions[x] !== "y" || _25embedOptions[x] !== "n") {
       _25embedOptions[x] = _25embedDefaults[x];
@@ -37,6 +35,7 @@ for (x in _25embedDefaults) {
   console.log(x);
   console.log(_25embedOptions[x]);
 }
+
 
 if (_25embedOptions.supportDevs !== "n") {
   var supDev = `<script async src="https://arc.io/widget.min.js#mppA68Nm"></` + `script>`;
