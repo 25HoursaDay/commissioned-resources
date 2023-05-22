@@ -127,7 +127,7 @@ function repo() {
 function _25HoursaDay_on_github(del, rsn) {
   if (del == "n") {
     document.write(`
-  <link href="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@a1cc93c205fe1821e358eb433ce9289cfba02a29/25Embed/style.css" rel="stylesheet" type="text/css"/>
+  <link href="https://cdn.jsdelivr.net/gh/25HoursaDay/commissioned-resources@8d4c488e3d3ea97213f07cbcc2a8215df2927b70/25Embed/style.css" rel="stylesheet" type="text/css"/>
   ` + supDev + `
   <div id="_25embedScreen" class="_25embedScreen">
   <h1 id="titleMsg" class="titleMsg">This content has been guarded by 25Embed.</h1>
