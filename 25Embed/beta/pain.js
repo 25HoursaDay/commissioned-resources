@@ -64,16 +64,16 @@ if (typeof _25embedBlacklistDomains !== "undefined") {
 }
 
 
-if (_25embedOptions.allowFileHost == "n" && window.location.protocol == "file:") {
+if (_25embedOptions.allowFileHost == "n" && (window.location.protocol == "file:" || new URL(document.referrer).protocol == "file:")) {
   _25HoursaDay_on_github("n", "Content was loaded with a file: URL.");
 }
-if (_25embedOptions.allowDataHost == "n" && window.location.protocol == "data:") {
+if (_25embedOptions.allowDataHost == "n" && (window.location.protocol == "data:" || new URL(document.referrer).protocol == "data:")) {
   _25HoursaDay_on_github("n", "Content was loaded with a data: URL.");
 }
-if (_25embedOptions.allowBlobHost == "n" && window.location.protocol == "blob:") {
+if (_25embedOptions.allowBlobHost == "n" && (window.location.protocol == "blob:" || new URL(document.referrer).protocol == "blob:")) {
   _25HoursaDay_on_github("n", "Content was loaded with a blob: URL.");
 }
-if (_25embedOptions.allowBlankHost == "n" && window.location.protocol == "about:") {
+if (_25embedOptions.allowBlankHost == "n" && (window.location.protocol == "about:" || new URL(document.referrer).protocol == "about:")) {
   _25HoursaDay_on_github("n", "Content was loaded with an about: URL.");
 }
 
