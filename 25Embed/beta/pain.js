@@ -109,24 +109,10 @@ else {
 }
 /*
 if (_25embedOptions.ultraThreatProtection == "y") {
-  if (document.endsWith(`</` + `html>`)) {} else {
-    document.innerHTML = `<html>` + document.innerHTML + `</` + `html>`
-  }
-  if (window.top.location.hostname == "http://webcache.googleusercontent.com/" || window.self.location.hostname == "http://webcache.googleusercontent.com/") {
+  if (window.top.location.hostname == "http://webcache.googleusercontent.com/" || window.location.hostname == "http://webcache.googleusercontent.com/") {
 
     window.close();
-    // if doesnt work, the function will launch
     _25embedLaunch("n", 'Protocol "ultraThreatProtection"');
-  }
-}
-
-if (contentOwner == "u") {
-  if (window.self !== window.top) {
-
-    _25embedLaunch("n", "The embedded content does not belong to this website.");
-  } else {
-
-    _25embedLaunch("y");
   }
 }
 
