@@ -76,22 +76,46 @@ if (_25embedOptions.allowBlobHost == "n" && (window.location.protocol == "blob:"
 if (_25embedOptions.allowBlankHost == "n" && (window.location.protocol == "about:" || new URL(document.referrer).protocol == "about:")) {
   _25HoursaDay_on_github("n", "Content was loaded with an about: URL.");
 }
+/*
+if (_25embedWhitelistDomains.includes(new URL().hostname)) {
 
+}
+*/
 ASH: if (_25embedOptions.allowSameHost == "y") {
+  // ancestorOrigins is only for google chrome
   ASH1: if (typeof document.location.ancestorOrigins !== "undefined") {
     ASH2: for (var i = 0; i < document.location.ancestorOrigins.length; i++) {
-      if (document.location.hostname != new URL(document.location.ancestorOrigins[i]).hostname) {
-        _25HoursaDay_on_github("n", "This content does not belong to this page.");
+      if (_25embedBlacklistDomains.includes(new URL(document.location.ancestorOrigins[i]).hostname)) {
+        // if blacklisted, end
+        _25HoursaDay_on_github("n", "Blacklisted URLs are involved.");
         break ASH;
       } else {
-        break ASH2;
+        if (_25embedWhitelistDomains.includes(new URL(document.location.ancestorOrigins[i]).hostname)) {
+          // if whitelisted, skip
+        } else {
+          if (document.location.hostname != new URL(document.location.ancestorOrigins[i]).hostname) {
+            _25HoursaDay_on_github("n", "This content does not belong to this page.");
+            break ASH;
+          }
+        }
+      }
+      // this is after the checks
+    }
+    // after i if statement
+  }
+  if (_25embedBlacklistDomains.includes(new URL(document.referrer).hostname)) {
+
+  } else {
+    if (_25embedWhitelistDomains.includes(new URL(document.referrer).hostname)) {
+
+    } else {
+      if (new URL(document.referrer).hostname != new URL(document.location.href).hostname) {
+        _25HoursaDay_on_github("n", "This content does not belong to this page.");
+        break ASH;
       }
     }
   }
-  if (new URL(document.referrer).hostname != new URL(document.location.href).hostname) {
-    _25HoursaDay_on_github("n", "This content does not belong to this page.");
-    break ASH;
-  }
+
 }
 else {
   if (window != window.top) {
