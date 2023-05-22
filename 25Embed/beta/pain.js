@@ -81,7 +81,7 @@ ASH: if (_25embedOptions.allowSameHost == "y") {
   ASH1: if (typeof document.location.ancestorOrigins !== "undefined") {
     ASH2: for (var i = 0; i < document.location.ancestorOrigins.length; i++) {
       if (document.location.hostname != new URL(document.location.ancestorOrigins[i]).hostname) {
-        _25HoursaDay_on_github("n", "This content has been embedded or iframed.");
+        _25HoursaDay_on_github("n", "This content does not belong to this page.");
         break ASH;
       } else {
         break ASH2;
@@ -89,7 +89,7 @@ ASH: if (_25embedOptions.allowSameHost == "y") {
     }
   }
   if (new URL(document.referrer).hostname != new URL(document.location.href).hostname) {
-    _25HoursaDay_on_github("n", "This content has been embedded or iframed.");
+    _25HoursaDay_on_github("n", "This content does not belong to this page.");
     break ASH;
   }
 }
@@ -131,10 +131,10 @@ function _25HoursaDay_on_github(del, rsn) {
   ` + supDev + `
   <div id="_25embedScreen" class="_25embedScreen">
   <h1 id="titleMsg" class="titleMsg">This content has been guarded by 25Embed.</h1>
-  <h2 id="reason" class="reason">Reason: '` + rsn + `'</h2>
+  <h2 id="reason" class="reason">Reason: "` + rsn + `""</h2>
   <div class="rowClass">
   <button id="ogSrc" class="mBtn" onclick="ogSrc()">Original Content</button>
-  <button id="repo" class="mBtn" onclick="repo()">More Information</button>
+  <button id="repo" class="mBtn" onclick="repo()">Learn More</button>
   </div>
   <script>
   var ogContent = self.location;
