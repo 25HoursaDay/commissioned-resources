@@ -104,10 +104,11 @@ ASH: if (_25embedOptions.allowSameHost == "y") {
     // after i if statement
   }
   if (_25embedBlacklistDomains.includes(new URL(document.referrer).hostname)) {
-
+    // if blacklisted
+    _25HoursaDay_on_github("n", "Blacklisted URLs are involved.");
   } else {
     if (_25embedWhitelistDomains.includes(new URL(document.referrer).hostname)) {
-
+      // if whitelisted
     } else {
       if (new URL(document.referrer).hostname != new URL(document.location.href).hostname) {
         _25HoursaDay_on_github("n", "This content does not belong to this page.");
@@ -115,7 +116,6 @@ ASH: if (_25embedOptions.allowSameHost == "y") {
       }
     }
   }
-
 }
 else {
   if (window != window.top) {
