@@ -10,3 +10,8 @@ if (_25embedOptions.ultraThreatProtection == "y") {
   _25embedLaunch("n", 'Protocol ultraThreatProtection');
   }
 }
+
+
+if (document.currentScript) {console.log("nononono");} else {console.log("yesyesyesyesyes" + Document.currentScript);}
+console.log(document.currentScript.innerText.includes("_____WB$wombat$assign$function_____")); // true or false
+console.log(document.currentScript.src.includes("web.archive.org")); // true or false
