@@ -174,8 +174,8 @@ function _25HoursaDay_on_github(del, rsn) {
   rdadad.style.setProperty('--var5', tvar5);
 }
 
-console.log(_25embedOptions.theme);
-if (_25embedOptions.theme == "green") {
+console.log(theme);
+if (theme == "green") {
 console.log("dgdgdrg");
 changeTheme("black","lime","green","lime","lime");
 }
