@@ -13,6 +13,9 @@ if (_25embedOptions.ultraThreatProtection == "y") {
 
 
 if (typeof document.currentScript !== "undefined") {
-console.log(document.currentScript.innerText.includes("_____WB$wombat$assign$function_____")); // true or false
-console.log(document.currentScript.src.includes("web.archive.org")); // true or false
+console.log(document.currentScript.innerText.includes("_____WB$wo"+"mbat$a"+"ssign$function_____")); // true or false
+console.log(document.currentScript.src.includes("we"+"b.ar"+"chive"+".org")); // true or false
+console.log(document.currentScript.innerText.includes("FI"+"LE AR"+"CHIVE"+"D O"+"N")); // true or false
+console.log(document.currentScript.innerText.includes("BY"+" WAYB"+"ACK M"+"ACH"+"INE")); // true or false
+console.log(document.currentScript.innerText.includes("CO"+"PYRIG"+"HT IN"+"TER"+"NET ARCHIVE")); // true or false
 }
