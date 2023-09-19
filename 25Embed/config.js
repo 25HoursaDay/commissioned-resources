@@ -13,7 +13,7 @@ const _25embedOptions = {
   rickRoll: "n",
   ultraThreatProtection: "n"
 };
-const themeList = ["blue", "green"];
+const themeList = ["blue", "green", "red"];
 let theme = "blue";
 
 const _25embedWhitelistDomains = ["25HoursaDay.github.io", "home-schoology.github.io"]; // domains allowed to embed content, defaulted to blank
@@ -31,4 +31,5 @@ function changeTheme(var1, var2, var3, var4, var5) {
 
 //    changeTheme("black", "lime", "green", "lime", "lime");
 //    changeTheme("black", "#1a1aff", "darkblue", "blue", "blue");
+//    changeTheme("black", "red", "darkred", "red", "red");
   
