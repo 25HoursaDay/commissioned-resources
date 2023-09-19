@@ -18,7 +18,7 @@
 
 <p>Example:</p>
 
-```
+```html
 <html>
   <head>
     <!-- Your head content -->
@@ -36,7 +36,7 @@ Put your [config.js](https://github.com/25HoursaDay/commissioned-resources/blob/
 <h3>Javascript file</h3>
 
 If you would like to install 25Embed in your index.js file, you must add the following code:
-```
+```javascript
 document.head.append(`
   <script src="path to config file"></script>
   <script src="path to 25Embed file"></script>
