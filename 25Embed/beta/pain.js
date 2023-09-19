@@ -15,7 +15,7 @@ const _25embedDefaults = {
   ultraThreatProtection: "n"
 };
 
-const themeList = ["blue", "green"];
+const themeList = ["blue", "green", "red"];
 
 
 if (typeof _25embedOptions == "undefined") {
@@ -178,6 +178,9 @@ console.log(theme);
 if (theme == "green") {
 console.log("dgdgdrg");
 changeTheme("black","lime","green","lime","lime");
+} else if (theme == "red") {
+console.log("dgdgdrg");
+changeTheme("black","red","darkred","red","red");
 }
   </` + `script>
   </div>
