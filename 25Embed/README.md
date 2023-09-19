@@ -13,7 +13,7 @@
 <p>To install 25Embed, first you must create your own <a href="https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js">config.js</a> file using the <a href="">25Embed Config Tool</a> if you want custom settings.
 </p>
 
-<h3>HTML file (recommended)</h3>
+<h3>Install with HTML (recommended)</h3>
 <p>To install 25Embed in an HTML file, you must add the <a href="https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/latest.js">latest.js</a> file and your custom <a href="https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js">config.js</a> file (leave it out if you want default settings.) to two script tags in the head of your file (two script tags in total).</p>
 
 <p>Example:</p>
@@ -33,7 +33,7 @@
 
 Put your [config.js](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js) file url where it says "path to config file", and put the [25Embed](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/latest.js) file url where it says "path to 25Embed file".
 
-<h3>Javascript file</h3>
+<h3>Install with Javascript</h3>
 
 If you would like to install 25Embed in your index.js file, you must add the following code:
 ```javascript
