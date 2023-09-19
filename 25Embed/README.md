@@ -4,6 +4,7 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/25HoursaDay/commissioned-resources?style=social)
 
 </div>
+
 **<h2>If you were directed to this page from an embed, please contact the original content owner to let them know their hard work is being stolen!</h2>**
 <p>25Embed is a tool to prevent your content from being stolen using embeds.</p>
 
