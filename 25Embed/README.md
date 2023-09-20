@@ -56,7 +56,7 @@ To see a list of all settings and their functions, [click here!]()
 <p>Fast forward two years, and I have the ability to make something like that... so I did.</p>
 
 <h1>Similar tools</h1>
-<h3>Here are some noteworthy tools similar to 25Embed:</h3>
+<h3>Here are some noteworthy tools similar to 25Embed, just in case you dont want to use mine:</h3>
 <p><a href="https://unframed.netlify.app/">Unframed</a>: A friend actually found and told me about this while I was working on 25Embed in class instead of doing work. (I kinda stole the idea of Unframed's UI ngl).</p>
 
 <p><a href="http://unbed.gq/">Unbed</a>:
