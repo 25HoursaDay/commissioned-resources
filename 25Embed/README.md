@@ -45,6 +45,7 @@ document.head.append(`
 Put your [config.js](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js) file url where it says "path to config file", and put the [25Embed](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/latest.js) file url where it says "path to 25Embed file".
 
 <h3>Settings</h3>
+
 The [config.js](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js) file is the file where your 25Embed settings are held.
 If you would like to change your config file to enable/disable the default settings, you must create your own [config.js](https://github.com/25HoursaDay/commissioned-resources/blob/main/25Embed/config.js) file with the settings adjusted to your liking.
 To see a list of all settings and their functions, [click here!]()
