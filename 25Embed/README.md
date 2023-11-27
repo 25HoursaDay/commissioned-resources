@@ -53,7 +53,8 @@ To see a list of all settings and their functions, [click here!]()
 <h1>History</h1>
 <p>I first thought of the concept of 25Embed back when I was not so technologically inclined (skid), when I would just embed things into google sites;</p>
 <p>I figured there had to be a way to prevent someone from so easily stealing your content, but I didn't know how to create something like that at the time.</p>
-<p>Fast forward two years, and I have the ability to make something like that... so I did.</p>
+<p>Fast forward two years, and I had the ability to make something like that... so I did.</p>
+<p>I now add features and optimize code when I can/want to.</p>
 
 <h1>Similar tools</h1>
 <h3>Here are some noteworthy tools similar to 25Embed, just in case you dont want to use mine:</h3>
