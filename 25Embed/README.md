@@ -66,7 +66,11 @@ Basically Unframed but was made for embeds. It's the same concept.
 
 <h1>Problems and Solutions</h1>
 <p>This tool is not perfect under any means, that means it cannot protect from everything, so here I will list various vulnerabilities and ways to further protect your site in hopes that your content will remain safe.</p>
-<h3>vulnerabilities</h3>
+<h3>Vulnerabilities</h3>
+<p>Sandbox iframes</p>
+<p>Outsider scripts that run before 25E</p>
+<p>Proxies</p>
+<p>Plain code ripping</p>
 <h3>Further Protection</h3>
 <p>1. Be sure to add html tags to the begining and end of your html file.</p>
 <p>2. Add meta tags or html headers.</p>
