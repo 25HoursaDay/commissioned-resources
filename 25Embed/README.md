@@ -67,7 +67,7 @@ Basically Unframed but was made for embeds. It's the same concept.
 <h1>Problems and Solutions</h1>
 <p>This tool is not perfect under any means, that means it cannot protect from everything, so here I will list various vulnerabilities and ways to further protect your site in hopes that your content will remain safe.</p>
 <h3>Vulnerabilities</h3>
-<p>Sandbox iframes</p>
+<p>Sandbox iframes (A project I found called <a href="https://github.com/JamesMGreene/sandblaster">Sandblaster</a> may work)</p>
 <p>Outsider scripts that run before 25E</p>
 <p>Proxies</p>
 <p>Plain code ripping</p>
