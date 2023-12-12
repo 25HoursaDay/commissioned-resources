@@ -67,10 +67,8 @@ Basically Unframed but was made for embeds. It's the same concept.
 <h1>Problems and Solutions</h1>
 <p>This tool is not perfect under any means, that means it cannot protect from everything, so here I will list various vulnerabilities and ways to further protect your site in hopes that your content will remain safe.</p>
 <h3>Vulnerabilities</h3>
-<p>Sandbox iframes (A project I found called <a href="https://github.com/JamesMGreene/sandblaster">Sandblaster</a> may work)</p>
-<p>Outsider scripts that run before 25E</p>
-<p>Proxies</p>
-<p>Plain code ripping</p>
-<h3>Further Protection</h3>
-<p>1. Be sure to add html tags to the begining and end of your html file.</p>
-<p>2. Add meta tags or html headers.</p>
+<h4>Problem | Solution</h4>
+<p>Sandbox iframes | A project I found called <a href="https://github.com/JamesMGreene/sandblaster">Sandblaster</a> may work</p>
+<p>Outsider scripts that run before 25E | Make sure 25E is the first script ran on your site</p>
+<p>Proxies | Some Anti-Proxy products do exist, but almost all of them either dont work very well, need to grab the user's IP, or both. I am currently working on a solution to this problem.</p>
+<p>Plain code ripping | Not sure, maybe use your host to run scripts? Idk beckend stuffs.</p>
