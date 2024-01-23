@@ -72,3 +72,7 @@ Basically Unframed but was made for embeds. It's the same concept.
 <p>Outsider scripts that run before 25E | Make sure 25E is the first script ran on your site</p>
 <p>Proxies | Some Anti-Proxy products do exist, but almost all of them either dont work very well, need to grab the user's IP, or both. I am currently working on a solution to this problem.</p>
 <p>Plain code ripping | Not sure, maybe use your host to run scripts? Idk beckend stuffs.</p>
+
+<h1>Further Protection</h1>
+<p>To further protect your content, you may want to do some of the following:</p>
+<p>Add authentication like <a href="https://auth0.com/">Auth0</a>.</p>
