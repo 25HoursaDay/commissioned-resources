@@ -130,6 +130,10 @@ else {
     _25HoursaDay_on_github("n", "This content has been embedded or iframed.");
     break ASH;
   }
+  if (window.frameElement) {
+    _25HoursaDay_on_github("n", "This content has been embedded or iframed.");
+    break ASH;
+  }
 }
 /*
 if (_25embedOptions.ultraThreatProtection == "y") {
